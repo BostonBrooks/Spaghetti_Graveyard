@@ -11,37 +11,37 @@
  
 #ifndef SYSTEM_INCLUDES
 #define SYSTEM_INCLUDES
-#include "../../headers/system_includes.h"
+#include "../headers/system_includes.h"
 #endif
 
 #ifndef CONSTANTS
 #define CONSTANTS
-#include "../../headers/constants.h"
+#include "../headers/constants.h"
 #endif
 
 #ifndef GEOMETRY
 #define GEOMETRY
-#include "../../headers/geometry.h"
+#include "../headers/geometry.h"
 #endif
 
 #ifndef BBAICONTROL
 #define BBAICONTROL
-#include "../../headers/bbAIControl.h"
+#include "../headers/bbAIControl.h"
 #endif
 
 #ifndef BBMESSAGE
 #define BBMESSAGE
-#include "../../headers/bbMessage.h"
+#include "../headers/bbMessage.h"
 #endif
 
 #ifndef BBDRAWABLE
 #define BBDRAWABLE
-#include "../../headers/bbDrawable.h"
+#include "../headers/bbDrawable.h"
 #endif
 
 #ifndef INPUT
 #define INPUT
-#include "../../headers/input.h"
+#include "../headers/input.h"
 #endif
 
 int PLAYER_20230829_new(bbMapCoords mc){

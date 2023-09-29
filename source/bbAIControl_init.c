@@ -53,10 +53,10 @@
 
 //one #include per ai type
 
-#include "../source/AI/AI_null.h"
-#include "../source/AI/AI_fox.h"
-#include "../source/AI/AI_snail.h"
-#include "../source/AI/PLAYER_20230829.h"
+#include "../AI/AI_null.h"
+#include "../AI/AI_fox.h"
+#include "../AI/AI_snail.h"
+#include "../AI/PLAYER_20230829.h"
 
 
 //-----------------------------CODE------------------------------//
