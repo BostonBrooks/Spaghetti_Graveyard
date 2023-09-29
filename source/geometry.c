@@ -115,7 +115,7 @@ int bbElevations_load(){
     sfVector2u height_map_size;
     sfUint8*   height_map_values;
     
-    height_map = sfImage_createFromFile("./media/HeightMap.bmp");
+    height_map = sfImage_createFromFile("../media/HeightMap.bmp");
     assert (height_map != NULL);
     height_map_size = sfImage_getSize (height_map);
     height_map_values = sfImage_getPixelsPtr(height_map);
