@@ -4,11 +4,7 @@
  * @ingroup 
  * @brief This header file describes the actions of a Player AI, the player is prompted to move around the map by the data from input.h / input.c
  */
- 
- //Declare includes. note extra "../"
- //this is because we are in "~/source/AI"
- //and not "~/source" or "~/headers"
- 
+
 #ifndef SYSTEM_INCLUDES
 #define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
