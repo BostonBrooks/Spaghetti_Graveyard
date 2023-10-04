@@ -13,6 +13,27 @@ Color_Off='\033[0m'
   -I /mingw64/include\
   -L /mingw64/lib\
   ../test/test_pools.c\
+  ../source/bbAIControl.c\
+  ../source/bbAIControl_init.c\
+  ../source/bbDrawable.c\
+  ../source/bbDrawable_plot.c\
+  ../source/bbDrawable_lists.c\
+  ../source/bbGroundSurface.c\
+  ../source/bbMessage.c\
+  ../source/bbMessage_constructors.c\
+  ../source/bbMessage_functions.c\
+  ../source/bbMessage_passing.c\
+  ../source/bbTerrainSquare.c\
+  ../source/geometry.c\
+  ../source/input.c\
+  ../source/interpolation.c\
+  ../source/media.c\
+  ../source/move_towards.c\
+  ../source/nelder_mead.c\
+  ../source/potential_fields.c\
+  ../source/prompt.c\
+  ../source/viewport.c\
+  ../source/window.c\
   -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm; 
   then
     echo "Compile Succeeded:"

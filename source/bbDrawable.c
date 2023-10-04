@@ -100,11 +100,16 @@ int bbDrawable_isCloser (bbDrawable* a, bbDrawable* b){
 /** Create a new drawable (a barrel) */
 int bbDrawable_new(bbMapCoords MC){
 
-    //#ifdef DEBUG
-    //printf("Create Drawable:\n");
-    //#endif
+    #ifdef DEBUG
+    printf("Create Drawable:\n");
+    #endif
     
     int drawable_int = bbDrawable_Pool_New(NEXT_AVAILABLE);
+
+    #ifdef DEBUG
+    printf("Created Drawable\n");
+    #endif
+
     assert(drawable_int >= 0);
     
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);

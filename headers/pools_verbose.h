@@ -180,6 +180,7 @@
 //add to in use list, return address
 #define DEFINE_POOL_NEW(CLASS, LEVEL_1, LEVEL_2)\
     int CLASS##_Pool_New(int Address){          \
+        printf("creating a new object\n");\
         printf("Pool_New, Address = %d\n", Address);\
         Address = NEXT_AVAILABLE;\
 \
