@@ -9,7 +9,7 @@ Color_Off='\033[0m'
  echo -e "Look, a Tortoise:\n${BGreen}\n       _____     ____\n     /      \  |  o |\n    |        |/ ___\| \n    |_________/     \n    |_|_| |_|_|\n//////////////////////////////////////////////////////////////${Color_Off}\n\nAttempting to compile:\n"
 
  if gcc\
-  ../test/main.c\
+  ../test/test_pools.c\
   ../source/bbAIControl.c\
   ../source/bbAIControl_init.c\
   ../source/bbDrawable.c\
@@ -31,7 +31,7 @@ Color_Off='\033[0m'
   ../source/prompt.c\
   ../source/viewport.c\
   ../source/window.c\
-  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm;
+  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm; 
   then
     echo "Compile Succeeded:"
     ./a.out

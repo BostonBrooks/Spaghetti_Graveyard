@@ -3,28 +3,16 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader">{
-  &quot;useNewFormat&quot;: true
-}</component>
-  <component name="CMakeReloadState">
-    <option name="reloaded" value="true" />
-  </component>
-  <component name="CMakeRunConfigurationManager">
-    <generated />
-  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="pools.h testing with MSYS">
+    <list default="true" id="bf23a3e4-23cb-40d7-b4eb-c67e8ece6964" name="Changes" comment="removed CSFML path from Build_Linux.sh">
+      <change afterPath="$PROJECT_DIR$/Ubuntu/Linux_test_pools.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSYS/MSYS_test_pools.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/MSYS_test_pools.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSYS/a.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/a.exe.stackdump" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/pools_verbose.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/pools_verbose.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/bbDrawable.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_pools.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_pools.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +33,19 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectApplicationVersion">
-    <option name="ide" value="CLion" />
-    <option name="majorVersion" value="2023" />
-    <option name="minorVersion" value="2.2" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2W47oC1H5qVwzOEH98SKN6gEVID" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2W9l4vhKLvbs5s81JK9nkyhaZGm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -71,179 +53,89 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/bbroo/CLionProjects/Spaghetti_Graveyard/test",
+    "last_opened_file_path": "/home/boston-brooks/CLionProjects/Spaghetti_Graveyard/Ubuntu",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Shell Script"
-    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\test" />
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\MSYS" />
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\headers" />
+      <recent name="$PROJECT_DIR$/Ubuntu" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sh" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Shell Script.scratch.sh" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="" />
-      <created>1695980172845</created>
+      <changelist id="bf23a3e4-23cb-40d7-b4eb-c67e8ece6964" name="Changes" comment="" />
+      <created>1696152489507</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695980172845</updated>
-      <workItem from="1695980180320" duration="621000" />
-      <workItem from="1695981265814" duration="1064000" />
-      <workItem from="1695982430111" duration="547000" />
-      <workItem from="1695983681346" duration="1264000" />
-      <workItem from="1695985006019" duration="2317000" />
-      <workItem from="1695987450853" duration="1136000" />
-      <workItem from="1695995822184" duration="97000" />
-      <workItem from="1696398815214" duration="4438000" />
+      <updated>1696152489507</updated>
+      <workItem from="1696152490685" duration="731000" />
+      <workItem from="1696209388731" duration="724000" />
+      <workItem from="1696212227813" duration="125000" />
+      <workItem from="1696213121037" duration="537000" />
+      <workItem from="1696213854569" duration="452000" />
+      <workItem from="1696220787987" duration="2299000" />
+      <workItem from="1696398687326" duration="52000" />
+      <workItem from="1696403678675" duration="1354000" />
     </task>
-    <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
+    <task id="LOCAL-00001" summary="added CSFML path to Build_Linux.sh">
       <option name="closed" value="true" />
-      <created>1695981590140</created>
+      <created>1696220984768</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1695981590140</updated>
+      <updated>1696220984768</updated>
     </task>
-    <task id="LOCAL-00002" summary="Testing gitignore">
+    <task id="LOCAL-00002" summary="added CSFML path to Build_Linux.sh">
       <option name="closed" value="true" />
-      <created>1695982103701</created>
+      <created>1696398731013</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1695982103701</updated>
+      <updated>1696398731013</updated>
     </task>
-    <task id="LOCAL-00003" summary="Testing gitignore. Fixing code after moving AI directory from within source directory to root directory.">
+    <task id="LOCAL-00003" summary="removed CSFML path from Build_Linux.sh">
       <option name="closed" value="true" />
-      <created>1695984065212</created>
+      <created>1696403836240</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1695984065212</updated>
+      <updated>1696403836240</updated>
     </task>
-    <task id="LOCAL-00004" summary="RE Fixing code after moving AI directory from within source directory to root directory. Removed comment relating to previous directory structure.">
+    <task id="LOCAL-00004" summary="removed CSFML path from Build_Linux.sh">
       <option name="closed" value="true" />
-      <created>1695984275208</created>
+      <created>1696404129216</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1695984275208</updated>
+      <updated>1696404129216</updated>
     </task>
-    <task id="LOCAL-00005" summary="Fiddling around with file paths, compiling externally with MSYS">
-      <option name="closed" value="true" />
-      <created>1695987280021</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1695987280021</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Fiddling around with file paths, compiling externally with MSYS">
-      <option name="closed" value="true" />
-      <created>1695988384994</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1695988384994</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Fiddling around with file paths, compiling externally with MSYS">
-      <option name="closed" value="true" />
-      <created>1695988576156</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1695988576156</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Fiddling around with file paths, compiling externally with MSYS">
-      <option name="closed" value="true" />
-      <created>1696398882422</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1696398882422</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Fiddling around with file paths, compiling externally with MSYS">
-      <option name="closed" value="true" />
-      <created>1696400639685</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1696400639685</updated>
-    </task>
-    <task id="LOCAL-00010" summary="pools.h testing with MSYS">
-      <option name="closed" value="true" />
-      <created>1696400787068</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1696400787068</updated>
-    </task>
-    <task id="LOCAL-00011" summary="pools.h testing with MSYS">
-      <option name="closed" value="true" />
-      <created>1696402216582</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1696402216582</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VCPKGProject">
-    <isAutomaticEditVcpkgJson value="false" />
-    <isAutomaticCheckingOnLaunch value="false" />
-    <isAutomaticFoundErrors value="true" />
-    <isAutomaticFoundErrors value="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit" />
-    <MESSAGE value="Importing files from old VCS, Windows Explorer :P" />
-    <MESSAGE value="Testing gitignore" />
-    <MESSAGE value="Testing gitignore. Fixing code after moving AI directory from within source directory to root directory." />
-    <MESSAGE value="RE Fixing code after moving AI directory from within source directory to root directory. Removed comment relating to previous directory structure." />
-    <MESSAGE value="Fiddling around with file paths, compiling externally with MSYS" />
-    <MESSAGE value="pools.h testing with MSYS" />
-    <option name="LAST_COMMIT_MESSAGE" value="pools.h testing with MSYS" />
+    <MESSAGE value="added CSFML path to Build_Linux.sh" />
+    <MESSAGE value="removed CSFML path from Build_Linux.sh" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed CSFML path from Build_Linux.sh" />
   </component>
 </project>
