@@ -1,0 +1,9 @@
+#exclude everything except headers, media, source, AI, test directories.
+$ cat .gitignore
+    # exclude everything except directory foo/bar
+    /*
+    !/headers
+    !/media
+    !/source
+    !/AI
+    !/test
