@@ -1,14 +1,16 @@
 #define TEST_POOLS
 
+#ifndef POOLS
+#define POOLS
+#include "../headers/pools_verbose.h"
+#endif
+
 #ifndef SYSTEM_INCLUDES
 #define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
 #endif
 
-#ifndef POOLS
-#define POOLS
-#include "../headers/pools.h"
-#endif
+
 
 typedef struct {
     int Pool_Self;

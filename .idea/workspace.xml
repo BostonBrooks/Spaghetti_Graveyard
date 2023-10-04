@@ -18,8 +18,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="Fiddling around with file paths, compiling externally with MSYS">
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="pools.h testing with MSYS">
+      <change afterPath="$PROJECT_DIR$/MSYS/MSYS_pools_verbose.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/pools_verbose.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/main_pools_verbose.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MSYS/a.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/a.exe.stackdump" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_pools.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_pools.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +72,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/bbroo/CLionProjects/Spaghetti_Graveyard/MSYS",
+    "last_opened_file_path": "C:/Users/bbroo/CLionProjects/Spaghetti_Graveyard/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +87,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\test" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\MSYS" />
+      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\headers" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,7 +134,7 @@
       <workItem from="1695985006019" duration="2317000" />
       <workItem from="1695987450853" duration="1136000" />
       <workItem from="1695995822184" duration="97000" />
-      <workItem from="1696398815214" duration="1845000" />
+      <workItem from="1696398815214" duration="3169000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -200,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696400639685</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="pools.h testing with MSYS">
+      <option name="closed" value="true" />
+      <created>1696400787068</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696400787068</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +236,7 @@
     <MESSAGE value="Testing gitignore. Fixing code after moving AI directory from within source directory to root directory." />
     <MESSAGE value="RE Fixing code after moving AI directory from within source directory to root directory. Removed comment relating to previous directory structure." />
     <MESSAGE value="Fiddling around with file paths, compiling externally with MSYS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fiddling around with file paths, compiling externally with MSYS" />
+    <MESSAGE value="pools.h testing with MSYS" />
+    <option name="LAST_COMMIT_MESSAGE" value="pools.h testing with MSYS" />
   </component>
 </project>
