@@ -33,9 +33,10 @@ Color_Off='\033[0m'
   ../source/prompt.c\
   ../source/viewport.c\
   ../source/window.c\
-  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm; 
+  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm;
   then
     echo "Compile Succeeded:"
+    LD_PRELOAD="../../CSFML/lib/libcsfml-system.so.2.5.0 ../../CSFML/lib/libcsfml-graphics.so.2.5.0 ../../CSFML/lib/libcsfml-window.so.2.5.0"\
     ./a.out
   else 
     echo "Compile Failed!"
