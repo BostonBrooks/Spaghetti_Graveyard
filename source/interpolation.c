@@ -100,6 +100,10 @@ float gaussdiff(float x){
 int generate_gaussdiff(){
 
     gaussdiff_kernel = malloc(10* (POINTS_PER_PIXEL * PIXELS_PER_TILE)*sizeof(float));
+
+    if(gaussdiff_kernel == NULL)
+        err(EXIT_FAILURE, "malloc");
+
     int n, X;
     float x;
     for (n = 0; n< 10* (POINTS_PER_PIXEL * PIXELS_PER_TILE); n++){
