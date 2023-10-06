@@ -137,8 +137,9 @@
             }\
         }\
 \
-        CLASS *j = calloc(LEVEL_2, sizeof(CLASS));\
-        if  (j == NULL) return (MALLOC_FAILED);\
+        CLASS *j = calloc(LEVEL_2, sizeof(CLASS));   \
+        if (j == NULL)
+            err(EXIT_FAILURE, "malloc");
         CLASS##_Pool[i] = j;\
 \
         if (CLASS##_Pool_Available_Head == -1){\

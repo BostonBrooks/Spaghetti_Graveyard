@@ -65,6 +65,8 @@ float dlanczos(float x){
 int generate_lanczos(){
 
     lanczos_kernel = malloc(4* (POINTS_PER_PIXEL * PIXELS_PER_TILE)*sizeof(float));
+    if (lanczos_kernel == NULL)
+        err(EXIT_FAILURE, "malloc");
     int n, X;
     float x;
     for (n = 0; n< 4* (POINTS_PER_PIXEL * PIXELS_PER_TILE); n++){

@@ -46,14 +46,20 @@ int print_next_line(FILE* Media) {
 
 int sfTexture_vtable_alloc(int number) {
     sfTexture_vtable = (sfTexture**) malloc (sizeof(sfTexture*) * number);
+    if (sfTexture_vtable == NULL)
+        err(EXIT_FAILURE, "malloc");
 }
 
 int sfSprite_vtable_alloc(int number) {
     sfSprite_vtable = (sfSprite**) malloc (sizeof(sfSprite*) * number);
+    if (sfSprite_vtable == NULL)
+        err(EXIT_FAILURE, "malloc");
 }
 
 int bbAnimation_vtable_alloc(int number) {
     bbAnimation_vtable = (bbAnimation**) malloc (sizeof(bbAnimation*) * number);
+    if (bbAnimation_vtable == NULL)
+        err(EXIT_FAILURE, "malloc");
 }
 
 int sfTexture_to_vtable(int VAddress, char File[], sfBool smooth){
@@ -102,6 +108,9 @@ int sfSprite_to_vtable(int VAddress, int TextureVAddress, int left, int top, int
 int bbAnimation_to_vtable(int VAddress, int Vdrawfunction, int angles, int frames, int framerate, int sprites[]){
 
     bbAnimation* animation = malloc (sizeof(bbAnimation) + sizeof(int) * angles * frames);
+
+    if (animation == NULL)
+        err(EXIT_FAILURE, "malloc");
     
     animation->Vdrawfunction = Vdrawfunction;
     animation->angles = angles;
