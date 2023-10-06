@@ -27,6 +27,8 @@ int main (void){
 
 int Test_All(void){
 
+    printf("Change made on ubuntu computer\n");
+
     Window_Init();
 
     sfColor beige = COLOUR_BEIGE;
