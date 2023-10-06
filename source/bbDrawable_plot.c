@@ -325,21 +325,55 @@ int nulldraw(bbDrawable* tobedrawn, int i){
 }
 
 int repeatdraw(bbDrawable* tobedrawn, int i){
+
+//#ifdef DEBUG
+//    printf("before accessing drawable struct\n");
+//#endif
     int animation = tobedrawn->animation[i];
+
+
+//#ifdef DEBUG
+//    printf("animation = %d\n", animation);
+//#endif
+
     int angle = tobedrawn->angle[i];
     int frame = tobedrawn->frame[i];
-    
+
+//#ifdef DEBUG
+//    printf("after accessing drawable struct\n");
+//#endif
     
     bbMapCoords mc = tobedrawn->location;
+
+
+//#ifdef DEBUG
+//    printf("mc.i = %d, mc.j = %d, mc.k = %d\n", mc.i, mc.j, mc.k);
+//#endif
+
     bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
     
     sfVector2f position;
     position.x = sc.x;
     position.y = sc.y;
-    
-    sfSprite* sprite = bbAnimation_getSprite(animation,angle,frame);
-    
+
+
+//#ifdef DEBUG
+//    printf("position.x = %f, position.y = %f\n", position.x, position.y);
+//#endif
+
+    sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
+
+//#ifdef DEBUG
+//    printf("after accessing sfSprite\n");
+//#endif
+
+
+
     sfSprite_setPosition(sprite, position);
+
+//#ifdef DEBUG
+//    printf("after modifying sfSprite\n");
+//#endif
     sfRenderTexture_drawSprite(bbViewport_main, sprite, NULL);
     
     bbAnimation* anim = bbAnimation_vtable[animation];

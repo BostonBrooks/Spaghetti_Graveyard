@@ -5,6 +5,12 @@
 #include "../headers/pools_verbose.h"
 #endif
 
+
+#ifndef BBNOTHING
+#define BBNOTHING
+#include "../headers/bbNothing.h"
+#endif
+
 #ifndef ALL_INCLUDES
 #define ALL_INCLUDES
 #include "../headers/all_includes.h"
@@ -12,18 +18,10 @@
 
 int Current_Time = 0;
 
-typedef struct {
-    int Pool_Self;
-    int Pool_Prev;
-    int Pool_Next;
-    int Pool_In_Use;
-
-    int data;
-} bbNothing;
-
-DEFINE_POOL(bbNothing, 4, 4)
 
 int main(void){
+    bbDrawable_Pool_Make_Null();
+
     int nothing_int;
     nothing_int = bbNothing_Pool_New(NEXT_AVAILABLE);
     printf("nothing_int = %d\n", nothing_int);

@@ -88,8 +88,9 @@
 
 //-----------------------------CODE------------------------------//
 
-
-DECLARE_POOL_GLOBALS(bbDrawable, DRAWABLE_POOL_LEVEL_1, DRAWABLE_POOL_LEVEL_2)
+DECLARE_POOL_GLOBALS(bbDrawable, 500, 51)
+//DECLARE_POOL_GLOBALS(bbDrawable, DRAWABLE_POOL_LEVEL_1, DRAWABLE_POOL_LEVEL_2)
+//TODO Why does the commented out line cause segfault in MSYS?
 
 /** return 1 if a is closer to the screen than b, 0 otherwise */
 int bbDrawable_isCloser (bbDrawable* a, bbDrawable* b);

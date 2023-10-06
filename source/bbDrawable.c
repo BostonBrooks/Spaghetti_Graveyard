@@ -86,7 +86,9 @@
 //-----------------------------CODE------------------------------//
 
 
-DEFINE_POOL(bbDrawable, DRAWABLE_POOL_LEVEL_1, DRAWABLE_POOL_LEVEL_2)
+DEFINE_POOL(bbDrawable, 500, 51)
+//DEFINE_POOL(bbDrawable, DRAWABLE_POOL_LEVEL_1, DRAWABLE_POOL_LEVEL_2)
+//TODO why does the commented out line cause segfault in MSYS?
 
 /** return 1 if a is closer to the screen than b, 0 otherwise */
 int bbDrawable_isCloser (bbDrawable* a, bbDrawable* b){ 
@@ -100,15 +102,15 @@ int bbDrawable_isCloser (bbDrawable* a, bbDrawable* b){
 /** Create a new drawable (a barrel) */
 int bbDrawable_new(bbMapCoords MC){
 
-    #ifdef DEBUG
-    printf("Create Drawable:\n");
-    #endif
+    //#ifdef DEBUG
+    //printf("Create Drawable:\n");
+    //#endif
     
     int drawable_int = bbDrawable_Pool_New(NEXT_AVAILABLE);
 
-    #ifdef DEBUG
-    printf("Created Drawable\n");
-    #endif
+    //#ifdef DEBUG
+    //printf("Created Drawable\n");
+    //#endif
 
     assert(drawable_int >= 0);
     

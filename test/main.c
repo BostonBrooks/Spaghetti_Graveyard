@@ -250,8 +250,8 @@ int Test_All(void){
         viewpoint = viewpoint_drawable->location;
         
         #ifdef VERBOSE
-        printf("Draw to Screen\n");
-        #endif 
+        printf("Draw to Screen:\n");
+        #endif
     
         bbTerrainSquare_drawVisible();
         bbGroundSurface_drawVisible(); 

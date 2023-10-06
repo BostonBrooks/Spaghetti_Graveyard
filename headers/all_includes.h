@@ -60,6 +60,12 @@
 #include "../headers/bbMessage_passing.h"
 #endif
 
+
+#ifndef BBNOTHING
+#define BBNOTHING
+#include "../headers/bbNothing.h"
+#endif
+
 #ifndef BBTERRAINSQUARE
 #define BBTERRAINSQUARE
 #include "../headers/bbTerrainSquare.h"

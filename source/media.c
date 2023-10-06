@@ -286,6 +286,13 @@ sfSprite* bbAnimation_getSprite(int animation_int, int angle_int, int frame_int)
     bbAnimation* animation = bbAnimation_vtable[animation_int];
     int sprite_int = (animation->frames)*angle_int + frame_int/animation->framerate;
     int sprite_num = animation->sprites[sprite_int];
+
+//#ifdef DEBUG
+//    printf("sprite_num = %d\n", sprite_num);
+//#endif
+//TODO why do we get a -1 here?
+
+    if (sprite_num == -1) return sfSprite_vtable[44];
     return sfSprite_vtable[sprite_num];
     
 }

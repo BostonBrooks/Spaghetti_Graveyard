@@ -1,12 +1,12 @@
  #!/bin/bash
- 
+
 BGreen='\033[1;32m' 
 Color_Off='\033[0m'
  
 #while [ 1 == 1 ]
 #do
 
- echo -e "Look, a Tortoise:\n${BGreen}\n       _____     ____\n     /      \  |  o |\n    |        |/ ___\| \n    |_________/     \n    |_|_| |_|_|\n//////////////////////////////////////////////////////////////${Color_Off}\n\nAttempting to compile:\n"
+ echo -e "Look, a Tortoise:\n${BGreen}\n       _____     ____        ////////\n     /      \  |  o |        ////////\n    |        |/ ___\|        ////////\n    |_________/              ////////\n    |_|_| |_|_|              ////////\n/////////////////////////////////////${Color_Off}\n\nAttempting to compile:\n"
 
  if gcc\
   -D _WIN32\
@@ -23,6 +23,7 @@ Color_Off='\033[0m'
   ../source/bbMessage_constructors.c\
   ../source/bbMessage_functions.c\
   ../source/bbMessage_passing.c\
+  ../source/bbNothing.c\
   ../source/bbTerrainSquare.c\
   ../source/geometry.c\
   ../source/input.c\
@@ -34,7 +35,7 @@ Color_Off='\033[0m'
   ../source/prompt.c\
   ../source/viewport.c\
   ../source/window.c\
-  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm; 
+  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -w -lm;
   then
     echo "Compile Succeeded:"
     ./a.exe
