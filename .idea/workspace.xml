@@ -18,9 +18,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf23a3e4-23cb-40d7-b4eb-c67e8ece6964" name="Changes" comment="EXIT_FAILURE is malloc fails">
-      <change beforePath="$PROJECT_DIR$/source/interpolation.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/interpolation.c" afterDir="false" />
-    </list>
+    <list default="true" id="bf23a3e4-23cb-40d7-b4eb-c67e8ece6964" name="Changes" comment="EXIT_FAILURE is malloc fails" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +97,7 @@
       <workItem from="1696403678675" duration="1527000" />
       <workItem from="1696490736082" duration="152000" />
       <workItem from="1696542796562" duration="45000" />
-      <workItem from="1696571157257" duration="1057000" />
+      <workItem from="1696571157257" duration="1395000" />
     </task>
     <task id="LOCAL-00001" summary="added CSFML path to Build_Linux.sh">
       <option name="closed" value="true" />
@@ -157,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696572042892</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="EXIT_FAILURE is malloc fails">
+      <option name="closed" value="true" />
+      <created>1696572431787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696572431787</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
