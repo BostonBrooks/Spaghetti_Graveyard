@@ -248,6 +248,7 @@ int Test_All(void){
         bbDrawable* viewpoint_drawable
              = bbDrawable_Pool_Lookup(viewpoint_drawable_int);
         viewpoint = viewpoint_drawable->location;
+        viewpoint.k *= 0.5;
         
         #ifdef VERBOSE
         printf("Draw to Screen:\n");
