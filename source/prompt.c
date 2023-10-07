@@ -53,7 +53,7 @@ int collumn = 0;
 
 int prompt_init(void){
 
-    prompt_font = sfFont_createFromFile("./media/Bowman.ttf");
+    prompt_font = sfFont_createFromFile("../media/Bowman.ttf");
     if (!prompt_font)
         return EXIT_FAILURE;
 
@@ -197,7 +197,7 @@ int nth_newline(char* input, int n){
 }
 
 int prompt_display(void){
-/*
+
     //count the number of rows in display text
     int rows = n_rows(display_char);
     //lop off rows from beginning
@@ -225,8 +225,7 @@ int prompt_display(void){
     sfRenderWindow_drawText(window, input_text, NULL);
     #endif
     
-    */
-//TODO Why does the above lead to segfault?
+
 }
 
 

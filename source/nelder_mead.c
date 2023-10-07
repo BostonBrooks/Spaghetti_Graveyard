@@ -60,7 +60,12 @@ bbMapCoords nelder_mead (int drawable_int){
     xh = xs = xl = drawable->location;
     
     xh.i += initial_size;
-    xs.j += initial_size;
+    xh.j += initial_size;
+
+    xh.i -= initial_size;
+    xh.j += initial_size;
+
+    xs.j -= initial_size;
     
     fh = sum_potential_Nearby(drawable_int, xh);
     fs = sum_potential_Nearby(drawable_int, xs);
