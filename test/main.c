@@ -83,7 +83,12 @@ int Test_All(void){
     #endif
     
     Load_Media();
-    
+
+    #ifdef DEBUG
+    bbAnimation_print_data(18);
+    bbAnimation_print_data(19);
+    #endif
+
     #ifdef VERBOSE
         printf("bbTerrainSquare_initAll();\n");
     #endif
@@ -186,7 +191,7 @@ int Test_All(void){
         
         bbMapCoords_updateElevation(&mc);
     
-        bbAI_constructor_vtable[AI_YETI](mc);
+        bbAI_constructor_vtable[AI_NULL](mc);
         
         //#ifdef DEBUG
         //printf("AI pool head = %d, AI pool tail = %d\n", bbAIControl_Pool_In_Use_Head, bbAIControl_Pool_In_Use_Tail);

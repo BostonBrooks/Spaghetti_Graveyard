@@ -37,7 +37,12 @@ int AI_null_new(bbMapCoords mc){
     
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
-    
+
+    drawable->animation[0] = 19;
+    drawable->angle[0] = rand()%32;
+    drawable->frame[0] = 0;
+    drawable->drawfunction[0] = DRAW_BASIC;
+    drawable->start_time = 0;
     //#ifdef DEBUG  
     //printf("New drawable is at the location %d\n", drawable_int );
     //#endif
@@ -75,9 +80,9 @@ int AI_null_new(bbMapCoords mc){
 
 int AI_null_update(bbAIControl* aicontroller){
 
-    #ifdef DEBUG  
-    printf("Updating a null AI object\n");
-    #endif
+    //#ifdef DEBUG
+    //printf("Updating a null AI object\n");
+    //#endif
 
     return NO_RETHUNK;
 

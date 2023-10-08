@@ -297,3 +297,22 @@ sfSprite* bbAnimation_getSprite(int animation_int, int angle_int, int frame_int)
     
 }
 
+int bbAnimation_print_data(int animation_int){
+
+        bbAnimation* animation = bbAnimation_vtable[animation_int];
+        int Vdrawfunction = animation->Vdrawfunction;
+        int angles = animation->angles;
+        int frames = animation->frames;
+        int framerate = animation->framerate;
+        int* sprites = animation->sprites;
+
+        printf("drawfunction = %d, angles = %d, frames = %d, framerate = %d", Vdrawfunction, angles, frames, framerate);
+
+        for(int i = 0; i < angles*frames; i++){
+            printf(", %d", sprites[i]);
+        }
+
+        printf("\n");
+
+
+}

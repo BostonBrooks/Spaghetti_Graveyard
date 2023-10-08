@@ -18,15 +18,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="nothing">
-      <change afterPath="$PROJECT_DIR$/source/sum_forces.c" afterDir="false" />
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="added tortoise.png to media.csv">
+      <change afterPath="$PROJECT_DIR$/media/.~lock.media.csv#" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/AI_snail.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Yeti.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/constants.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/bbAIControl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/nelder_mead.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/nelder_mead.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/potential_fields.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/potential_fields.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_null.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_null.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/media.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/media.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media.csv" beforeDir="false" afterPath="$PROJECT_DIR$/media/media.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/save csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/media.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/media.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/window.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
@@ -105,10 +106,25 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
     </configuration>
     <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
@@ -150,6 +166,7 @@
       <workItem from="1696572737370" duration="6000" />
       <workItem from="1696722893833" duration="44000" />
       <workItem from="1696723630740" duration="4057000" />
+      <workItem from="1696758596068" duration="5373000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -247,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696673186645</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added tortoise.png to media.csv">
+      <option name="closed" value="true" />
+      <created>1696757579134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696757579134</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +317,7 @@
     <MESSAGE value="pools.h testing with MSYS" />
     <MESSAGE value="EXIT_FAILURE is malloc fails" />
     <MESSAGE value="nothing" />
-    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
+    <MESSAGE value="added tortoise.png to media.csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tortoise.png to media.csv" />
   </component>
 </project>

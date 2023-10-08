@@ -64,3 +64,4 @@ int Load_Media();
 /** Lookup sprite with intention of drawing to screen */
 sfSprite* bbAnimation_getSprite(int animation_int, int angle_int, int frame_int);
 
+int bbAnimation_print_data(int animation_int);

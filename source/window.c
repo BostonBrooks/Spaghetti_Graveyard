@@ -40,8 +40,8 @@ int Window_Init(void){
     position.x = 0;
     position.y = 0;
 
-    sfWindow_setPosition(window, position);
-    //assert(window != 0);
+    sfRenderWindow_setPosition(window, position);
+
     sfRenderWindow_setFramerateLimit(window, 0);
     
     sfColor beige = COLOUR_BEIGE;
