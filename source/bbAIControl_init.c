@@ -55,7 +55,7 @@
 
 #include "../AI/AI_null.h"
 #include "../AI/AI_fox.h"
-#include "../AI/AI_snail.h"
+#include "../AI/AI_Yeti.h"
 #include "../AI/PLAYER.h"
 
 
@@ -85,9 +85,9 @@ bbAI_update_vtable[AI_FOX] = AI_fox_update;
 bbAI_RPC_vtable[AI_FOX] = AI_fox_RPC;
 
 
-bbAI_constructor_vtable[AI_SNAIL] = AI_snail_new;
-bbAI_update_vtable[AI_SNAIL] = AI_snail_update;
-bbAI_RPC_vtable[AI_SNAIL] = AI_snail_RPC;
+bbAI_constructor_vtable[AI_YETI] = AI_yeti_new;
+bbAI_update_vtable[AI_YETI] = AI_yeti_update;
+bbAI_RPC_vtable[AI_YETI] = AI_yeti_RPC;
 
 
 bbAI_constructor_vtable[PLAYER_20230829] = PLAYER_20230829_new;

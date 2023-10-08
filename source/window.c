@@ -35,7 +35,12 @@ int Window_Init(void){
     sfVideoMode mode = {WINDOW_WIDTH, WINDOW_HEIGHT, 32};
     
     window = sfRenderWindow_create(mode, "Maths RPG", sfResize | sfClose, NULL);
-    
+
+    sfVector2i position;
+    position.x = 0;
+    position.y = 0;
+
+    sfWindow_setPosition(window, position);
     //assert(window != 0);
     sfRenderWindow_setFramerateLimit(window, 0);
     

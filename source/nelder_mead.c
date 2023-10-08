@@ -35,7 +35,7 @@ bbMapCoords nelder_mead (int drawable_int){
     float gamma = 2;   //scale of expanded reflection
     float delta = 0.5; //scale of triangle shrinkage
     
-    int initial_size = POINTS_PER_PIXEL; //TODO try increasing initial size
+    int initial_size = 8 * POINTS_PER_PIXEL; //TODO try increasing initial size
     
   //vertices
   
@@ -58,14 +58,9 @@ bbMapCoords nelder_mead (int drawable_int){
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
     xh = xs = xl = drawable->location;
-    
+
     xh.i += initial_size;
-    xh.j += initial_size;
-
-    xh.i -= initial_size;
-    xh.j += initial_size;
-
-    xs.j -= initial_size;
+    xs.j += initial_size;
     
     fh = sum_potential_Nearby(drawable_int, xh);
     fs = sum_potential_Nearby(drawable_int, xs);

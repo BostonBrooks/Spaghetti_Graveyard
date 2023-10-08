@@ -214,8 +214,8 @@ float sum_potential_Nearby(int drawable_A_int, bbMapCoords test_point){
     
     if (i_min < 0) i_min = 0;
     if (j_min < 0) j_min = 0;
-    if (i_max >= SQUARES_PER_MAP ) i_max = SQUARES_PER_MAP -1;
-    if (j_max >= SQUARES_PER_MAP ) j_max = SQUARES_PER_MAP -1;
+    if (i_max >= SQUARES_PER_MAP ) i_max = SQUARES_PER_MAP;
+    if (j_max >= SQUARES_PER_MAP ) j_max = SQUARES_PER_MAP;
     
     float output = 0;
     float temp;

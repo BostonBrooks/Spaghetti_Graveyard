@@ -18,11 +18,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="EXIT_FAILURE is malloc fails">
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="nothing">
+      <change afterPath="$PROJECT_DIR$/source/sum_forces.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/system_includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/system_includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_snail.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Yeti.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/constants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbAIControl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl_init.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/nelder_mead.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/nelder_mead.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/prompt.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/prompt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/potential_fields.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/potential_fields.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/window.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +148,8 @@
       <workItem from="1695995822184" duration="97000" />
       <workItem from="1696398815214" duration="4438000" />
       <workItem from="1696572737370" duration="6000" />
+      <workItem from="1696722893833" duration="44000" />
+      <workItem from="1696723630740" duration="4057000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -231,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696402216582</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="nothing">
+      <option name="closed" value="true" />
+      <created>1696673186645</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696673186645</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +259,28 @@
     <isAutomaticFoundErrors value="true" />
     <isAutomaticFoundErrors value="true" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
@@ -253,6 +291,7 @@
     <MESSAGE value="Fiddling around with file paths, compiling externally with MSYS" />
     <MESSAGE value="pools.h testing with MSYS" />
     <MESSAGE value="EXIT_FAILURE is malloc fails" />
-    <option name="LAST_COMMIT_MESSAGE" value="EXIT_FAILURE is malloc fails" />
+    <MESSAGE value="nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
   </component>
 </project>

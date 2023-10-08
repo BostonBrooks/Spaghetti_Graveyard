@@ -34,7 +34,7 @@
 #include "../headers/angles.h"
 #endif
 
-int AI_snail_new(bbMapCoords mc){
+int AI_yeti_new(bbMapCoords mc){
 
     //#ifdef DEBUG  
     //printf("Creating a null AI object\n");
@@ -77,7 +77,7 @@ int AI_snail_new(bbMapCoords mc){
     
     }
 
-    aicontroller->external_state  = AI_SNAIL;
+    aicontroller->external_state  = AI_YETI;
     aicontroller->internal_state  = 0;
     
     aicontroller->clock           = 0;
@@ -88,7 +88,7 @@ int AI_snail_new(bbMapCoords mc){
     return aicontroller_int;
 }
 
-int AI_snail_update(bbAIControl* aicontroller){
+int AI_yeti_update(bbAIControl* aicontroller){
 
     //#ifdef DEBUG  
     //printf("Updating a null AI object\n");
@@ -153,7 +153,7 @@ int AI_snail_update(bbAIControl* aicontroller){
 
 }
 
-int AI_snail_RPC (bbAIControl* aicontroller, bbMessage* message){
+int AI_yeti_RPC (bbAIControl* aicontroller, bbMessage* message){
 
     return 0; //what does the return value signify?
 }
