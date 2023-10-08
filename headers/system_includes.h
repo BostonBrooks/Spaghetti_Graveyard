@@ -17,3 +17,4 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
+#include <err.h>

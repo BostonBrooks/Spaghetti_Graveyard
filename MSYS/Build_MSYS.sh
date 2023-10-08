@@ -34,7 +34,7 @@ Color_Off='\033[0m'
   ../source/prompt.c\
   ../source/viewport.c\
   ../source/window.c\
-  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm; 
+  -lcsfml-system -lcsfml-graphics -lcsfml-window -g -w -lm;
   then
     echo "Compile Succeeded:"
     ./a.exe

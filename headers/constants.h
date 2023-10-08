@@ -150,9 +150,8 @@
 
 #define AI_NULL                     0
 #define AI_FOX                      1
-#define AI_SNAIL                    2
+#define AI_YETI                     2
 #define AI_JELLY                    3
-#define AI_YETTI                    4
 
 
 
