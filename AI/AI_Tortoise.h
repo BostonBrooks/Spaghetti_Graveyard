@@ -4,6 +4,12 @@
 #include "../headers/system_includes.h"
 #endif
 
+
+#ifndef ANGLES
+#define ANGLES
+#include "../headers/angles.h"
+#endif
+
 #ifndef CONSTANTS
 #define CONSTANTS
 #include "../headers/constants.h"
@@ -102,6 +108,17 @@ int AI_tortoise_update(bbAIControl* aicontroller){
 
     bbMapCoords target_location = viewpoint;
 
+    int i = viewpoint.i - drawable->location.i;
+    int j = viewpoint.j - drawable->location.j;
+
+    int angle = angles_32(i, j);
+
+    //#ifdef DEBUG
+    //printf("Angle = %d\n", angle);
+    //#endif
+
+    drawable->angle[0] = angle;
+
     float delta_i = target_location.i - location.i;
     float delta_j = target_location.j - location.j;
 
@@ -115,14 +132,12 @@ int AI_tortoise_update(bbAIControl* aicontroller){
     location.i += delta_i;
     location.j += delta_j;
 
-    drawable->location = location;
-
 
     bbFloat3D forces = sum_forces_Nearby(drawable_int, location);
 
-    #ifdef DEBUG
-    printf("forces.i = %f, forces.j = %f]\n", forces.i, forces.j);
-    #endif
+    //#ifdef DEBUG
+    //printf("forces.i = %f, forces.j = %f]\n", forces.i, forces.j);
+    //#endif
 
     location.i += forces.i;
     location.j += forces.j;
