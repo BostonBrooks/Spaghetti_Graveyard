@@ -41,8 +41,10 @@ bbFloat3D (*force_shape_vtable[NUMBER_OF_AVOIDANCE_SHAPES])(int drawable_A_int, 
 
 float force_untuned(float dist){
 
-    dist /= 50000;
-    return (1/(dist*dist));
+
+    return -dist / (1+fabs(dist)) + 1;
+    //dist /= 50000;
+    //return (1/(dist*dist));
 
 }
 
