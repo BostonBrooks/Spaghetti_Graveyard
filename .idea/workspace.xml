@@ -19,16 +19,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="added tortoise.png to media.csv">
-      <change afterPath="$PROJECT_DIR$/media/.~lock.media.csv#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AI/AI_Tortoise.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/sum_forces.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/AI_null.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_null.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/media.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/media.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/all_includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/all_includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/constants.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media/media.csv" beforeDir="false" afterPath="$PROJECT_DIR$/media/media.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/save csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/media.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/media.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/window.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbAIControl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/sum_forces.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/sum_forces.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +83,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bbroo/CLionProjects/Spaghetti_Graveyard/source&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/boston-brooks/CLionProjects/Spaghetti_Graveyard/headers&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -99,10 +99,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/headers" />
+      <recent name="$PROJECT_DIR$/AI" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\source" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\test" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\MSYS" />
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\headers" />
     </key>
   </component>
   <component name="RunManager">
@@ -166,7 +167,8 @@
       <workItem from="1696572737370" duration="6000" />
       <workItem from="1696722893833" duration="44000" />
       <workItem from="1696723630740" duration="4057000" />
-      <workItem from="1696758596068" duration="5373000" />
+      <workItem from="1696758596068" duration="5507000" />
+      <workItem from="1696817404232" duration="4371000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -272,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696757579134</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added tortoise.png to media.csv">
+      <option name="closed" value="true" />
+      <created>1696765113928</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696765113928</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

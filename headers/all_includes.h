@@ -127,6 +127,11 @@
 #include "../headers/system_includes.h"
 #endif
 
+#ifndef SUM_FORCES
+#define SUM_FORCES
+#include "../headers/sum_forces.h"
+#endif
+
 #ifndef VIEWPORT
 #define VIEWPORT
 #include "../headers/viewport.h"

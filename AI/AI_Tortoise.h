@@ -29,17 +29,28 @@
 #include "../headers/bbDrawable.h"
 #endif
 
-int AI_null_new(bbMapCoords mc){
+#ifndef BBDRAWABLE
+#define BBDRAWABLE
+#include "../headers/bbDrawable.h"
+#endif
+
+
+#ifndef SUM_FORCES
+#define SUM_FORCES
+#include "../headers/sum_forces.h"
+#endif
+
+int AI_tortoise_new(bbMapCoords mc){
 
     //#ifdef DEBUG  
-    //printf("Creating a null AI object\n");
+    //printf("Creating a tortoise AI object\n");
     //#endif
     
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
-    drawable->animation[0] = 16;
-    drawable->angle[0] = 0;
+    drawable->animation[0] = 19;
+    drawable->angle[0] = rand() % 32;
     drawable->frame[0] = 0;
     drawable->drawfunction[0] = DRAW_BASIC;
     drawable->start_time = 0;
@@ -67,7 +78,7 @@ int AI_null_new(bbMapCoords mc){
     
     }
 
-    aicontroller->external_state  = AI_NULL;
+    aicontroller->external_state  = AI_TORTOISE;
     aicontroller->internal_state  = 0;
     
     aicontroller->clock           = 0;
@@ -78,17 +89,55 @@ int AI_null_new(bbMapCoords mc){
     return aicontroller_int;
 }
 
-int AI_null_update(bbAIControl* aicontroller){
+int AI_tortoise_update(bbAIControl* aicontroller){
 
     //#ifdef DEBUG
-    //printf("Updating a null AI object\n");
+    //printf("Updating a tortoise AI object\n");
     //#endif
+
+    int drawable_int = aicontroller->drawables[0];
+    bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
+    bbMapCoords location = drawable->location;
+
+
+    bbMapCoords target_location = viewpoint;
+
+    float delta_i = target_location.i - location.i;
+    float delta_j = target_location.j - location.j;
+
+    float distance = sqrt(delta_i * delta_i + delta_j * delta_j);
+
+    float speed = 4;
+
+    delta_i = (delta_i * speed) / distance;
+    delta_j = (delta_j * speed) / distance;
+
+    location.i += delta_i;
+    location.j += delta_j;
+
+    drawable->location = location;
+
+
+    bbFloat3D forces = sum_forces_Nearby(drawable_int, location);
+
+    #ifdef DEBUG
+    printf("forces.i = %f, forces.j = %f]\n", forces.i, forces.j);
+    #endif
+
+    location.i += forces.i;
+    location.j += forces.j;
+
+
+    bbMapCoords_updateElevation(&location);
+
+
+    message_movement_new(drawable_int, location);
 
     return NO_RETHUNK;
 
 }
 
-int AI_null_RPC (bbAIControl* aicontroller, bbMessage* message){
+int AI_tortoise_RPC (bbAIControl* aicontroller, bbMessage* message){
 
     return 0; //what does the return value signify?
 }

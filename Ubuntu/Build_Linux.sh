@@ -29,6 +29,7 @@ Color_Off='\033[0m'
   ../source/nelder_mead.c\
   ../source/potential_fields.c\
   ../source/prompt.c\
+  ../source/sum_forces.c\
   ../source/viewport.c\
   ../source/window.c\
   -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm -w;

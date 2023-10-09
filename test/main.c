@@ -84,10 +84,10 @@ int Test_All(void){
     
     Load_Media();
 
-    #ifdef DEBUG
-    bbAnimation_print_data(18);
-    bbAnimation_print_data(19);
-    #endif
+    //#ifdef DEBUG
+    //bbAnimation_print_data(18);
+    //bbAnimation_print_data(19);
+    //#endif
 
     #ifdef VERBOSE
         printf("bbTerrainSquare_initAll();\n");
@@ -143,6 +143,7 @@ int Test_All(void){
     #endif
     
     potential_avoidance_initShapes();
+    Sum_Forces_initShapes();
     
     #ifdef VERBOSE
         printf("Create_Ground_Shaders();\n");
@@ -191,7 +192,7 @@ int Test_All(void){
         
         bbMapCoords_updateElevation(&mc);
     
-        bbAI_constructor_vtable[AI_NULL](mc);
+        bbAI_constructor_vtable[AI_TORTOISE](mc);
         
         //#ifdef DEBUG
         //printf("AI pool head = %d, AI pool tail = %d\n", bbAIControl_Pool_In_Use_Head, bbAIControl_Pool_In_Use_Tail);

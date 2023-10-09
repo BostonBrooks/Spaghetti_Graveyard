@@ -36,18 +36,19 @@
 
 //-----------------------------GLOBALS----------------------------//
 
-float (*force_shape_vtable[NUMBER_OF_AVOIDANCE_SHAPES])(int drawable_A_int, int drawable_B_int, bbMapCoords test_point);
+bbFloat3D (*force_shape_vtable[NUMBER_OF_AVOIDANCE_SHAPES])(int drawable_A_int, int drawable_B_int, bbMapCoords test_point);
 
 
 float force_untuned(float dist){
 
+    dist /= 50000;
     return (1/(dist*dist));
 
 }
 
 float force (float distance){
 
-    float magnitude = 1;
+    float magnitude = 0.001;
     float stiffness = 5;
     float offset = 0;
 
@@ -56,7 +57,7 @@ float force (float distance){
     return(return_value);
 }
 
-bbFloat3 Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
+bbFloat3D Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
 
 //drawable_A is the object being repelled
 //drawable_B is the object doing the repelling,
@@ -96,7 +97,7 @@ bbFloat3 Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords tes
 
 }
 
-bbFloat3 Square_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
+bbFloat3D Square_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
 
     bbFloat3D vector_force;
     vector_force.i = 0;
@@ -104,7 +105,7 @@ bbFloat3 Square_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_
 
     return vector_force;
 }
-bbFloat3 Line_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
+bbFloat3D Line_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
 
     bbFloat3D vector_force;
     vector_force.i = 0;
@@ -112,7 +113,7 @@ bbFloat3 Line_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_po
 
     return vector_force;
 }
-bbFloat3 Rectangle_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
+bbFloat3D Rectangle_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
 
     bbFloat3D vector_force;
     vector_force.i = 0;
@@ -121,7 +122,7 @@ bbFloat3 Rectangle_Force (int drawable_A_int, int drawable_B_int, bbMapCoords te
     return vector_force;
 }
 
-bbFloat3 Polygon_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
+bbFloat3D Polygon_Force (int drawable_A_int, int drawable_B_int, bbMapCoords test_point) {
 
     bbFloat3D vector_force;
     vector_force.i = 0;
@@ -142,7 +143,7 @@ int Sum_Forces_initShapes(void){
 
 }
 
-bbFloat3 sum_forces_per_square(int drawable_A_int, bbMapCoords test_point, int Square_i, int Square_j){
+bbFloat3D sum_forces_per_square(int drawable_A_int, bbMapCoords test_point, int Square_i, int Square_j){
 
 //drawable_A is the object being repelled, drawable_B is the object doing the repelling,
 //test_point is the hypothetical position where drawable_A is located.

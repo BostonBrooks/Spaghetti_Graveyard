@@ -152,7 +152,7 @@
 #define AI_FOX                      1
 #define AI_YETI                     2
 #define AI_JELLY                    3
-
+#define AI_TORTOISE                 4
 
 
 #define PLAYER_BOW_IDLE             5
