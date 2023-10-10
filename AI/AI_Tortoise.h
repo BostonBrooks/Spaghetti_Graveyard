@@ -104,12 +104,12 @@ int AI_tortoise_update(bbAIControl* aicontroller){
     int drawable_int = aicontroller->drawables[0];
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
     bbMapCoords location = drawable->location;
-
+    bbMapCoords new_location = location;
 
     bbMapCoords target_location = viewpoint;
 
-    int i = viewpoint.i - drawable->location.i;
-    int j = viewpoint.j - drawable->location.j;
+    int i = viewpoint.i - location.i;
+    int j = viewpoint.j - location.j;
 
     int angle = angles_32(i, j);
 
@@ -126,27 +126,42 @@ int AI_tortoise_update(bbAIControl* aicontroller){
 
     float speed = 4;
 
-    delta_i = (delta_i * speed) / distance;
-    delta_j = (delta_j * speed) / distance;
+    if (distance < speed){
 
-    location.i += delta_i;
-    location.j += delta_j;
+        new_location.i = target_location.i;
+        new_location.j = target_location.j;
+    } else {
 
+        delta_i = (delta_i * speed) / distance;
+        delta_j = (delta_j * speed) / distance;
 
+        new_location.i += delta_i;
+        new_location.j += delta_j;
+
+    }
     bbFloat3D forces = sum_forces_Nearby(drawable_int, location);
 
     //#ifdef DEBUG
     //printf("forces.i = %f, forces.j = %f]\n", forces.i, forces.j);
     //#endif
 
-    location.i += forces.i;
-    location.j += forces.j;
+    new_location.i += forces.i;
+    new_location.j += forces.j;
 
+#ifdef DEBUG
+    int movement_i = new_location.i - location.i;
+    int movement_j = new_location.j - location.j;
 
-    bbMapCoords_updateElevation(&location);
+    float movement_scalar = sqrt( movement_i * movement_i + movement_j * movement_j);
+    float delta_scalar = sqrt( delta_i * delta_i + delta_j * delta_j);
+    float forces_scalar = sqrt( forces.i * forces.i + forces.j * forces.j);
 
-
-    message_movement_new(drawable_int, location);
+    if (movement_scalar > POINTS_PER_TILE) {
+        printf("movement = %f, delta = %f, forces = %f\n", movement_scalar, delta_scalar, forces_scalar);
+    sleep(60);
+    }
+#endif
+    message_movement_new(drawable_int, new_location);
 
     return NO_RETHUNK;
 

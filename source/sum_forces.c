@@ -39,19 +39,20 @@
 bbFloat3D (*force_shape_vtable[NUMBER_OF_AVOIDANCE_SHAPES])(int drawable_A_int, int drawable_B_int, bbMapCoords test_point);
 
 
-float force_untuned(float dist){
+float force_untuned(float x){
 
 
-    return -dist / (1+fabs(dist)) + 1;
-    //dist /= 50000;
-    //return (1/(dist*dist));
+    return -x / (1+fabs(x)) + 1;
+
+
 
 }
 
+
 float force (float distance){
 
-    float magnitude = 0.001;
-    float stiffness = 5;
+    float magnitude = 2;
+    float stiffness = 20;
     float offset = 0;
 
     float return_value = magnitude * force_untuned(distance * stiffness + offset);
@@ -84,14 +85,26 @@ bbFloat3D Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords te
     int delta_j = test_point.j - drawable_B_j;
 
     float distance =  sqrt(delta_i * delta_i + delta_j*delta_j);
+
+    bbFloat3D vector_force;
+    if (distance < 8){ //TODO fixes glitchiness but there shouldnt be no force when drawables are too close together.
+
+        vector_force.i = 0;
+        vector_force.j = 0;
+
+        return vector_force;
+
+    }
+
     float gap = distance - drawable_A_radius - drawable_B_radius;
 
     float scalar_force = force(gap);
 
+
     float normal_i = delta_i / distance;
     float normal_j = delta_j / distance;
 
-    bbFloat3D vector_force;
+
     vector_force.i = scalar_force * normal_i;
     vector_force.j = scalar_force * normal_j;
 
@@ -181,6 +194,12 @@ bbFloat3D sum_forces_per_square(int drawable_A_int, bbMapCoords test_point, int 
                 temp = force_shape_vtable[drawable_B->shape]
                         (drawable_A_int, drawable_B_int, test_point);
 
+//#ifdef DEBUG
+//                float scalar_temp = sqrt(temp.i * temp.i + temp.j *temp.j );
+//
+//                printf("repulsion from individual drawable = %f\n", scalar_temp);
+//#endif
+
                 output.i += temp.i;
                 output.j += temp.j;
 
@@ -237,10 +256,22 @@ bbFloat3D sum_forces_Nearby(int drawable_A_int, bbMapCoords test_point){
 
             output.i += temp.i;
             output.j += temp.j;
+
+//#ifdef DEBUG
+//            float temp_scalar = sqrt(temp.i * temp.i + temp.j * temp.j);
+//            printf("temp_scaler = %f\n", temp_scalar);
+//#endif
+
         }
 
     }
 
+//#ifdef DEBUG
+//    float output_scalar = sqrt(output.i * output.i + output.j * output.j);
+//
+//    //if (output_scalar > POINTS_PER_TILE)
+//        printf("output_scalar = %f\n", output_scalar);
+//#endif
 
     return output;
 

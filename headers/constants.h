@@ -11,14 +11,14 @@
 
 
 #define SHOWTIMING
-#define VERBOSE
+//#define VERBOSE
 #define DEBUG
 
 #define FASTLOAD
 //skips slow rendering of hillshading to speed up loading of game
 
 
-
+//#define LIMIT_FRAMERATE
 
 //-----------------------------PLACEHOLDERS----------------------------//
 
@@ -153,14 +153,8 @@
 #define AI_YETI                     2
 #define AI_JELLY                    3
 #define AI_TORTOISE                 4
-
-
-#define PLAYER_BOW_IDLE             5
-#define PLAYER_BOW_MOVING	    6
-#define PLAYER_BOW_APPROACHING      7
-#define PLAYER_BOW_QUESTION         8
-#define PLAYER_BOW_WAIT             9   
-#define PLAYER_BOW_SHOOT            10
+#define PLAYER_BOW                  5
+#define PLAYER_SWORD                6
 
 #define PLAYER_20230829             11
 
@@ -168,9 +162,11 @@
 
 #define NUMBER_OF_INNER_STATES     TBA
 
-#define COW_IDLE                   0
-#define COW_APPROACHING            1
-#define COW_ATTACKING              2
+#define STATE_IDLE                 0
+#define STATE_MOVING               1
+#define STATE_APPROACHING          2
+#define STATE_ATTACKING            3
+#define STATE_DEAD                 4
 
 
 //-----------------------------MESSAGES---------------------------------//

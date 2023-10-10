@@ -96,9 +96,9 @@ bbAI_update_vtable[AI_TORTOISE] = AI_tortoise_update;
 bbAI_RPC_vtable[AI_TORTOISE] = AI_tortoise_RPC;
 
 
-bbAI_constructor_vtable[PLAYER_20230829] = PLAYER_20230829_new;
-bbAI_update_vtable[PLAYER_20230829] = PLAYER_20230829_update;
-bbAI_RPC_vtable[PLAYER_20230829] = PLAYER_20230829_RPC;
+bbAI_constructor_vtable[PLAYER_20230829] = PLAYER_new;
+bbAI_update_vtable[PLAYER_20230829] = PLAYER_update;
+bbAI_RPC_vtable[PLAYER_20230829] = PLAYER_RPC;
 }
 
 

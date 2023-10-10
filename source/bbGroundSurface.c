@@ -394,15 +394,19 @@ int Create_Ground_Shaders (void){
     
     
     GroundShader = sfShader_createFromMemory(vertShader, NULL, fragShader);
-    printf("ground shader problem?\n");
+
+//#ifdef DEBUG
+//    printf("ground shader problem?\n");
+//#endif
     assert (GroundShader != NULL);
     GroundRenderer.shader = GroundShader;
     GroundRenderer.blendMode = sfBlendAlpha;
     GroundRenderer.transform = sfTransform_Identity;
     GroundRenderer.texture = null_texture;
-    
-    printf("No ground shader problem.\n");
-    
+
+//#ifdef DEBUG
+//    printf("No ground shader problem.\n");
+//#endif
 
 
 }
