@@ -98,12 +98,12 @@
 
 #ifndef MOVE_TOWARDS
 #define MOVE_TOWARDS
-#include "../headers/move_towards.h"
+#include "../headers/move_towards_deprecated.h"
 #endif
 
 #ifndef NELDER_MEAD
 #define NELDER_MEAD
-#include "../headers/nelder_mead.h"
+#include "../headers/nelder_mead_deprecated.h"
 #endif
 
 #ifndef POOLS
@@ -114,7 +114,7 @@
 
 #ifndef POTENTIAL_FIELDS
 #define POTENTIAL_FIELDS
-#include "../headers/potential_fields.h"
+#include "../headers/potential_fields_deprecated.h"
 #endif
 
 #ifndef PROMPT

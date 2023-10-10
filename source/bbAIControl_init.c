@@ -43,7 +43,7 @@
 
 #ifndef NELDER_MEAD
 #define NELDER_MEAD
-#include "../headers/nelder_mead.h"
+#include "../headers/nelder_mead_deprecated.h"
 #endif
 
 #ifndef ANGLES

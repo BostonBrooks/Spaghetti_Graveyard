@@ -16,7 +16,7 @@
 
 #ifndef POTENTIAL_FIELDS
 #define POTENTIAL_FIELDS
-#include "../headers/potential_fields.h"
+#include "../headers/potential_fields_deprecated.h"
 #endif
 
 #ifndef BBDRAWABLE
