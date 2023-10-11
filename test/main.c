@@ -192,7 +192,7 @@ int Test_All(void){
         
         bbMapCoords_updateElevation(&mc);
     
-        bbAI_constructor_vtable[AI_TORTOISE](mc);
+        bbAI_constructor_vtable[AI_COW](mc);
         
         //#ifdef DEBUG
         //printf("AI pool head = %d, AI pool tail = %d\n", bbAIControl_Pool_In_Use_Head, bbAIControl_Pool_In_Use_Tail);

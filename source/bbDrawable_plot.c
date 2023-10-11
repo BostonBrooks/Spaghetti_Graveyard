@@ -361,6 +361,10 @@ int repeatdraw(bbDrawable* tobedrawn, int i){
 //    printf("position.x = %f, position.y = %f\n", position.x, position.y);
 //#endif
 
+#ifdef DEBUG
+    printf("animation = %d, angle = %d, frame = %d\n", animation, angle, frame);
+#endif
+
     sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
 
 //#ifdef DEBUG

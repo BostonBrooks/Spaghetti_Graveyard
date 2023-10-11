@@ -273,7 +273,10 @@ int Load_Media(){
     }
     
     return_value = fscanf(Media, "%*[^\n]\n%*[^\n]\n\"End:\"%*[^\n]");
-    assert (return_value == 0);
+    if (return_value == 0){
+        printf("vaddress = %d\n", VAddress);
+        assert(0==1);
+    };
     
     
     fclose(Media);

@@ -57,6 +57,7 @@
 #include "../AI/AI_fox.h"
 #include "../AI/AI_Yeti.h"
 #include "../AI/AI_Tortoise.h"
+#include "../AI/AI_Cow.h"
 #include "../AI/PLAYER.h"
 
 
@@ -76,29 +77,33 @@ int bbAIControl_init(){
 //initialise table of ai functions
 //initialise table of RPCs
 
-bbAI_constructor_vtable[AI_NULL] = AI_null_new;
-bbAI_update_vtable[AI_NULL] = AI_null_update;
-bbAI_RPC_vtable[AI_NULL] = AI_null_RPC;
+    bbAI_constructor_vtable[AI_NULL] = AI_null_new;
+    bbAI_update_vtable[AI_NULL] = AI_null_update;
+    bbAI_RPC_vtable[AI_NULL] = AI_null_RPC;
 
 
-bbAI_constructor_vtable[AI_FOX] = AI_fox_new;
-bbAI_update_vtable[AI_FOX] = AI_fox_update;
-bbAI_RPC_vtable[AI_FOX] = AI_fox_RPC;
+    bbAI_constructor_vtable[AI_FOX] = AI_fox_new;
+    bbAI_update_vtable[AI_FOX] = AI_fox_update;
+    bbAI_RPC_vtable[AI_FOX] = AI_fox_RPC;
 
 
-bbAI_constructor_vtable[AI_YETI] = AI_yeti_new;
-bbAI_update_vtable[AI_YETI] = AI_yeti_update;
-bbAI_RPC_vtable[AI_YETI] = AI_yeti_RPC;
+    bbAI_constructor_vtable[AI_YETI] = AI_yeti_new;
+    bbAI_update_vtable[AI_YETI] = AI_yeti_update;
+    bbAI_RPC_vtable[AI_YETI] = AI_yeti_RPC;
 
 
-bbAI_constructor_vtable[AI_TORTOISE] = AI_tortoise_new;
-bbAI_update_vtable[AI_TORTOISE] = AI_tortoise_update;
-bbAI_RPC_vtable[AI_TORTOISE] = AI_tortoise_RPC;
+    bbAI_constructor_vtable[AI_TORTOISE] = AI_tortoise_new;
+    bbAI_update_vtable[AI_TORTOISE] = AI_tortoise_update;
+    bbAI_RPC_vtable[AI_TORTOISE] = AI_tortoise_RPC;
+
+    bbAI_constructor_vtable[AI_COW] = AI_cow_new;
+    bbAI_update_vtable[AI_COW] = AI_cow_update;
+    bbAI_RPC_vtable[AI_COW] = AI_cow_RPC;
 
 
-bbAI_constructor_vtable[PLAYER_20230829] = PLAYER_new;
-bbAI_update_vtable[PLAYER_20230829] = PLAYER_update;
-bbAI_RPC_vtable[PLAYER_20230829] = PLAYER_RPC;
+    bbAI_constructor_vtable[PLAYER_20230829] = PLAYER_new;
+    bbAI_update_vtable[PLAYER_20230829] = PLAYER_update;
+    bbAI_RPC_vtable[PLAYER_20230829] = PLAYER_RPC;
 }
 
 

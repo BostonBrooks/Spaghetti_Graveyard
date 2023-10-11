@@ -14,7 +14,7 @@
 //#define VERBOSE
 #define DEBUG
 
-#define FASTLOAD
+//#define FASTLOAD
 //skips slow rendering of hillshading to speed up loading of game
 
 
@@ -153,8 +153,9 @@
 #define AI_YETI                     2
 #define AI_JELLY                    3
 #define AI_TORTOISE                 4
-#define PLAYER_BOW                  5
-#define PLAYER_SWORD                6
+#define AI_COW                      5
+#define PLAYER_BOW                  6
+#define PLAYER_SWORD                7
 
 #define PLAYER_20230829             11
 
