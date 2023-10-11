@@ -54,14 +54,16 @@
     int health_bar_length;
     
     int cosmetic_radius;
-
     int animation[ANIMATIONS_PER_DRAWABLE];
     int angle[ANIMATIONS_PER_DRAWABLE];
     int frame[ANIMATIONS_PER_DRAWABLE];
     int drawfunction[ANIMATIONS_PER_DRAWABLE];
     int start_time; //frame = ((current time - start time)/framerate)%frames
-    
-/* Avoidance Data */
+
+    int skin;
+
+
+     /* Avoidance Data */
     
     float avoidance_radius;
     float mass;

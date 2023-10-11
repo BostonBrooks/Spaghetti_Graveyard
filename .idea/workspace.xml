@@ -18,7 +18,51 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="Software got confused.&#10;Backed up files.&#10;Reset to main.&#10;Replaced old files with modified files." />
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="Software got confused.&#10;Backed up files.&#10;Reset to main.&#10;Replaced old files with modified files.">
+      <change afterPath="$PROJECT_DIR$/graphics/Balloons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Bowman.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Decal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Decal2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Diablo_2_Abominable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Generating.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Lights0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Lights1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Lights2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Lights3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Lights4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Lights5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/NULL.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Shadows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Snails.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Sphere.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Splash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/SpriteSheet.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Terrain (copy).bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Terrain.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Tree.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/VP_Test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Yeti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tortoise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/bbSkin.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps/map0/Animations.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps/map0/HeightMap.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/bbSkin.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSYS/MSYS_pools_verbose.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/MSYS_pools_verbose.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSYS/MSYS_test_pools.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/MSYS_test_pools.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ubuntu/Linux_test_pools.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Linux_test_pools.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/bbDrawable.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbDrawable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/constants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/media.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/media.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbDrawable.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/geometry.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/geometry.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/media.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/media.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/prompt.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/prompt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,13 +137,11 @@
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\test" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\MSYS" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/maps/map0" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />

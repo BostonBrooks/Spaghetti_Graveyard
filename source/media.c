@@ -146,7 +146,7 @@ int Load_Media(){
     //#endif
 
 
-    FILE* Media = fopen("../media/media.csv", "r");
+    FILE* Media = fopen("../maps/map0/media.csv", "r");
     assert(Media != NULL);
     
     int return_value;

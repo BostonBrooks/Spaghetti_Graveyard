@@ -33,7 +33,7 @@ int Test_All(void){
     sfColor dark_brown = COLOUR_DARKBROWN;
     sfVector2f position = {50, 440};
     
-    sfFont* font = sfFont_createFromFile("../media/Bowman.ttf");
+    sfFont* font = sfFont_createFromFile("../graphics/Bowman.ttf");
     if (!font) return EXIT_FAILURE;
     sfText* text = sfText_create();
     sfText_setString(text, "Hello Spaghetti Graveyard!");

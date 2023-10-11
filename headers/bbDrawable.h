@@ -63,6 +63,9 @@
     int frame[ANIMATIONS_PER_DRAWABLE];
     int drawfunction[ANIMATIONS_PER_DRAWABLE];
     int start_time; //frame = ((current time - start time)/framerate)%frames
+
+
+    int skin;
     
 /* Avoidance Data */
     

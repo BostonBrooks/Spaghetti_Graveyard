@@ -53,7 +53,7 @@ int collumn = 0;
 
 int prompt_init(void){
 
-    prompt_font = sfFont_createFromFile("../media/Bowman.ttf");
+    prompt_font = sfFont_createFromFile("../graphics/Bowman.ttf");
     if (!prompt_font)
         return EXIT_FAILURE;
 

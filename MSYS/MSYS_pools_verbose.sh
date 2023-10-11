@@ -28,9 +28,9 @@ Color_Off='\033[0m'
   ../source/input.c\
   ../source/interpolation.c\
   ../source/media.c\
-  ../source/move_towards.c\
-  ../source/nelder_mead.c\
-  ../source/potential_fields.c\
+  ../source/move_towards_deprecated.c\
+  ../source/nelder_mead_deprecated.c\
+  ../source/potential_fields_deprecated.c\
   ../source/prompt.c\
   ../source/viewport.c\
   ../source/window.c\
