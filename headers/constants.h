@@ -172,7 +172,6 @@
 
 //-----------------------------SKINS---------------------------------//
 
-#define NUMBER_OF_SKINS              256
 #define INNER_STATES_PER_SKIN        5
 #define ANIMATION_NONE               -1     //the animation slot of the drawable is unused
 #define ANIMATION_SKIN               -2     //the refer to animation for which drawable is used

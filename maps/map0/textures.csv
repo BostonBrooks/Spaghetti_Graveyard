@@ -1,0 +1,29 @@
+"Label:","Virtual Address:","File:","Smooth:","Comment:"
+"Tree_1",0,"../graphics/Tree.png","T",
+"Lights_0",1,"../graphics/Lights0.png","T",
+"Lights_1",2,"../graphics/Lights1.png","T",
+"Lights_2",3,"../graphics/Lights2.png","T",
+"Lights_3",4,"../graphics/Lights3.png","T",
+"Lights_4",5,"../graphics/Lights4.png","T",
+"Lights_5",6,"../graphics/Lights5.png","T",
+"Tree_2",7,"../graphics/Tree.bmp","T",
+"Sprite_Sheet",8,"../graphics/SpriteSheet.bmp","T",
+"Decal",9,"../graphics/Decal.png","F",
+"Splash",10,"../graphics/Splash.png","F",
+"Terrain",11,"../graphics/Terrain.bmp","F",
+"NULL",12,"../graphics/NULL.bmp","T",
+"Sphere",13,"../graphics/Sphere.png","T",
+"Viewport_Test",14,"../graphics/VP_Test.png","T",
+"Loading_Screen",15,"../graphics/Generating.png","F",
+"Shadows",16,"../graphics/Shadows.png","T",
+"Balloons",17,"../graphics/Balloons.png","T",
+"Yeti",18,"../graphics/Yeti.png","F",
+"Snail",19,"../graphics/Snails.png","T",
+"Abominable",20,"../graphics/Diablo_2_Abominable.png","T","Not for release, demo only"
+"Splash_2",21,"../graphics/Decal2.png","F",
+"Tortoise",22,"../graphics/tortoise.png","T",
+"Cow_Move",23,"../graphics/cow_move.png","T","Not for release, demo only"
+"Cow_Hit",24,"../graphics/cow_gethit.png","T","Not for release, demo only"
+"Cow_Attack",25,"../graphics/cow_attack.png","T","Reference only"
+"Cow_Dead",26,"../graphics/cow_dead.png","T","Reference only"
+"Cow_Idle",27,"../graphics/cow_idle.png","T","From Diablo 2"
