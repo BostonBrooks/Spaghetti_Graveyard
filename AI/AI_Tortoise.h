@@ -55,6 +55,7 @@ int AI_tortoise_new(bbMapCoords mc){
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
+    drawable->skin = -1;
     drawable->animation[0] = 19;
     drawable->angle[0] = rand() % 32;
     drawable->frame[0] = 0;

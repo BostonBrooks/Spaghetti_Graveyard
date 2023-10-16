@@ -46,7 +46,8 @@ int AI_fox_new(bbMapCoords mc){
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
     
     
-    // change drawable animation 
+    // change drawable animation
+    drawable->skin = -1;
     drawable->animation[0] = 4;
     drawable->angle[0]     = 0;
     drawable->frame[0]     = 0;

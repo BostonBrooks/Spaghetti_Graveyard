@@ -48,8 +48,9 @@ int PLAYER_new(bbMapCoords mc){
     
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
-    
-    
+
+
+    drawable->skin = -1;
     // change drawable animation 
     drawable->animation[0] = 4;
     drawable->angle[0]     = 0;

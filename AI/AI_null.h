@@ -38,6 +38,7 @@ int AI_null_new(bbMapCoords mc){
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
+    drawable->skin = -1;
     drawable->animation[0] = 16;
     drawable->angle[0] = 0;
     drawable->frame[0] = 0;

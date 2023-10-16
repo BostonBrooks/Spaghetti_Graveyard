@@ -55,6 +55,8 @@ int AI_cow_new(bbMapCoords mc){
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
+    drawable->skin = 0;
+    drawable->state = STATE_IDLE;
     drawable->animation[0] = 24;
     drawable->angle[0] = rand() % 8;
     drawable->frame[0] = 0;

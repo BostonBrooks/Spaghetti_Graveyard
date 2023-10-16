@@ -4,9 +4,12 @@
  * @ingroup
  * @brief each bbSkin contains INNER_STATES_PER_SKIN animations. These are templates the animations used by bbAIControl objects.
  */
+
+#define BBSKIN
+
 typedef struct {
 
-    int drawables_int [INNER_STATES_PER_SKIN][ANIMATIONS_PER_DRAWABLE];
+    int animations_int [INNER_STATES_PER_SKIN][ANIMATIONS_PER_DRAWABLE];
     int drawfunctions_int [INNER_STATES_PER_SKIN][ANIMATIONS_PER_DRAWABLE];
 
 

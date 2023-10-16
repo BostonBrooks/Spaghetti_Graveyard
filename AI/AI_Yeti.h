@@ -39,10 +39,11 @@ int AI_yeti_new(bbMapCoords mc){
     //#ifdef DEBUG  
     //printf("Creating a null AI object\n");
     //#endif
-    
+
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
-    
+
+    drawable->skin = -1;
     drawable->animation[0]     = 18;
     drawable->angle[0]         = rand() % 8;
     drawable->frame[0]         = 0;
