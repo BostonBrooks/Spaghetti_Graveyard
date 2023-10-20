@@ -56,11 +56,11 @@ int AI_cow_new(bbMapCoords mc){
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
     drawable->skin = 0;
-    drawable->state = STATE_IDLE;
+    drawable->state = STATE_DEAD;
     drawable->animation[0] = ANIMATION_SKIN;
     drawable->angle[0] = rand() % 8;
     drawable->frame[0] = 0;
-    drawable->drawfunction[0] = DRAW_REPEAT_SKIN;
+    drawable->drawfunction[0] = DRAW_ONCE_SKIN;
     drawable->start_time = 0;
     drawable->avoidance_radius = POINTS_PER_TILE;
     //#ifdef DEBUG  

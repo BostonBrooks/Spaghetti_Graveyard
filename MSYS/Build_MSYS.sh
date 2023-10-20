@@ -24,6 +24,7 @@ Color_Off='\033[0m'
   ../source/bbMessage_functions.c\
   ../source/bbMessage_passing.c\
   ../source/bbTerrainSquare.c\
+  ../source/bbSkin.c\
   ../source/geometry.c\
   ../source/input.c\
   ../source/interpolation.c\
@@ -32,6 +33,7 @@ Color_Off='\033[0m'
   ../source/nelder_mead_deprecated.c\
   ../source/potential_fields_deprecated.c\
   ../source/prompt.c\
+  ../source/sum_forces.c\
   ../source/viewport.c\
   ../source/window.c\
   -lcsfml-system -lcsfml-graphics -lcsfml-window -g -w -lm;

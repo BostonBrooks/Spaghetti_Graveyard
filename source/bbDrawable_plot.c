@@ -502,6 +502,115 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
     return 0;
 }
 
+int draw_once_skin(bbDrawable* tobedrawn, int i){
+
+//#ifdef DEBUG
+//    printf("before accessing drawable struct\n");
+//#endif
+#ifdef DEBUG
+    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
+#endif
+    int skin_int = -7;
+    int state_int = -11;
+
+    int animation = tobedrawn->animation[i];
+    if (animation == ANIMATION_NONE) return 0;
+    if (animation == ANIMATION_SKIN) {
+
+        //lookup animation from skin
+
+        skin_int = tobedrawn->skin;
+        state_int = tobedrawn->state;
+
+        assert(state_int >= 0 && state_int < INNER_STATES_PER_SKIN);
+
+        animation = bbSkins[skin_int].animations_int[state_int][i];
+        printf("animation = %d\n", animation);
+
+    }
+
+//#ifdef DEBUG
+//    printf("animation = %d\n", animation);
+//#endif
+
+    int angle = tobedrawn->angle[i];
+    int frame = tobedrawn->frame[i];
+
+//#ifdef DEBUG
+//    printf("after accessing drawable struct\n");
+//#endif
+
+
+#ifdef DEBUG
+    printf("1 tobedrawn = %d\n", tobedrawn->Pool_Self);
+#endif
+
+    bbMapCoords mc = tobedrawn->location;
+
+
+//#ifdef DEBUG
+//    printf("mc.i = %d, mc.j = %d, mc.k = %d\n", mc.i, mc.j, mc.k);
+//#endif
+
+    bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
+
+    sfVector2f position;
+    position.x = sc.x;
+    position.y = sc.y;
+
+
+//#ifdef DEBUG
+//    printf("position.x = %f, position.y = %f\n", position.x, position.y);
+//#endif
+
+#ifdef DEBUG
+    printf("i = %d, skin = %d, state = %d, animation = %d, angle = %d, frame = %d\n",i, skin_int,state_int,  animation, angle, frame);
+#endif
+
+#ifdef DEBUG
+    printf("2 tobedrawn = %d\n", tobedrawn->Pool_Self);
+#endif
+
+    sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
+
+
+
+//#ifdef DEBUG
+//    printf("after accessing sfSprite\n");
+//#endif
+
+#ifdef DEBUG
+    printf("3 tobedrawn = %d\n", tobedrawn->Pool_Self);
+#endif
+
+    sfSprite_setPosition(sprite, position);
+
+#ifdef DEBUG
+    printf("4 tobedrawn = %d\n", tobedrawn->Pool_Self);
+#endif
+//#ifdef DEBUG
+//    printf("after modifying sfSprite\n");
+//#endif
+    sfRenderTexture_drawSprite(bbViewport_main, sprite, NULL);
+
+
+
+
+    bbAnimation* anim = bbAnimation_vtable[animation];
+
+    int frames = anim->frames;
+    int framerate = anim->framerate;
+
+    if (tobedrawn->frame[i] < frames*framerate - 1) {
+        tobedrawn->frame[i] = tobedrawn->frame[i] + 1;
+    }
+
+
+
+
+    return 0;
+}
+
 int balloondraw(bbDrawable* tobedrawn, int i){
 
     bbMapCoords mc = tobedrawn->location;
@@ -587,6 +696,7 @@ int bbDrawfunction_initAll(){
     bbDrawfunction_vtable[DRAW_BALLOON] = balloondraw;
     bbDrawfunction_vtable[DRAW_SHADOW] = shadowdraw;
     bbDrawfunction_vtable[DRAW_REPEAT_SKIN] = repeatdraw_skin;
+    bbDrawfunction_vtable[DRAW_ONCE_SKIN] = draw_once_skin;
     
     return 0;
 }

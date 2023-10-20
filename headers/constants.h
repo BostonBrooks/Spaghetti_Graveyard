@@ -132,6 +132,7 @@
 #define DRAW_BALLOON        3
 #define DRAW_SHADOW         4
 #define DRAW_REPEAT_SKIN    5
+#define DRAW_ONCE_SKIN      6
 
 
 //-----------------------------AICONTROLLERS---------------------------------//

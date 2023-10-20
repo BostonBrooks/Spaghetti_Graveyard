@@ -84,7 +84,7 @@ int bbSkin_init() {
     for (int i = 0; i < INNER_STATES_PER_SKIN; i++){
 
 
-        skin->drawfunctions_int[i][0] = DRAW_BASIC;
+        skin->drawfunctions_int[i][0] = DRAW_ONCE_SKIN;
 
         for (int j = 1; j < ANIMATIONS_PER_DRAWABLE; j++){
 
