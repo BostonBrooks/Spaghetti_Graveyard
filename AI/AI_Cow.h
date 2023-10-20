@@ -57,10 +57,10 @@ int AI_cow_new(bbMapCoords mc){
 
     drawable->skin = 0;
     drawable->state = STATE_IDLE;
-    drawable->animation[0] = 24;
+    drawable->animation[0] = ANIMATION_SKIN;
     drawable->angle[0] = rand() % 8;
     drawable->frame[0] = 0;
-    drawable->drawfunction[0] = DRAW_REPEAT;
+    drawable->drawfunction[0] = DRAW_REPEAT_SKIN;
     drawable->start_time = 0;
     drawable->avoidance_radius = POINTS_PER_TILE;
     //#ifdef DEBUG  
@@ -88,7 +88,7 @@ int AI_cow_new(bbMapCoords mc){
     }
 
     aicontroller->external_state  = AI_COW;
-    aicontroller->internal_state  = 0;
+    aicontroller->internal_state  = STATE_IDLE;
     
     aicontroller->clock           = 0;
     aicontroller->clock2          = 0;
@@ -164,10 +164,14 @@ int AI_cow_update(bbAIControl* aicontroller){
     sleep(60);
     }
 #endif
+
+
+    //update elevation of next point
+    bbMapCoords_updateElevation(&new_location);
     message_movement_new(drawable_int, new_location);
 
-    return NO_RETHUNK;
 
+    return NO_RETHUNK;
 }
 
 int AI_cow_RPC (bbAIControl* aicontroller, bbMessage* message){

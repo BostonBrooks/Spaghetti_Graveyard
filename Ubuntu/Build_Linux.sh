@@ -21,6 +21,7 @@ Color_Off='\033[0m'
   ../source/bbMessage_functions.c\
   ../source/bbMessage_passing.c\
   ../source/bbTerrainSquare.c\
+  ../source/bbSkin.c\
   ../source/geometry.c\
   ../source/input.c\
   ../source/interpolation.c\

@@ -162,6 +162,10 @@ int AI_tortoise_update(bbAIControl* aicontroller){
     sleep(60);
     }
 #endif
+
+    //update elevation of next point
+    bbMapCoords_updateElevation(&new_location);
+
     message_movement_new(drawable_int, new_location);
 
     return NO_RETHUNK;

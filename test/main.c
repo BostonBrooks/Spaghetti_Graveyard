@@ -89,6 +89,8 @@ int Test_All(void){
     //bbAnimation_print_data(19);
     //#endif
 
+    bbSkin_init();
+
     #ifdef VERBOSE
         printf("bbTerrainSquare_initAll();\n");
     #endif

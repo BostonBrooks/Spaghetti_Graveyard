@@ -18,18 +18,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="created templates for *.csv files in maps/map0">
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="created bbSkin object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/AI_Cow.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Cow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/AI_Tortoise.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Tortoise.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/AI_Yeti.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Yeti.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/AI_fox.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_fox.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/AI_null.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_null.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/PLAYER.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/PLAYER.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/bbDrawable.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbDrawable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/bbSkin.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbSkin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/bbDrawable.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/constants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbDrawable_plot.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable_plot.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/bbSkin.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbSkin.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +224,9 @@
       <workItem from="1697077086009" duration="2855000" />
       <workItem from="1697171536081" duration="615000" />
       <workItem from="1697433776219" duration="2932000" />
-      <workItem from="1697436719377" duration="2000" />
+      <workItem from="1697436719377" duration="207000" />
+      <workItem from="1697437016963" duration="4387000" />
+      <workItem from="1697793660763" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -412,7 +412,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697078047272</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="created bbSkin object">
+      <option name="closed" value="true" />
+      <created>1697436766022</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697436766022</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,6 +473,7 @@
     <MESSAGE value="added cow walking to AI" />
     <MESSAGE value="Added the rest of cow animations to madia.csv" />
     <MESSAGE value="created templates for *.csv files in maps/map0" />
-    <option name="LAST_COMMIT_MESSAGE" value="created templates for *.csv files in maps/map0" />
+    <MESSAGE value="created bbSkin object" />
+    <option name="LAST_COMMIT_MESSAGE" value="created bbSkin object" />
   </component>
 </project>

@@ -14,7 +14,7 @@
 //#define VERBOSE
 #define DEBUG
 
-//#define FASTLOAD
+#define FASTLOAD
 //skips slow rendering of hillshading to speed up loading of game
 
 
@@ -126,11 +126,12 @@
 
 //Drawfunction types:
 
-#define DRAW_BASIC      0
-#define DRAW_NULL       1
-#define DRAW_REPEAT     2
-#define DRAW_BALLOON    3
-#define DRAW_SHADOW     4
+#define DRAW_BASIC          0
+#define DRAW_NULL           1
+#define DRAW_REPEAT         2
+#define DRAW_BALLOON        3
+#define DRAW_SHADOW         4
+#define DRAW_REPEAT_SKIN    5
 
 
 //-----------------------------AICONTROLLERS---------------------------------//
@@ -169,12 +170,17 @@
 #define STATE_APPROACHING          2
 #define STATE_ATTACKING            3
 #define STATE_DEAD                 4
+#define STATE_STUNNED              5
 
 //-----------------------------SKINS---------------------------------//
 
-#define INNER_STATES_PER_SKIN        5
+#define NUMBER_OF_SKINS            256
+#define INNER_STATES_PER_SKIN        6
 #define ANIMATION_NONE               -1     //the animation slot of the drawable is unused
 #define ANIMATION_SKIN               -2     //the refer to animation for which drawable is used
+
+#define DRAWFUNCTION_NONE            -1
+#define DRAWFUNCTION_SKIN            -2
 
 
 //-----------------------------MESSAGES---------------------------------//
