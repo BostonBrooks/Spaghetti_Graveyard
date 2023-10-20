@@ -55,8 +55,8 @@ typedef struct {
     int external_state; 
     
     /** Parameter of function/state/action function */
-    int internal_state; 
-    
+    int internal_state;
+    int isnewstate;
     /** Counts the number of loop iterations since last reset */
     int clock;
     

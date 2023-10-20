@@ -366,9 +366,9 @@ int repeatdraw(bbDrawable* tobedrawn, int i){
 //    printf("position.x = %f, position.y = %f\n", position.x, position.y);
 //#endif
 
-#ifdef DEBUG
-    printf("animation = %d, angle = %d, frame = %d\n", animation, angle, frame);
-#endif
+//#ifdef DEBUG
+//    printf("animation = %d, angle = %d, frame = %d\n", animation, angle, frame);
+//#endif
 
     sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
 
@@ -397,12 +397,13 @@ int repeatdraw(bbDrawable* tobedrawn, int i){
 
 int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 
-//#ifdef DEBUG
-//    printf("before accessing drawable struct\n");
-//#endif
 #ifdef DEBUG
-    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
+    printf("repeatdraw_skin\n");
 #endif
+//#ifdef DEBUG
+//    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
+
     int skin_int = -7;
     int state_int = -11;
 
@@ -418,7 +419,7 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
         assert(state_int >= 0 && state_int < INNER_STATES_PER_SKIN);
 
         animation = bbSkins[skin_int].animations_int[state_int][i];
-        printf("animation = %d\n", animation);
+        //printf("animation = %d\n", animation);
 
     }
 
@@ -434,9 +435,9 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 //#endif
 
 
-#ifdef DEBUG
-    printf("1 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("1 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 
     bbMapCoords mc = tobedrawn->location;
 
@@ -456,13 +457,13 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 //    printf("position.x = %f, position.y = %f\n", position.x, position.y);
 //#endif
 
-#ifdef DEBUG
-    printf("i = %d, skin = %d, state = %d, animation = %d, angle = %d, frame = %d\n",i, skin_int,state_int,  animation, angle, frame);
-#endif
+//#ifdef DEBUG
+//    printf("i = %d, skin = %d, state = %d, animation = %d, angle = %d, frame = %d\n",i, skin_int,state_int,  animation, angle, frame);
+//#endif
 
-#ifdef DEBUG
-    printf("2 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("2 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 
     sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
 
@@ -472,15 +473,15 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 //    printf("after accessing sfSprite\n");
 //#endif
 
-#ifdef DEBUG
-    printf("3 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("3 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 
     sfSprite_setPosition(sprite, position);
 
-#ifdef DEBUG
-    printf("4 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("4 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 //#ifdef DEBUG
 //    printf("after modifying sfSprite\n");
 //#endif
@@ -495,7 +496,7 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
     int framerate = anim->framerate;
 
     tobedrawn->frame[i] = (frame+1)%(frames*framerate);
-
+    //printf("frame = %d\n", tobedrawn->frame[i]);
 
 
 
@@ -504,12 +505,13 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 
 int draw_once_skin(bbDrawable* tobedrawn, int i){
 
+    printf("Draw once skin\n");
 //#ifdef DEBUG
 //    printf("before accessing drawable struct\n");
 //#endif
-#ifdef DEBUG
-    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
     int skin_int = -7;
     int state_int = -11;
 
@@ -525,7 +527,7 @@ int draw_once_skin(bbDrawable* tobedrawn, int i){
         assert(state_int >= 0 && state_int < INNER_STATES_PER_SKIN);
 
         animation = bbSkins[skin_int].animations_int[state_int][i];
-        printf("animation = %d\n", animation);
+        //printf("animation = %d\n", animation);
 
     }
 
@@ -541,9 +543,9 @@ int draw_once_skin(bbDrawable* tobedrawn, int i){
 //#endif
 
 
-#ifdef DEBUG
-    printf("1 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("1 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 
     bbMapCoords mc = tobedrawn->location;
 
@@ -563,13 +565,13 @@ int draw_once_skin(bbDrawable* tobedrawn, int i){
 //    printf("position.x = %f, position.y = %f\n", position.x, position.y);
 //#endif
 
-#ifdef DEBUG
-    printf("i = %d, skin = %d, state = %d, animation = %d, angle = %d, frame = %d\n",i, skin_int,state_int,  animation, angle, frame);
-#endif
+//#ifdef DEBUG
+//    printf("i = %d, skin = %d, state = %d, animation = %d, angle = %d, frame = %d\n",i, skin_int,state_int,  animation, angle, frame);
+//#endif
 
-#ifdef DEBUG
-    printf("2 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("2 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 
     sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
 
@@ -579,15 +581,15 @@ int draw_once_skin(bbDrawable* tobedrawn, int i){
 //    printf("after accessing sfSprite\n");
 //#endif
 
-#ifdef DEBUG
-    printf("3 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("3 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 
     sfSprite_setPosition(sprite, position);
 
-#ifdef DEBUG
-    printf("4 tobedrawn = %d\n", tobedrawn->Pool_Self);
-#endif
+//#ifdef DEBUG
+//    printf("4 tobedrawn = %d\n", tobedrawn->Pool_Self);
+//#endif
 //#ifdef DEBUG
 //    printf("after modifying sfSprite\n");
 //#endif
@@ -683,18 +685,22 @@ int shadowdraw(bbDrawable* tobedrawn, int i){
 
 int draw_skin(bbDrawable* tobedrawn, int i){
 
-        //if no skin, do nothing: SKIN_NONE
-        int skin_int = tobedrawn->skin;
-        if (skin_int == SKIN_NONE) return 0;
-        //if state not recognised, do nothing: state < 0 or state >= INNER_STATES_PER_SKIN
+    //if no skin, do nothing: SKIN_NONE
+    int skin_int = tobedrawn->skin;
+    if (skin_int == SKIN_NONE) return 0;
+    //if state not recognised, do nothing: state < 0 or state >= INNER_STATES_PER_SKIN
 
-        int state = tobedrawn->state;
-        if (state < 0 || state >= INNER_STATES_PER_SKIN) return 0;
+    int state = tobedrawn->state;
+    if (state < 0 || state >= INNER_STATES_PER_SKIN) return 0;
 
     //lookup drawfunction from skin,
     // return either draw_once_skin() or repeatdraw_skin()
 
 
+    int drawfunction_int = bbSkins[skin_int].drawfunctions_int[state][i];
+
+    printf("state = %d, drawfunction_int = %d\n",state, drawfunction_int);
+    return bbDrawfunction_vtable[drawfunction_int](tobedrawn, i);
 }
 
 int bbDrawfunction_initAll(){
@@ -713,6 +719,7 @@ int bbDrawfunction_initAll(){
     bbDrawfunction_vtable[DRAW_SHADOW] = shadowdraw;
     bbDrawfunction_vtable[DRAW_REPEAT_SKIN] = repeatdraw_skin;
     bbDrawfunction_vtable[DRAW_ONCE_SKIN] = draw_once_skin;
+    bbDrawfunction_vtable[DRAW_SKIN] = draw_skin;
     
     return 0;
 }

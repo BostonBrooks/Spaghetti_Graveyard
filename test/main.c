@@ -7,6 +7,7 @@
 
 
 int Current_Time = 0;
+int player_int;
 
 int viewpoint_drawable_int; 
 
@@ -209,7 +210,7 @@ int Test_All(void){
         printf("Spawn player AI\n");
     #endif    
 
-    int player_int = bbAI_constructor_vtable[PLAYER_20230829](viewpoint);
+    player_int = bbAI_constructor_vtable[PLAYER_20230829](viewpoint);
     bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
     viewpoint_drawable_int = player_AI->drawables[0];
     
