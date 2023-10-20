@@ -183,6 +183,8 @@
 #define DRAWFUNCTION_NONE            -1
 #define DRAWFUNCTION_SKIN            -2
 
+#define SKIN_NONE                    -1
+
 
 //-----------------------------MESSAGES---------------------------------//
 

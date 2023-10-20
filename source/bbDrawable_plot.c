@@ -681,6 +681,22 @@ int shadowdraw(bbDrawable* tobedrawn, int i){
 
 }
 
+int draw_skin(bbDrawable* tobedrawn, int i){
+
+        //if no skin, do nothing: SKIN_NONE
+        int skin_int = tobedrawn->skin;
+        if (skin_int == SKIN_NONE) return 0;
+        //if state not recognised, do nothing: state < 0 or state >= INNER_STATES_PER_SKIN
+
+        int state = tobedrawn->state;
+        if (state < 0 || state >= INNER_STATES_PER_SKIN) return 0;
+
+    //lookup drawfunction from skin,
+    // return either draw_once_skin() or repeatdraw_skin()
+
+
+}
+
 int bbDrawfunction_initAll(){
 
     Circle = sfCircleShape_create();
