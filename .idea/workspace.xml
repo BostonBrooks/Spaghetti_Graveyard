@@ -21,9 +21,10 @@
     <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="int draw_skin(bbDrawable* tobedrawn, int i)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/AI_Cow.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Cow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/AI_Cow2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/constants.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/bbAIControl.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbAIControl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/bbDrawable.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbDrawable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/bbAIControl.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbDrawable.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

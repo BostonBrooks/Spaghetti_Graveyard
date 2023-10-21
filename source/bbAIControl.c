@@ -43,7 +43,7 @@ typedef struct {
 
     int external_state; //what AI function/state/action function to call
     int internal_state; //parameter of function/state/action function 
-    int isnewstate;
+    int state_transition; //Set to 1 if the state has just been altered, otherwise 0
     
     int clock; //Counts the number of loop iterations since last reset
     int clock2; //Specifies a point in future given by the number of loops processed since loading the game.
@@ -54,7 +54,7 @@ typedef struct {
     
     //union of structs containing ai data?
     
-    int state_transition; //Set to 1 if the state has just been altered, otherwise 0
+
 
 
 } bbAIControl;

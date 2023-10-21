@@ -90,6 +90,11 @@
 //-----------------------------CODE------------------------------//
 
 
+#ifndef SUM_FORCES
+#define SUM_FORCES
+#include "../headers/sum_forces.h"
+#endif
+
 DEFINE_POOL(bbDrawable, 500, 51)
 //DEFINE_POOL(bbDrawable, DRAWABLE_POOL_LEVEL_1, DRAWABLE_POOL_LEVEL_2)
 //TODO why does the commented out line cause segfault in MSYS?
@@ -203,4 +208,39 @@ int bbDrawable_new(bbMapCoords MC){
     bbDrawable_addtoTS (drawable_int);
 
     return drawable_int;
+}
+int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location){
+    bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
+    bbMapCoords location = drawable->location;
+    bbMapCoords new_location = location;
+
+    int i = target_location.i - location.i;
+    int j = target_location.j - location.j;
+
+    int angle = angles_8(i,j);
+    drawable->angle[0] = angle;
+
+    float distance = sqrt(i*i + j*j);
+    float speed = 4;
+
+    if(distance < speed){
+
+        new_location.i = target_location.i;
+        new_location.j = target_location.j;
+    } else {
+        float delta_i = (i * speed) / distance;
+        float delta_j = (j * speed) / distance;
+
+        new_location.i += delta_i;
+        new_location.j += delta_j;
+    }
+    bbFloat3D forces = sum_forces_Nearby(drawable_int, location);
+
+    new_location.i += forces.i;
+    new_location.j += forces.j;
+
+    bbMapCoords_updateElevation(&new_location);
+    message_movement_new(drawable_int, new_location);
+
+    return 0;
 }

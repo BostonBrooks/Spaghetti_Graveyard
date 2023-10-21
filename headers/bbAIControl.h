@@ -56,7 +56,8 @@ typedef struct {
     
     /** Parameter of function/state/action function */
     int internal_state;
-    int isnewstate;
+    /**Set to 1 if the state has just been altered, otherwise 0 */
+    int state_transition;
     /** Counts the number of loop iterations since last reset */
     int clock;
     
@@ -69,8 +70,7 @@ typedef struct {
     
     //union of structs containing ai data?
     
-    /**Set to 1 if the state has just been altered, otherwise 0 */
-    int state_transition;
+
 
 
 } bbAIControl;
