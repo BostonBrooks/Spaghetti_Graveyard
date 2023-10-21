@@ -153,7 +153,7 @@ int AI_cow_update(bbAIControl* aicontroller){
             //return RETHUNK
 
 
-            if (distance < 16 * POINTS_PER_TILE) {
+            if (distance < 25 * POINTS_PER_TILE) {
                 aicontroller->internal_state = STATE_APPROACHING;
                 AI_drawable->target_drawable = player_drawable->Pool_Self;
                 aicontroller->state_transition = 1;
@@ -178,7 +178,7 @@ int AI_cow_update(bbAIControl* aicontroller){
                 aicontroller->state_transition = 0;
             }
             //if player out of view, "become" IDLE
-            if (distance > 20 * POINTS_PER_TILE){
+            if (distance > 25 * POINTS_PER_TILE){
                 aicontroller->internal_state = STATE_IDLE;
                 aicontroller->state_transition = 1;
                 return RETHUNK;

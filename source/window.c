@@ -43,7 +43,7 @@ int Window_Init(void){
     sfRenderWindow_setPosition(window, position);
 
 #ifdef LIMIT_FRAMERATE
-    sfRenderWindow_setFramerateLimit(window, 60);
+    sfRenderWindow_setFramerateLimit(window, 120);
 #endif
     sfColor beige = COLOUR_BEIGE;
     

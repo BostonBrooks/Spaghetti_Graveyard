@@ -14,7 +14,7 @@
 //#define VERBOSE
 #define DEBUG
 
-#define FASTLOAD
+//#define FASTLOAD
 //skips slow rendering of hillshading to speed up loading of game
 
 
