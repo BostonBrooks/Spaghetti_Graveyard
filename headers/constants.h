@@ -18,7 +18,7 @@
 //skips slow rendering of hillshading to speed up loading of game
 
 
-//#define LIMIT_FRAMERATE
+#define LIMIT_FRAMERATE
 
 //-----------------------------PLACEHOLDERS----------------------------//
 

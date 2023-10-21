@@ -395,11 +395,13 @@ int repeatdraw(bbDrawable* tobedrawn, int i){
     return 0;
 }
 
+int angles_8 (float i, float j);
+
 int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 
-#ifdef DEBUG
-    printf("repeatdraw_skin\n");
-#endif
+//#ifdef DEBUG
+//    printf("repeatdraw_skin\n");
+//#endif
 //#ifdef DEBUG
 //    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
 //#endif
@@ -505,7 +507,7 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 
 int draw_once_skin(bbDrawable* tobedrawn, int i){
 
-    printf("Draw once skin\n");
+    //printf("Draw once skin\n");
 //#ifdef DEBUG
 //    printf("before accessing drawable struct\n");
 //#endif
@@ -699,7 +701,7 @@ int draw_skin(bbDrawable* tobedrawn, int i){
 
     int drawfunction_int = bbSkins[skin_int].drawfunctions_int[state][i];
 
-    printf("state = %d, drawfunction_int = %d\n",state, drawfunction_int);
+    //printf("state = %d, drawfunction_int = %d\n",state, drawfunction_int);
     return bbDrawfunction_vtable[drawfunction_int](tobedrawn, i);
 }
 

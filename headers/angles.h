@@ -19,6 +19,7 @@
 
 int angles_8 (float i, float j){
 
+
     float x = i + j;
     float y = j - i;
 

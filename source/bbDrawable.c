@@ -22,6 +22,8 @@
 #include "../headers/media.h"
 #endif
 
+
+
 //#define NO_HEALTHBAR -1  // what even is this?
 //-----------------------------STRUCTS------------------------------//
 
@@ -61,8 +63,8 @@
     int drawfunction[ANIMATIONS_PER_DRAWABLE];
     int start_time; //frame = ((current time - start time)/framerate)%frames (not yet implemented)
 
-     int skin;
-     int state;
+    int skin;
+    int state;
 
 
      /* Avoidance Data */
@@ -133,7 +135,7 @@ int bbDrawable_new(bbMapCoords MC){
     
     
     drawable->location              = MC;
-    drawable->health                = -1;
+    drawable->health                = 5;
     drawable->max_health            = -1;
     drawable->display_health_until  = -1;
     drawable->health_bar_height     = -1;
@@ -209,6 +211,47 @@ int bbDrawable_new(bbMapCoords MC){
 
     return drawable_int;
 }
+
+int angles_8_hack (float i, float j){
+
+
+    float x = i + j;
+    float y = j - i;
+
+    const float tan_A = -2.4142135623730;
+    const float tan_B = -0.4142135623731;
+    //tan_C = -tab_B
+    //tan_D = -tan_A
+    //tan E = tan_A
+    //tan_F = tan_B
+    //tan_G = -tan_B
+    //tan_H = -tan_A
+
+    if (x>0){ //vector (i, j) points to the right
+
+        if (y < x * tan_A)  return 6;
+        if (y < x * tan_B)  return 7;
+        if (y < x * -tan_B) return 0;
+        if (y < x * -tan_A) return 1;
+
+        return 2;
+
+
+
+    } else { //vector (i, j) points to the left
+
+        if (y < -x * tan_A)  return 6;
+        if (y < -x * tan_B)  return 5;
+        if (y < -x * -tan_B) return 4;
+        if (y < -x * -tan_A) return 3;
+
+        return 2;
+
+    }
+
+}
+
+
 int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location){
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
     bbMapCoords location = drawable->location;
@@ -217,7 +260,8 @@ int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location){
     int i = target_location.i - location.i;
     int j = target_location.j - location.j;
 
-    int angle = angles_8(i,j);
+    int angle = angles_8_hack(i,j);
+    printf("angle = %d\n", angle);
     drawable->angle[0] = angle;
 
     float distance = sqrt(i*i + j*j);

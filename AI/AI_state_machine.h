@@ -111,24 +111,15 @@ int AI_cow_update(bbAIControl* aicontroller){
     if (drawable->health <= 0){
         drawable->state = STATE_DEAD;
 
-        for(int i = 0; i < ANIMATIONS_PER_DRAWABLE; i++){
+        for(int i; i < ANIMATIONS_PER_DRAWABLE; i++){
             drawable->frame[i] = 0;
         }
 
         return KILL_AI;
     }
 
-    bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
 
-    int player_drawable_int = player_AI->drawables[0];
-    bbDrawable* player_drawable = bbDrawable_Pool_Lookup(player_drawable_int);
-    bbMapCoords player_coords = player_drawable->location;
 
-    int AI_drawable_int = aicontroller->drawables[0];
-    bbDrawable* AI_drawable = bbDrawable_Pool_Lookup(AI_drawable_int);
-    bbMapCoords AI_coords = AI_drawable->location;
-
-    float distance = bbMapCoords_getDistance(player_coords, AI_coords);
 
     switch (state) {
         case STATE_IDLE:
@@ -146,20 +137,13 @@ int AI_cow_update(bbAIControl* aicontroller){
                 aicontroller->clock = Current_Time;
                 aicontroller->state_transition = 0;
             }
-            //if player within range, "become" APPROACHING
-            //set target
-            //set state to approaching
-            //set state_transition
-            //return RETHUNK
 
+            if (Current_Time > aicontroller->clock + 360){
 
-            if (distance < 16 * POINTS_PER_TILE) {
                 aicontroller->internal_state = STATE_APPROACHING;
-                AI_drawable->target_drawable = player_drawable->Pool_Self;
                 aicontroller->state_transition = 1;
                 return RETHUNK;
             }
-
             return NO_RETHUNK;
 
         case STATE_APPROACHING:
@@ -177,25 +161,13 @@ int AI_cow_update(bbAIControl* aicontroller){
                 aicontroller->clock = Current_Time;
                 aicontroller->state_transition = 0;
             }
-            //if player out of view, "become" IDLE
-            if (distance > 20 * POINTS_PER_TILE){
-                aicontroller->internal_state = STATE_IDLE;
-                aicontroller->state_transition = 1;
-                return RETHUNK;
 
-            }
+            if (Current_Time > aicontroller->clock + 360){
 
-            //else if player within range, "become" ATTACKING
-
-            if (distance < 5*POINTS_PER_TILE) {
                 aicontroller->internal_state = STATE_ATTACKING;
                 aicontroller->state_transition = 1;
                 return RETHUNK;
-
             }
-
-            //else move towards player
-            bbDrawable_movetowards(AI_drawable_int, player_coords);
             return NO_RETHUNK;
 
         case STATE_ATTACKING:
@@ -212,18 +184,13 @@ int AI_cow_update(bbAIControl* aicontroller){
                 aicontroller->clock = Current_Time;
                 aicontroller->state_transition = 0;
             }
-            if (Current_Time > aicontroller->clock + 360) {
+
+            if (Current_Time > aicontroller->clock + 360){
+
                 aicontroller->internal_state = STATE_IDLE;
                 aicontroller->state_transition = 1;
                 return RETHUNK;
-
             }
-            //if player within range and Current_Time = clock + ?
-            //damage player
-            //if Current_Time >= clock + ??
-            //"become" IDLE
-
-            //else move towards player
             return NO_RETHUNK;
     }
     return NO_RETHUNK;

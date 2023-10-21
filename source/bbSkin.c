@@ -83,7 +83,7 @@ int bbSkin_init() {
     skin->drawfunctions_int[STATE_IDLE][0] = DRAW_REPEAT_SKIN;
     skin->drawfunctions_int[STATE_MOVING][0] = DRAW_REPEAT_SKIN;
     skin->drawfunctions_int[STATE_APPROACHING][0] = DRAW_REPEAT_SKIN;
-    skin->drawfunctions_int[STATE_ATTACKING][0] = DRAW_REPEAT_SKIN;
+    skin->drawfunctions_int[STATE_ATTACKING][0] = DRAW_ONCE_SKIN;
     skin->drawfunctions_int[STATE_DEAD][0] = DRAW_ONCE_SKIN;
     skin->drawfunctions_int[STATE_STUNNED][0] = DRAW_REPEAT_SKIN;
 
