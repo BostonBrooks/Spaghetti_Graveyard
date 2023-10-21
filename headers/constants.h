@@ -145,7 +145,7 @@
 
 #define RETHUNK      1   //flag message/ai handler to re-process message/ai function
 #define NO_RETHUNK   0
-
+#define KILL_AI      2
 //-----------------------------AI TYPES (EXTERNAL STATE)----------------------------------//
 
 

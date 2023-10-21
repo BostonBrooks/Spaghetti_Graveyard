@@ -127,6 +127,7 @@ int AI_cow_update(bbAIControl* aicontroller){
 
     float distance = sqrt(delta_i * delta_i + delta_j * delta_j);
 
+    if (distance < 12 * POINTS_PER_TILE) return KILL_AI;
     float speed = 4;
 
     if (distance < speed){

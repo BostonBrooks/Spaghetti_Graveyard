@@ -97,6 +97,10 @@ int bbAIControl_update(bbAIControl* aicontroller){
     //#endif      
         
         rethunk = bbAI_update_vtable[type](aicontroller);
+        if (rethunk == KILL_AI){
+            return KILL_AI;
+        }
+
     }
 
     return 0;
@@ -114,6 +118,9 @@ int bbAIControl_update_int(int aicontroller_int){
     
         type = aicontroller->external_state;
         rethunk = bbAI_update_vtable[type](aicontroller);
+        if (rethunk == KILL_AI){
+            return KILL_AI;
+        }
     }
 
     return 0;
@@ -122,6 +129,8 @@ int bbAIControl_update_int(int aicontroller_int){
 int bbAIControl_updatePool(void){
 
     int tobeupdated_int = bbAIControl_Pool_In_Use_Head;
+    int previous_int;
+    int killflag;
     
     if ( tobeupdated_int == -1) return 0;
     
@@ -133,11 +142,14 @@ int bbAIControl_updatePool(void){
         //#ifdef DEBUG  
         //printf("location of AI in vtable = %d\n", tobeupdated_int);
         //#endif  
-    
+
         bbAIControl* tobeupdated = bbAIControl_Pool_Lookup(tobeupdated_int);
-        bbAIControl_update(tobeupdated);
+        killflag = bbAIControl_update(tobeupdated);
+        previous_int = tobeupdated_int;
         tobeupdated_int = tobeupdated->Pool_Next;
-        
+        if(killflag == KILL_AI) bbAIControl_Pool_Delete(previous_int);
+
+
     }
     return 0;
 }
