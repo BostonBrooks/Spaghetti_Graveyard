@@ -8,6 +8,44 @@
 
 int Current_Time = 0;
 int player_int;
+int player_hp = 100;
+
+int damage_player(int x){
+    bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
+    bbDrawable* drawable = bbDrawable_Pool_Lookup(player_AI->drawables[0]);
+
+    drawable->health = drawable->health - 5;
+    player_hp = drawable->health;
+    if(drawable->health <= 0) {
+        printf("Now you're dead!\n");
+        exit(1);
+    }
+}
+
+sfRectangleShape* Health_Bar;
+
+int init_health(){
+    Health_Bar = sfRectangleShape_create();
+    sfColor dark_red = sfColor_fromRGB(188, 0, 0);
+    sfRectangleShape_setFillColor(Health_Bar, dark_red);
+    sfVector2f position;
+    position.x = 62;
+    position.y = 530;
+    sfRectangleShape_setPosition(Health_Bar, position);
+    position.x = -13;
+    position.y = -449;
+    sfRectangleShape_setSize(Health_Bar, position);
+}
+
+int display_health(){
+    sfVector2f size;
+    size.x = -13;
+    size.y = -449 * player_hp / 100;
+
+    sfRectangleShape_setSize(Health_Bar, size);
+
+    sfRenderWindow_drawRectangleShape(window, Health_Bar, NULL);
+}
 
 int viewpoint_drawable_int; 
 
@@ -184,7 +222,7 @@ int Test_All(void){
     
     bbMapCoords mc;   
     
-    for (int i=0; i<64; i++){
+    for (int i=0; i<128; i++){
     
         float i = rand() % (POINTS_PER_SQUARE * 5);
         float j = rand() % (POINTS_PER_SQUARE * 5);
@@ -213,8 +251,8 @@ int Test_All(void){
     player_int = bbAI_constructor_vtable[PLAYER_20230829](viewpoint);
     bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
     viewpoint_drawable_int = player_AI->drawables[0];
-    
-    
+
+    init_health();
 
 
     sfRenderTexture_drawSprite(viewport, sfSprite_vtable[28], NULL); //viewport background
@@ -255,7 +293,7 @@ int Test_All(void){
         bbDrawable* viewpoint_drawable
              = bbDrawable_Pool_Lookup(viewpoint_drawable_int);
         viewpoint = viewpoint_drawable->location;
-        viewpoint.k *= 0.5;
+        viewpoint.k = viewpoint.k *0.5 + 200;
         
         #ifdef VERBOSE
         printf("Draw to Screen:\n");
@@ -267,6 +305,7 @@ int Test_All(void){
         sfRenderWindow_drawSprite(window, viewport_sprite, &bbViewport_renderer);
         Display_Decal();
         prompt_display();
+        display_health();
         sfRenderWindow_display(window);
         
         #ifdef VERBOSE

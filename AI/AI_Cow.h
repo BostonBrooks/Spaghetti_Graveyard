@@ -48,6 +48,7 @@
 
 extern int Current_Time;
 extern int player_int;
+int damage_player(int);
 
 int AI_cow_new(bbMapCoords mc){
 
@@ -189,6 +190,7 @@ int AI_cow_update(bbAIControl* aicontroller){
 
             if (distance < 5*POINTS_PER_TILE) {
                 aicontroller->internal_state = STATE_ATTACKING;
+                aicontroller->attack_centre = player_coords;
                 aicontroller->state_transition = 1;
                 return RETHUNK;
 
@@ -212,7 +214,17 @@ int AI_cow_update(bbAIControl* aicontroller){
                 aicontroller->clock = Current_Time;
                 aicontroller->state_transition = 0;
             }
-            if (Current_Time > aicontroller->clock + 360) {
+
+            if (Current_Time == aicontroller->clock + 160){
+                //Is the player within the effected area?
+                float dist = bbMapCoords_getDistance(player_coords, aicontroller->attack_centre);
+                if (dist < POINTS_PER_TILE * 2) {
+                    damage_player(5);
+                    printf("You got hit\n");
+                }
+            }
+
+            if (Current_Time > aicontroller->clock + 304) {
                 aicontroller->internal_state = STATE_IDLE;
                 aicontroller->state_transition = 1;
                 return RETHUNK;

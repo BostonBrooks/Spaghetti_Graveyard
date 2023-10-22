@@ -61,7 +61,11 @@ int PLAYER_new(bbMapCoords mc){
     drawable->avoidance_radius = 32 * POINTS_PER_PIXEL;
     drawable->mass             = 1;
     drawable->speed            = 6;
-    drawable->shape            = AVOIDANCE_CIRCLULAR;  
+    drawable->shape            = AVOIDANCE_CIRCLULAR;
+
+
+    drawable->health     = 100;
+    drawable->max_health = 100;
     //#ifdef DEBUG  
     //printf("New drawable is at the location %d\n", drawable_int );
     //#endif

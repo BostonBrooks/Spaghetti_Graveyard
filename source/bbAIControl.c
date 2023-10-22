@@ -53,7 +53,8 @@ typedef struct {
     //bbMapCoords target_location;
     
     //union of structs containing ai data?
-    
+
+    bbMapCoords attack_centre;
 
 
 

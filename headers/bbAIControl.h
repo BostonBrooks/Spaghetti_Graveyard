@@ -70,7 +70,7 @@ typedef struct {
     
     //union of structs containing ai data?
     
-
+    bbMapCoords attack_centre;
 
 
 } bbAIControl;

@@ -261,7 +261,7 @@ int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location){
     int j = target_location.j - location.j;
 
     int angle = angles_8_hack(i,j);
-    printf("angle = %d\n", angle);
+    //printf("angle = %d\n", angle);
     drawable->angle[0] = angle;
 
     float distance = sqrt(i*i + j*j);
