@@ -18,6 +18,7 @@ Color_Off='\033[0m'
   ../source/bbDrawable.c\
   ../source/bbDrawable_plot.c\
   ../source/bbDrawable_lists.c\
+  ../source/bbDrawable_click.c\
   ../source/bbGroundSurface.c\
   ../source/bbMessage.c\
   ../source/bbMessage_constructors.c\

@@ -19,9 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MSYS/Build_MSYS.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/WinLibs/libsfml-audio-s.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WinLibs/libsfml-graphics-s.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WinLibs/libsfml-main.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WinLibs/libsfml-network-s.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WinLibs/libsfml-system-s.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WinLibs/libsfml-window-s.a" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
