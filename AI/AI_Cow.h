@@ -223,7 +223,7 @@ int AI_cow_update(bbAIControl* aicontroller){
             }
 
             //else move towards player
-            bbDrawable_movetowards(AI_drawable_int, player_coords);
+            bbDrawable_movetowards_multiple(AI_drawable_int, player_coords);
             return NO_RETHUNK;
 
         case STATE_ATTACKING:

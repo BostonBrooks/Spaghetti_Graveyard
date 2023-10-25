@@ -104,3 +104,4 @@ int bbDrawable_new(bbMapCoords MC);
 
 /** drawable moves toward goal point */
 int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location);
+int bbDrawable_movetowards_multiple(int drawable_int, bbMapCoords target_location);

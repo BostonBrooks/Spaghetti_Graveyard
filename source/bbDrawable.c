@@ -22,7 +22,13 @@
 #include "../headers/media.h"
 #endif
 
+#ifndef BBMESSAGE_CONSTRUCTORS
+#define BBMESSAGE_CONSTRUCTORS
+#include "../headers/bbMessage_constructors.h"
+#endif
 
+
+#include <math.h>
 
 //#define NO_HEALTHBAR -1  // what even is this?
 //-----------------------------STRUCTS------------------------------//
@@ -283,6 +289,50 @@ int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location){
     new_location.i += forces.i;
     new_location.j += forces.j;
 
+    bbMapCoords_updateElevation(&new_location);
+    message_movement_new(drawable_int, new_location);
+
+    return 0;
+}
+
+int bbDrawable_movetowards_multiple(int drawable_int, bbMapCoords target_location){
+
+    bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
+    bbMapCoords location = drawable->location;
+    bbMapCoords new_location = location;
+
+    for (int dummy = 0; dummy < 4; dummy++){
+
+        location = new_location;
+
+        int i = target_location.i - new_location.i;
+        int j = target_location.j - new_location.j;
+
+        float distance = sqrt(i*i + j*j);
+        float speed = 4;
+        if(distance < speed){
+
+            new_location.i = target_location.i;
+            new_location.j = target_location.j;
+        } else {
+            float delta_i = (i * speed) / distance;
+            float delta_j = (j * speed) / distance;
+
+            new_location.i += delta_i;
+            new_location.j += delta_j;
+        }
+        bbFloat3D forces = sum_forces_Nearby(drawable_int, location);
+
+        new_location.i += forces.i;
+        new_location.j += forces.j;
+    }
+
+    int i = target_location.i - new_location.i;
+    int j = target_location.j - new_location.j;
+
+    int angle = angles_8_hack(i,j);
+    //printf("angle = %d\n", angle);
+    drawable->angle[0] = angle;
     bbMapCoords_updateElevation(&new_location);
     message_movement_new(drawable_int, new_location);
 
