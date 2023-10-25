@@ -76,7 +76,7 @@ int AI_cow_new(bbMapCoords mc){
     //#ifdef DEBUG
     //printf("New AI Controller is at the location %d\n", aicontroller_int );
     //#endif
-
+    drawable->AI_Controller = aicontroller_int;
 
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);
 

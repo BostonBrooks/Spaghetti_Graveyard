@@ -18,6 +18,12 @@
 #include "../headers/pools.h"
 #endif
 
+
+#ifndef BBDRAWABLE
+#define BBDRAWABLE
+#include "../headers/bbDrawable.h"
+#endif
+
 //-----------------------------STRUCTS------------------------------//
 
 /** an ai controller is a function that gets run once per loop, updating drawables in the game */
@@ -148,7 +154,21 @@ int bbAIControl_updatePool(void){
         killflag = bbAIControl_update(tobeupdated);
         previous_int = tobeupdated_int;
         tobeupdated_int = tobeupdated->Pool_Next;
-        if(killflag == KILL_AI) bbAIControl_Pool_Delete(previous_int);
+        if(killflag == KILL_AI) {
+            //Cleanup orphaned drawables;
+            for (int i = 0; i<DRAWABLES_PER_AI; i++){
+                int drawable_int = tobeupdated->drawables[i];
+                if (drawable_int >= 0) {
+                    bbDrawable *drawable = bbDrawable_Pool_Lookup(drawable_int);
+                    drawable->AI_Controller = -1;
+                }
+            }
+            //Delete AI Controller
+            bbAIControl_Pool_Delete(previous_int);
+
+
+
+        }
 
 
     }

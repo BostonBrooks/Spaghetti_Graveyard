@@ -18,16 +18,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="AI Cow demo">
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="Show HP bars, with sloppy code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/AI_Cow.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Cow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/PLAYER.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/PLAYER.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/Decal2.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/Decal2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/bbAIControl.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbAIControl.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/bbAIControl.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/bbDrawable.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/window.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +160,9 @@
       <workItem from="1696572737370" duration="6000" />
       <workItem from="1696722893833" duration="44000" />
       <workItem from="1696723630740" duration="4057000" />
-      <workItem from="1697954174712" duration="3826000" />
+      <workItem from="1697954174712" duration="4070000" />
+      <workItem from="1698200707042" duration="779000" />
+      <workItem from="1698201548501" duration="205000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -303,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697868768264</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Show HP bars, with sloppy code.">
+      <option name="closed" value="true" />
+      <created>1697958117510</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697958117510</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +357,8 @@
     <MESSAGE value="int draw_skin(bbDrawable* tobedrawn, int i)" />
     <MESSAGE value="AI Cow state machine. doesnt work if drawable-&gt;health &gt; 0" />
     <MESSAGE value="AI Cow state machine. Works well" />
-    <option name="LAST_COMMIT_MESSAGE" value="AI Cow state machine. Works well" />
+    <MESSAGE value="Show HP bars, with sloppy code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Show HP bars, with sloppy code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
