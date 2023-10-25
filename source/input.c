@@ -7,7 +7,7 @@
  
  #define INPUT
 
-
+int heal_player(int x);
 //-----------------------------INCLUDES----------------------------//
 
 
@@ -45,6 +45,7 @@ int right_button_down;
 int left_button_down;
 //if button is clicked the player AI will attack the ground at that point
 
+//int bbTerrainSquare_onclick_visible(bbScreenCoords SC, int mousebutton);
 
 //-----------------------PLACEHOLDER FUNCTIONS--------------------//
 
@@ -55,12 +56,18 @@ int process_click_widgets(int x, int y, int right_click){
     return 0;
     
 }
+int process_click_drawables(int x, int y, int right_click);
 /** This function will eventually enable the user to left click monsters */
-int process_click_drawables(int x, int y, int right_click){
+/*int process_click_drawables(int x, int y, int right_click){
 
+    if (right_click == 0){
+        heal_player(-50);
+        printf("You are being healed\n");
+        return 1;
+    }
     return 0;
 }
-
+*/
 //-----------------------------FUNCTIONS--------------------------//
 
 int process_key_event(sfEvent);
@@ -108,7 +115,7 @@ int input_process(void){
        } else if (event.type == sfEvtMouseButtonPressed){
            //if left button down
            if (event.mouseButton.button == sfMouseLeft){
-           
+               //printf("you left clicked\n");
                //check if a widget is being clicked & process
                if (process_click_widgets( //This is an example of Guard Clause
                    mouse_screen_position.x,
@@ -118,14 +125,15 @@ int input_process(void){
                    
                //or check if a monster is being clicked & process
                } else if (process_click_drawables(
-                   mouse_screen_position.x,
-                   mouse_screen_position.y,
+                   mouse_viewport_position.x,
+                   mouse_viewport_position.y,
                    0) == 1){
+                   printf("You left clicked a drawable\n");
                    //The third argument is a flag to tell process_click_drawables that the drawable is being left clicked
                } else {
                    
-               //left click ground
-               left_button_down = 1;
+               // no left click ground
+               //left_button_down = 1;
                
                }
 
@@ -140,8 +148,8 @@ int input_process(void){
                    
                //or check if a monster is being clicked & process
                } else if (process_click_drawables(
-                   mouse_screen_position.x,
-                   mouse_screen_position.y,
+                   mouse_viewport_position.x,
+                   mouse_viewport_position.y,
                    1) == 1){
                    //The third argument is a flag to tell process_click_drawables that the drawable is being right clicked
                } else {

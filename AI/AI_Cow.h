@@ -67,6 +67,23 @@ int AI_cow_new(bbMapCoords mc){
     drawable->drawfunction[0] = DRAW_SKIN;
     drawable->start_time = 0;
     drawable->avoidance_radius = POINTS_PER_TILE;
+
+
+
+    drawable->health                = 100;
+    drawable->max_health            = 100;
+    drawable->display_health_until  = -1;
+    drawable->health_bar_height     = 200;
+    drawable->health_bar_width      = 5;
+    drawable->health_bar_length     = 60;
+
+    bbIntRect Hit_Box;
+    Hit_Box.top = 94 * 1.5;
+    Hit_Box.left = 20 * 1.5;
+    Hit_Box.height = 94 * 1.5;
+    Hit_Box.width = 40 * 1.5;
+
+    drawable->Hit_Box = Hit_Box;
     //#ifdef DEBUG
     //printf("New drawable is at the location %d\n", drawable_int );
     //#endif
@@ -112,8 +129,17 @@ int AI_cow_update(bbAIControl* aicontroller){
     if (drawable->health <= 0){
         drawable->state = STATE_DEAD;
 
+        drawable->display_health_until = -1;
+        bbIntRect Hit_Box;
+        Hit_Box.top = -1;
+        Hit_Box.left = -1;
+        Hit_Box.height = -1;
+        Hit_Box.width = -1;
+
         for(int i = 0; i < ANIMATIONS_PER_DRAWABLE; i++){
             drawable->frame[i] = 0;
+
+            drawable->Hit_Box = Hit_Box;
         }
 
         return KILL_AI;

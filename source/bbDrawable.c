@@ -82,7 +82,7 @@
     int onclick_function; //might want to implement a vtable or just not use this variable
     int AI_Controller;
     int Interactivity; //(0 = none, 1 = enemy, 2 = chest)
-    bbFloatRect Hit_Box;
+    bbIntRect Hit_Box;
     
     
      
@@ -189,7 +189,7 @@ int bbDrawable_new(bbMapCoords MC){
     //printf("Set Interactive Data\n");
     //#endif
     
-    bbFloatRect NULL_Hit_Box;
+    bbIntRect NULL_Hit_Box;
     NULL_Hit_Box.top      = -1;
     NULL_Hit_Box.left     = -1;
     NULL_Hit_Box.height   = -1;

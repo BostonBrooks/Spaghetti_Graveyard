@@ -82,7 +82,7 @@
     int onclick_function; //might want to implement a vtable or just not use this variable
     int AI_Controller;
     int Interactivity; //(0 = none, 1 = enemy, 2 = chest)
-    bbFloatRect Hit_Box;
+    bbIntRect Hit_Box;
     
     
      

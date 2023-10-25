@@ -21,6 +21,17 @@ int damage_player(int x){
         exit(1);
     }
 }
+int heal_player(int x){
+    bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
+    bbDrawable* drawable = bbDrawable_Pool_Lookup(player_AI->drawables[0]);
+
+    drawable->health = drawable->health + 50;
+    player_hp = drawable->health;
+    if(drawable->health <= 0) {
+        printf("Now you're dead!\n");
+        exit(1);
+    }
+}
 
 sfRectangleShape* Health_Bar;
 

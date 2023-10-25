@@ -59,13 +59,13 @@ typedef struct {
 
 typedef struct {       //used to store the hit box of a drawable relative to the drawable's location on screen.
 
-    float top;
-    float left;
-    float height;
-    float width;
+    int top;
+    int left;
+    int height;
+    int width;
     
 
-} bbFloatRect;
+} bbIntRect;
 
 
 

@@ -55,7 +55,7 @@ typedef struct {       //used to store the hit box of a drawable relative to the
     float width;
     
 
-} bbFloatRect;
+} bbIntRect;
 
 
 

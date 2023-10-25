@@ -18,11 +18,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="Show HP bars, with sloppy code.">
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies.">
+      <change afterPath="$PROJECT_DIR$/source/bbDrawable_click.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/AI_Cow.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Cow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/PLAYER.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/PLAYER.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/bbAIControl.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/all_includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/all_includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/bbDrawable.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbDrawable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/geometry.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/geometry.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbDrawable.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbTerrainSquare.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbTerrainSquare.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/geometry.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/geometry.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/input.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/input.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,37 +74,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/boston-brooks/CLionProjects/Spaghetti_Graveyard/AI&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/boston-brooks/CLionProjects/Spaghetti_Graveyard/headers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Shell Script&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Shell Script"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/headers" />
       <recent name="$PROJECT_DIR$/AI" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\AI" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\source" />
       <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\test" />
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\MSYS" />
     </key>
   </component>
   <component name="RunManager">
@@ -162,7 +170,7 @@
       <workItem from="1696723630740" duration="4057000" />
       <workItem from="1697954174712" duration="4070000" />
       <workItem from="1698200707042" duration="779000" />
-      <workItem from="1698201548501" duration="205000" />
+      <workItem from="1698201548501" duration="9277000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -308,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697958117510</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies.">
+      <option name="closed" value="true" />
+      <created>1698201790468</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1698201790468</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,14 +374,15 @@
     <MESSAGE value="AI Cow state machine. doesnt work if drawable-&gt;health &gt; 0" />
     <MESSAGE value="AI Cow state machine. Works well" />
     <MESSAGE value="Show HP bars, with sloppy code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Show HP bars, with sloppy code." />
+    <MESSAGE value="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies." />
+    <option name="LAST_COMMIT_MESSAGE" value="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/test/main.c</url>
-          <line>277</line>
+          <line>288</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

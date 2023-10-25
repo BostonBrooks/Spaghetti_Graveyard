@@ -131,6 +131,7 @@ int bbTerrainSquare_drawVisible(){
     
     for (n = RightCorner.j; n >= LeftCorner.j; n--){
         for (m = LeftCorner.i; m <= RightCorner.i; m++){
+            //printf("drawing ts n=%d, m=%d\n", n, m);
             bbTerrainSquare_draw(m,n);
         }
     }
