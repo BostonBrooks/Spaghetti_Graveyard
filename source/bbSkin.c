@@ -73,12 +73,12 @@ bbSkin bbSkins [NUMBER_OF_SKINS];
 int bbSkin_init() {
 
     bbSkin* skin = &bbSkins[0];
-    skin->animations_int[STATE_IDLE][0] = 24;
-    skin->animations_int[STATE_MOVING][0] = 20;
-    skin->animations_int[STATE_APPROACHING][0] = 20;
-    skin->animations_int[STATE_ATTACKING][0] = 22;
-    skin->animations_int[STATE_DEAD][0] = 23;
-    skin->animations_int[STATE_STUNNED][0] = 21;
+    skin->animations_int[STATE_IDLE][0] = 17;
+    skin->animations_int[STATE_MOVING][0] = 17;
+    skin->animations_int[STATE_APPROACHING][0] = 17;
+    skin->animations_int[STATE_ATTACKING][0] = 17;
+    skin->animations_int[STATE_DEAD][0] = 17;
+    skin->animations_int[STATE_STUNNED][0] = 17;
 
     skin->drawfunctions_int[STATE_IDLE][0] = DRAW_REPEAT_SKIN;
     skin->drawfunctions_int[STATE_MOVING][0] = DRAW_REPEAT_SKIN;

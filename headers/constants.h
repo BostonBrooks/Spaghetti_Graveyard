@@ -14,7 +14,7 @@
 //#define VERBOSE
 #define DEBUG
 
-//#define FASTLOAD
+#define FASTLOAD
 //skips slow rendering of hillshading to speed up loading of game
 
 
@@ -87,7 +87,7 @@
 
 //-----------------------------GEOMETRY----------------------------//
 
-#define POINTS_PER_PIXEL      8   //was 8
+#define POINTS_PER_PIXEL      64   //was 8
 #define PIXELS_PER_TILE       16
 #define POINTS_PER_TILE       (POINTS_PER_PIXEL*PIXELS_PER_TILE)
 #define TILES_PER_SQUARE      32

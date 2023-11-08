@@ -156,7 +156,7 @@ int PLAYER_update(bbAIControl* aicontroller){
 
     float distance = sqrt(delta_i * delta_i + delta_j * delta_j);
 
-    float speed = 32;
+    float speed = 128;
 
     if (distance < speed){
 

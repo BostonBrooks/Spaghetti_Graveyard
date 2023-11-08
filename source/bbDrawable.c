@@ -309,7 +309,7 @@ int bbDrawable_movetowards_multiple(int drawable_int, bbMapCoords target_locatio
         int j = target_location.j - new_location.j;
 
         float distance = sqrt(i*i + j*j);
-        float speed = 4;
+        float speed = 32;
         if(distance < speed){
 
             new_location.i = target_location.i;

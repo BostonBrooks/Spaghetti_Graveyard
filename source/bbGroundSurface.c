@@ -305,9 +305,10 @@ int bbGroundSurface_initAll(void){
             //#ifdef DEBUG  
             //printf("Entering bbGroundSurface_calcHillShading(%d, %d);\n", i, j);
             //#endif    
-                
+
+            /* todo: ommented out buggy code
             bbGroundSurface_calcHillShading(i, j);
-            
+
 
                 
             sfIntRect area;
@@ -324,10 +325,13 @@ int bbGroundSurface_initAll(void){
             temp_hill_shading_sprite = sfSprite_create();
             sfSprite_setTexture(temp_hill_shading_sprite,temp_hill_shading,sfTrue);
             sfRenderTexture_drawSprite(Ground_Surface->Hill_Shading_Render_Texture, temp_hill_shading_sprite, NULL);
-            sfRenderTexture_display(Ground_Surface->Hill_Shading_Render_Texture);
-            
             sfSprite_destroy(temp_hill_shading_sprite);
             sfTexture_destroy(temp_hill_shading);
+             */
+            sfRenderTexture_clear(Ground_Surface->Hill_Shading_Render_Texture, sfWhite);
+            sfRenderTexture_display(Ground_Surface->Hill_Shading_Render_Texture);
+            
+
             
 
             
