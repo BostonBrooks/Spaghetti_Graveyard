@@ -337,3 +337,9 @@ int Test_All(void){
     
     
 }
+
+void err( int eval,
+          const char *fmt, ...){
+    printf("%s\n", fmt);
+    exit(eval);
+}

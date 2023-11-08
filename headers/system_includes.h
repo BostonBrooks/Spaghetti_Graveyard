@@ -17,4 +17,8 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
-#include <err.h>
+//#include <err.h>
+
+void err( int eval,
+          const char *fmt, ...);
+
