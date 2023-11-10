@@ -128,7 +128,9 @@ int bbGroundSurface_initVertexArray(int square_i, int square_j){
 
 
             SC = bbGetVertex(i + 1, j, square_i, square_j);
-            
+
+
+
             bottomVertex.position.x = SC.x;
             bottomVertex.position.y = SC.y;
 
@@ -306,7 +308,7 @@ int bbGroundSurface_initAll(void){
             //printf("Entering bbGroundSurface_calcHillShading(%d, %d);\n", i, j);
             //#endif    
 
-            /* todo: ommented out buggy code
+
             bbGroundSurface_calcHillShading(i, j);
 
 
@@ -327,7 +329,7 @@ int bbGroundSurface_initAll(void){
             sfRenderTexture_drawSprite(Ground_Surface->Hill_Shading_Render_Texture, temp_hill_shading_sprite, NULL);
             sfSprite_destroy(temp_hill_shading_sprite);
             sfTexture_destroy(temp_hill_shading);
-             */
+
             sfRenderTexture_clear(Ground_Surface->Hill_Shading_Render_Texture, sfWhite);
             sfRenderTexture_display(Ground_Surface->Hill_Shading_Render_Texture);
             

@@ -14,7 +14,7 @@
 //#define VERBOSE
 #define DEBUG
 
-#define FASTLOAD
+//#define FASTLOAD
 //skips slow rendering of hillshading to speed up loading of game
 
 
@@ -91,7 +91,7 @@
 #define PIXELS_PER_TILE       16
 #define POINTS_PER_TILE       (POINTS_PER_PIXEL*PIXELS_PER_TILE)
 #define TILES_PER_SQUARE      32
-#define PIXELS_PER_SQUARE     (POINTS_PER_TILE * TILES_PER_SQUARE)
+#define PIXELS_PER_SQUARE     (PIXELS_PER_TILE * TILES_PER_SQUARE)
 #define POINTS_PER_SQUARE     (POINTS_PER_PIXEL * PIXELS_PER_TILE * TILES_PER_SQUARE)
 #define SQUARES_PER_MAP	      5
 #define TILES_PER_MAP         (TILES_PER_SQUARE * SQUARES_PER_MAP)
@@ -103,7 +103,7 @@
 
 #define ISOMETRIC_FACTOR      2.0
 
-#define ELEVATION_SCALE       4
+#define ELEVATION_SCALE       32
 // The elevation in POINTS is given by the pixel value of the height map * ELEVATION_SCALE
 // This is to circumvent the fact that we have 8 bits or 2^8 possible values on the height map
 
