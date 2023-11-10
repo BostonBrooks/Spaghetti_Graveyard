@@ -51,8 +51,8 @@ float force_untuned(float x){
 
 float force (float distance){
 
-    float magnitude = 2;
-    float stiffness = 20;
+    float magnitude = 16;
+    float stiffness = 3;
     float offset = 0;
 
     float return_value = magnitude * force_untuned(distance * stiffness + offset);

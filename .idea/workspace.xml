@@ -20,11 +20,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="Can now click to damage cow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/map0/_media.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/map0/animations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/animations.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/map0/media.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/media.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/map0/sprites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/sprites.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/map0/textures.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/textures.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/sum_forces.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/sum_forces.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +161,9 @@
       <workItem from="1697954174712" duration="4070000" />
       <workItem from="1698200707042" duration="779000" />
       <workItem from="1698201548501" duration="9331000" />
-      <workItem from="1699416404988" duration="305000" />
+      <workItem from="1699416404988" duration="3781000" />
+      <workItem from="1699420856586" duration="245000" />
+      <workItem from="1699606215341" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -327,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698210866210</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Can now click to damage cow">
+      <option name="closed" value="true" />
+      <created>1699416726525</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699416726525</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
