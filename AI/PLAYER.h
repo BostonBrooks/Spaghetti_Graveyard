@@ -49,6 +49,8 @@ int PLAYER_new(bbMapCoords mc){
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
+    //drawable->target_location.i = POINTS_PER_MAP/2;
+    //drawable->target_location.j = POINTS_PER_MAP/2;
 
     drawable->skin = -1;
     // change drawable animation 
@@ -137,67 +139,10 @@ int PLAYER_update(bbAIControl* aicontroller){
     /////move towards goal point//////
     bbMapCoords location = drawable->location;
     bbMapCoords target_location = drawable->target_location;
-    bbMapCoords new_location = location;
+
+    bbDrawable_movetowards_multiple(drawable_int, target_location); //TODO this function assumes there are 8 angles of drawable
 
 
-    //int i = viewpoint.i - location.i;
-    //int j = viewpoint.j - location.j;
-
-    //int angle = angles_32(i, j);
-    //drawable->angle[0] = angle;
-
-    //#ifdef DEBUG
-    //printf("Angle = %d\n", angle);
-    //#endif
-
-
-    float delta_i = target_location.i - location.i;
-    float delta_j = target_location.j - location.j;
-
-    float distance = sqrt(delta_i * delta_i + delta_j * delta_j);
-
-    float speed = 128;
-
-    if (distance < speed){
-
-        new_location.i = target_location.i;
-        new_location.j = target_location.j;
-    } else {
-
-        delta_i = (delta_i * speed) / distance;
-        delta_j = (delta_j * speed) / distance;
-
-        new_location.i += delta_i;
-        new_location.j += delta_j;
-
-    }
-    bbFloat3D forces = sum_forces_Nearby(drawable_int, location);
-
-    //#ifdef DEBUG
-    //printf("forces.i = %f, forces.j = %f]\n", forces.i, forces.j);
-    //#endif
-
-    new_location.i += forces.i;
-    new_location.j += forces.j;
-
-#ifdef DEBUG
-    int movement_i = new_location.i - location.i;
-    int movement_j = new_location.j - location.j;
-
-    float movement_scalar = sqrt( movement_i * movement_i + movement_j * movement_j);
-    float delta_scalar = sqrt( delta_i * delta_i + delta_j * delta_j);
-    float forces_scalar = sqrt( forces.i * forces.i + forces.j * forces.j);
-
-    if (movement_scalar > POINTS_PER_TILE) {
-        printf("movement = %f, delta = %f, forces = %f\n", movement_scalar, delta_scalar, forces_scalar);
-        sleep(60);
-    }
-#endif
-
-
-    //update elevation of next point
-    bbMapCoords_updateElevation(&new_location);
-    message_movement_new(drawable_int, new_location);
 
     return NO_RETHUNK;
 

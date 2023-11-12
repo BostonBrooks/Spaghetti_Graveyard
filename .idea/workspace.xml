@@ -18,9 +18,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="Can now click to damage cow">
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/sum_forces.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/sum_forces.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/PLAYER.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/PLAYER.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/geometry.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/geometry.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,9 +99,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
@@ -164,6 +165,9 @@
       <workItem from="1699416404988" duration="3781000" />
       <workItem from="1699420856586" duration="245000" />
       <workItem from="1699606215341" duration="31000" />
+      <workItem from="1699614423482" duration="51000" />
+      <workItem from="1699615408406" duration="6000" />
+      <workItem from="1699763246216" duration="514000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -333,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699416726525</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading">
+      <option name="closed" value="true" />
+      <created>1699609956007</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699609956007</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +397,8 @@
     <MESSAGE value="Show HP bars, with sloppy code." />
     <MESSAGE value="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies." />
     <MESSAGE value="Can now click to damage cow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now click to damage cow" />
+    <MESSAGE value="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading" />
+    <option name="LAST_COMMIT_MESSAGE" value="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
