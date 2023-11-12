@@ -251,11 +251,7 @@ bbScreenCoords bbTileCoords_getScreenCoords_centre (bbTileCoords TC){
 bbScreenCoords bbGetVertex(int tile_i, int tile_j, int square_i, int square_j){
 
     int k = bbTileCoords_getElevation(tile_i + square_i * TILES_PER_SQUARE, tile_j + square_j * TILES_PER_SQUARE);
-    #ifdef DEBUG
-    if (k != 0) {
-        printf("k = %d\n", k);
-    }
-    #endif
+
 
     int i, j;
     

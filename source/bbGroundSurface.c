@@ -241,6 +241,15 @@ int bbGroundSurface_calcHillShading(int Square_i, int Square_j){
     bbGroundSurface_grid[Square_i][Square_j].Hill_Shading_CPU 
          = sfImage_createFromPixels (PIXELS_PER_SQUARE,
              PIXELS_PER_SQUARE, Hill_Shading_Data);
+
+#ifdef DEBUG
+
+    char filename[128];
+    sprintf(filename, "image_%d_%d.bmp", Square_i, Square_j);
+    sfImage_saveToFile(bbGroundSurface_grid[Square_i][Square_j].Hill_Shading_CPU, filename);
+
+#endif
+
     return 0;
 } 
 
@@ -325,13 +334,15 @@ int bbGroundSurface_initAll(void){
                 
             temp_hill_shading = sfTexture_createFromImage(Ground_Surface->Hill_Shading_CPU, &area);
             temp_hill_shading_sprite = sfSprite_create();
+
+
             sfSprite_setTexture(temp_hill_shading_sprite,temp_hill_shading,sfTrue);
             sfRenderTexture_drawSprite(Ground_Surface->Hill_Shading_Render_Texture, temp_hill_shading_sprite, NULL);
+            sfRenderTexture_display(Ground_Surface->Hill_Shading_Render_Texture);
+
             sfSprite_destroy(temp_hill_shading_sprite);
             sfTexture_destroy(temp_hill_shading);
 
-            sfRenderTexture_clear(Ground_Surface->Hill_Shading_Render_Texture, sfWhite);
-            sfRenderTexture_display(Ground_Surface->Hill_Shading_Render_Texture);
             
 
             
