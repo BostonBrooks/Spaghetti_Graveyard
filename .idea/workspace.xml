@@ -18,10 +18,65 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading">
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="removed debug code">
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree51.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree52.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/Etsy_Trees/tree9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps/map0/.~lock.media.csv#" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/PLAYER.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/PLAYER.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/geometry.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/geometry.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/bbDrawable.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbDrawable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map0/media.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/media.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbDrawable.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbDrawable.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +100,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="3d728971-71a4-4ad8-9460-4d61609096d3" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,6 +139,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -167,7 +226,9 @@
       <workItem from="1699606215341" duration="31000" />
       <workItem from="1699614423482" duration="51000" />
       <workItem from="1699615408406" duration="6000" />
-      <workItem from="1699763246216" duration="514000" />
+      <workItem from="1699763246216" duration="2537000" />
+      <workItem from="1699765790917" duration="1973000" />
+      <workItem from="1699769231394" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -345,7 +406,39 @@
       <option name="project" value="LOCAL" />
       <updated>1699609956007</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="updates brawable move towards in PLAYER.h&#10;&#10;this causes a glitch because PLAYER has 2 angles and the new function expects 8 angles.">
+      <option name="closed" value="true" />
+      <created>1699763878396</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699763878396</updated>
+    </task>
+    <task id="LOCAL-00024" summary="gave PLAYER 8 angles, in line with change in code">
+      <option name="closed" value="true" />
+      <created>1699764513687</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699764513687</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fixed hill shading">
+      <option name="closed" value="true" />
+      <created>1699765178792</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699765178792</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fixed hill shading">
+      <option name="closed" value="true" />
+      <created>1699765222613</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699765222613</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,14 +491,17 @@
     <MESSAGE value="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies." />
     <MESSAGE value="Can now click to damage cow" />
     <MESSAGE value="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading" />
-    <option name="LAST_COMMIT_MESSAGE" value="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading" />
+    <MESSAGE value="updates brawable move towards in PLAYER.h&#10;&#10;this causes a glitch because PLAYER has 2 angles and the new function expects 8 angles." />
+    <MESSAGE value="gave PLAYER 8 angles, in line with change in code" />
+    <MESSAGE value="fixed hill shading" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed hill shading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/test/main.c</url>
-          <line>288</line>
+          <line>309</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

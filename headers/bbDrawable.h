@@ -101,6 +101,7 @@ int bbDrawable_isCloser (bbDrawable* a, bbDrawable* b);
 /** create a new drawable object (in the form of a barrel */
 int bbDrawable_new(bbMapCoords MC);
 
+int bbDrawable_new_tree(bbMapCoords MC);
 
 /** drawable moves toward goal point */
 int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location);

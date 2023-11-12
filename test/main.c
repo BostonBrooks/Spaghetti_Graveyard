@@ -254,8 +254,29 @@ int Test_All(void){
         //printf("AI available head = %d, AI available tail = %d\n", bbAIControl_Pool_Available_Head, bbAIControl_Pool_Available_Tail);
         //#endif   
     }
-    
-    #ifdef VERBOSE
+    for (int i=0; i<128; i++){
+
+        float i = rand() % (POINTS_PER_SQUARE * 5);
+        float j = rand() % (POINTS_PER_SQUARE * 5);
+
+        mc.i = i;
+        mc.j = j;
+        mc.k = 0;
+
+        bbMapCoords_updateElevation(&mc);
+
+        bbDrawable_new_tree(mc);
+
+        //#ifdef DEBUG
+        //printf("AI pool head = %d, AI pool tail = %d\n", bbAIControl_Pool_In_Use_Head, bbAIControl_Pool_In_Use_Tail);
+        //#endif
+
+        //#ifdef DEBUG
+        //printf("AI available head = %d, AI available tail = %d\n", bbAIControl_Pool_Available_Head, bbAIControl_Pool_Available_Tail);
+        //#endif
+    }
+
+#ifdef VERBOSE
         printf("Spawn player AI\n");
     #endif    
 

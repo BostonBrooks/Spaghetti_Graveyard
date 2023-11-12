@@ -218,6 +218,108 @@ int bbDrawable_new(bbMapCoords MC){
     return drawable_int;
 }
 
+int bbDrawable_new_tree(bbMapCoords MC){
+
+    //#ifdef DEBUG
+    //printf("Create Drawable:\n");
+    //#endif
+
+    int drawable_int = bbDrawable_Pool_New(NEXT_AVAILABLE);
+
+    //#ifdef DEBUG
+    //printf("Created Drawable\n");
+    //#endif
+
+    assert(drawable_int >= 0);
+
+    bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
+
+/* Cosmetic Data */
+
+    //#ifdef DEBUG
+    //printf("Set Cosmetic Data\n");
+    //#endif
+
+
+    drawable->location              = MC;
+    drawable->health                = 5;
+    drawable->max_health            = -1;
+    drawable->display_health_until  = -1;
+    drawable->health_bar_height     = -1;
+    drawable->health_bar_width      = -1;
+    drawable->health_bar_length     = -1;
+
+    int cosmetic_radius             = -1;
+
+    drawable->animation[0]          = 20;
+    drawable->angle[0]              = rand()%52;
+    drawable->frame[0]              = 0;
+    drawable->drawfunction[0]       = DRAW_BASIC;
+
+    //#ifdef DEBUG
+    //printf("Set Null Animations\n");
+    //#endif
+
+    for (int i=1; i < ANIMATIONS_PER_DRAWABLE; i++){
+
+
+        drawable->animation[i] = -1;
+        drawable->angle[i] = -1;
+        drawable->frame[i] = -1;
+        drawable->drawfunction[i] = -1;
+
+    }
+
+    bbMapCoords NULL_Coords;
+
+    NULL_Coords.i = -1;
+    NULL_Coords.j = -1;
+    NULL_Coords.k = -1;
+
+/* Avoidance Data */
+
+    //#ifdef DEBUG
+    //printf("Set Avoidance Data\n");
+    //#endif
+
+    drawable->avoidance_radius        = 2*POINTS_PER_TILE;
+    drawable->mass                    = -1;
+    drawable->speed                   = -1;
+    drawable->shape                   = AVOIDANCE_CIRCLULAR;
+    drawable->preferred_next_location = NULL_Coords;
+    drawable->target_location         = NULL_Coords;
+    drawable->target_drawable         = -1;
+
+/* Interactive Data: */
+
+    //#ifdef DEBUG
+    //printf("Set Interactive Data\n");
+    //#endif
+
+    bbIntRect NULL_Hit_Box;
+    NULL_Hit_Box.top      = -1;
+    NULL_Hit_Box.left     = -1;
+    NULL_Hit_Box.height   = -1;
+    NULL_Hit_Box.width    = -1;
+
+    drawable->onclick_function  = -1;
+    drawable->AI_Controller     = -1;
+    drawable->Interactivity     = -1;
+    drawable->Hit_Box           = NULL_Hit_Box;
+
+
+/* Add to Terrain Sqaure */
+
+    //#ifdef DEBUG
+    //printf("Add to Terrain Sqaure:\n");
+    //#endif
+
+    bbDrawable_addtoTS (drawable_int);
+
+    return drawable_int;
+}
+
+
 int angles_8_hack (float i, float j){
 
 
