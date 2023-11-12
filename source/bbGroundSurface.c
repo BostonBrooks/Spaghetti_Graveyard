@@ -242,13 +242,6 @@ int bbGroundSurface_calcHillShading(int Square_i, int Square_j){
          = sfImage_createFromPixels (PIXELS_PER_SQUARE,
              PIXELS_PER_SQUARE, Hill_Shading_Data);
 
-#ifdef DEBUG
-
-    char filename[128];
-    sprintf(filename, "image_%d_%d.bmp", Square_i, Square_j);
-    sfImage_saveToFile(bbGroundSurface_grid[Square_i][Square_j].Hill_Shading_CPU, filename);
-
-#endif
 
     return 0;
 } 
