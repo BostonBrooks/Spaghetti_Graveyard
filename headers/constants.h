@@ -135,6 +135,9 @@
 #define DRAW_ONCE_SKIN      6
 #define DRAW_SKIN           7
 
+#define DRAW_TREE           8
+#define DRAW_UNIT           9
+
 
 //-----------------------------AICONTROLLERS---------------------------------//
 

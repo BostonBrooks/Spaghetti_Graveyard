@@ -59,6 +59,12 @@ int balloondraw(bbDrawable* tobedrawn, int i);
 /** Plot the shadow under a unit */
 int shadowdraw(bbDrawable* tobedrawn, int i);
 
+/** Plot a tree to bbViewport_main, dont advance animation */
+int treedraw(bbDrawable* tobedrawn, int i);
+
+/** Plot a unit to  bbViewport_main and bbViewport_highlights */
+int unitdraw(bbDrawable* tobedrawn, int i);
+
 /** Initialise vtable of draw functions */
 int bbDrawfunction_initAll();
 

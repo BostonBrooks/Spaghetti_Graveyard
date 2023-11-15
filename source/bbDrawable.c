@@ -254,7 +254,7 @@ int bbDrawable_new_tree(bbMapCoords MC){
     drawable->animation[0]          = 20;
     drawable->angle[0]              = rand()%52;
     drawable->frame[0]              = 0;
-    drawable->drawfunction[0]       = DRAW_BASIC;
+    drawable->drawfunction[0]       = DRAW_TREE;
 
     //#ifdef DEBUG
     //printf("Set Null Animations\n");

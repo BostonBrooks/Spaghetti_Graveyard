@@ -184,7 +184,7 @@ int bbViewport_shaders_create (void){
         \
             vec4 mix1 = mix(background, ground, ground.a);\
             vec4 mix2 = mix(mix1, drawables, drawables.a);\
-            vec4 mix3 = mix(mix2, highlights, highlights.a);\
+            vec4 mix3 = mix(mix2, highlights, highlights.a/2);\
             vec4 mix4 = mix(mix3, healthbars, healthbars.a);\
             gl_FragColor =  mix4;\
             \

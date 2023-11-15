@@ -705,6 +705,65 @@ int draw_skin(bbDrawable* tobedrawn, int i){
     return bbDrawfunction_vtable[drawfunction_int](tobedrawn, i);
 }
 
+int treedraw(bbDrawable* tobedrawn, int i){
+
+    int animation = tobedrawn->animation[i];
+    int angle = tobedrawn->angle[i];
+    int frame = tobedrawn->frame[i];
+
+    bbMapCoords mc = tobedrawn->location;
+    bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
+
+    //printf("x=%f, y=%f\n", sc.x, sc.y);
+
+    sfVector2f position;
+    position.x = sc.x;
+    position.y = sc.y;
+
+    sfSprite* sprite = bbAnimation_getSprite(animation,angle,frame);
+
+    sfSprite_setPosition(sprite, position);
+    sfRenderTexture_drawSprite(bbViewport_main, sprite, NULL);
+
+
+
+    return 0;
+}
+
+int unitdraw(bbDrawable* tobedrawn, int i){
+
+        int animation = tobedrawn->animation[i];
+
+
+        int angle = tobedrawn->angle[i];
+        int frame = tobedrawn->frame[i];
+
+        bbMapCoords mc = tobedrawn->location;
+
+        bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
+
+        sfVector2f position;
+        position.x = sc.x;
+        position.y = sc.y;
+
+
+        sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
+
+
+        sfSprite_setPosition(sprite, position);
+        sfRenderTexture_drawSprite(bbViewport_main, sprite, NULL);
+        sfRenderTexture_drawSprite(bbViewport_highlights, sprite, NULL);
+
+        bbAnimation* anim = bbAnimation_vtable[animation];
+
+        int frames = anim->frames;
+        int framerate = anim->framerate;
+
+        tobedrawn->frame[i] = (frame+1)%(frames*framerate);
+
+        return 0;
+    }
+
 int bbDrawfunction_initAll(){
 
     Circle = sfCircleShape_create();
@@ -722,6 +781,8 @@ int bbDrawfunction_initAll(){
     bbDrawfunction_vtable[DRAW_REPEAT_SKIN] = repeatdraw_skin;
     bbDrawfunction_vtable[DRAW_ONCE_SKIN] = draw_once_skin;
     bbDrawfunction_vtable[DRAW_SKIN] = draw_skin;
+    bbDrawfunction_vtable[DRAW_TREE] = treedraw;
+    bbDrawfunction_vtable[DRAW_UNIT] = unitdraw;
     
     return 0;
 }

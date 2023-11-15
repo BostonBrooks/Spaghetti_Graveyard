@@ -61,10 +61,10 @@ int AI_cow_new(bbMapCoords mc){
 
     drawable->skin = 0;
     drawable->state = STATE_IDLE;
-    drawable->animation[0] = ANIMATION_SKIN;
+    drawable->animation[0] = 17;
     drawable->angle[0] = rand() % 8;
     drawable->frame[0] = 0;
-    drawable->drawfunction[0] = DRAW_SKIN;
+    drawable->drawfunction[0] = DRAW_UNIT;
     drawable->start_time = 0;
     drawable->avoidance_radius = POINTS_PER_TILE;
 
