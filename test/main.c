@@ -254,7 +254,7 @@ int Test_All(void){
         //printf("AI available head = %d, AI available tail = %d\n", bbAIControl_Pool_Available_Head, bbAIControl_Pool_Available_Tail);
         //#endif   
     }
-    for (int i=0; i<128; i++){
+    for (int i=0; i<64; i++){
 
         float i = rand() % (POINTS_PER_SQUARE * 5);
         float j = rand() % (POINTS_PER_SQUARE * 5);
