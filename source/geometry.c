@@ -227,6 +227,18 @@ bbScreenCoords bbMapCoords_getScreenCoords_centre (bbMapCoords mc){
     return sc;
 }
 
+bbScreenCoords bbMapCoords_getScreenCoords_vector (bbMapCoords A, bbMapCoords B){
+    bbScreenCoords sc;
+
+    sc.x =    (B.i - A.i) / (1.0 * POINTS_PER_PIXEL)
+              + (B.j - A.j) / (1.0 * POINTS_PER_PIXEL);
+
+    sc.y =    (B.i - A.i) / (1.0 * ISOMETRIC_FACTOR * POINTS_PER_PIXEL)
+              - (B.j - A.j) / (1.0 * ISOMETRIC_FACTOR * POINTS_PER_PIXEL)
+              - (B.k - A.k) / (1.0 * POINTS_PER_PIXEL);
+
+}
+
 bbScreenCoords bbTileCoords_getScreenCoords_centre (bbTileCoords TC){
 
     
