@@ -120,11 +120,16 @@ bbTileCoords bbMapCoords_getTileCoords (bbMapCoords map);
 /** Find the coordinates of the square containing the point given in map coordinates */
 bbSquareCoords bbMapCoords_getSquareCoords (bbMapCoords map);
 
-/** Find the screen coordinates of a point if (0,0,0) is in the top left corner of the screen */
+/** Find the screen coordinates of a point if (0,0,0)??? is in the top left corner of the screen */
 bbScreenCoords bbMapCoords_getScreenCoords_topleft (bbMapCoords mc);
 
-/** Find the screen coordinates of a point if (0,0,0) is in the centre of the screen */
+/** Find the screen coordinates of a point if viewpoint is in the centre of the screen */
 bbScreenCoords bbMapCoords_getScreenCoords_centre (bbMapCoords mc);
+
+/** find the screen coords of point B if point A is in the top left of the screen.
+ * will not be effected by GLOBAL_SCALE in constants.h
+ */
+bbScreenCoords bbMapCoords_getScreenCoords_vector (bbMapCoords A, bbMapCoords B);
 
 /** Find the screen coordinates of a point, in tile coordinates, if (0,0,0) is in the centre of the screen */
 bbScreenCoords bbTileCoords_getScreenCoords_centre (bbTileCoords TC);

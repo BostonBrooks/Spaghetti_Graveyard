@@ -237,6 +237,7 @@ bbScreenCoords bbMapCoords_getScreenCoords_vector (bbMapCoords A, bbMapCoords B)
               - (B.j - A.j) / (1.0 * ISOMETRIC_FACTOR * POINTS_PER_PIXEL)
               - (B.k - A.k) / (1.0 * POINTS_PER_PIXEL);
 
+    return sc;
 }
 
 bbScreenCoords bbTileCoords_getScreenCoords_centre (bbTileCoords TC){
