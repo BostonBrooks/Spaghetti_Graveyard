@@ -159,7 +159,7 @@
 #define AI_YETI                     2
 #define AI_JELLY                    3
 #define AI_TORTOISE                 4
-#define AI_COW                      5
+#define AI_SNAIL                      5
 #define PLAYER_BOW                  6
 #define PLAYER_SWORD                7
 

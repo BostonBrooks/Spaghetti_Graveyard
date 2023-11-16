@@ -57,7 +57,7 @@
 #include "../AI/AI_fox.h"
 #include "../AI/AI_Yeti.h"
 #include "../AI/AI_Tortoise.h"
-#include "../AI/AI_Cow.h"
+#include "../AI/AI_Snail.h"
 #include "../AI/PLAYER.h"
 
 
@@ -96,9 +96,9 @@ int bbAIControl_init(){
     bbAI_update_vtable[AI_TORTOISE] = AI_tortoise_update;
     bbAI_RPC_vtable[AI_TORTOISE] = AI_tortoise_RPC;
 
-    bbAI_constructor_vtable[AI_COW] = AI_cow_new;
-    bbAI_update_vtable[AI_COW] = AI_cow_update;
-    bbAI_RPC_vtable[AI_COW] = AI_cow_RPC;
+    bbAI_constructor_vtable[AI_SNAIL] = AI_cow_new;
+    bbAI_update_vtable[AI_SNAIL] = AI_cow_update;
+    bbAI_RPC_vtable[AI_SNAIL] = AI_cow_RPC;
 
 
     bbAI_constructor_vtable[PLAYER_20230829] = PLAYER_new;

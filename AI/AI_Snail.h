@@ -97,7 +97,7 @@ int AI_cow_new(bbMapCoords mc){
 
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);
 
-    aicontroller->external_state  = AI_COW;
+    aicontroller->external_state  = AI_SNAIL;
     aicontroller->internal_state = STATE_IDLE;
     aicontroller->SquareCoords = bbMapCoords_getSquareCoords(mc);
 

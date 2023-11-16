@@ -244,7 +244,7 @@ int Test_All(void){
         
         bbMapCoords_updateElevation(&mc);
     
-        bbAI_constructor_vtable[AI_COW](mc);
+        bbAI_constructor_vtable[AI_SNAIL](mc);
         
         //#ifdef DEBUG
         //printf("AI pool head = %d, AI pool tail = %d\n", bbAIControl_Pool_In_Use_Head, bbAIControl_Pool_In_Use_Tail);
@@ -350,13 +350,15 @@ int Test_All(void){
         sfRenderTexture_clear(bbViewport_healthbars, sfTransparent);
         
         Current_Time++;
+
+
+
     }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
 }
 
 void err( int eval,
