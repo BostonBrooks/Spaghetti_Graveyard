@@ -226,14 +226,22 @@ int Test_All(void){
     #ifdef VERBOSE
         printf("Spawn some null AIs\n");
     #endif
-    
-    
+
+#ifdef VERBOSE
+    printf("Spawn player AI\n");
+#endif
+
+    player_int = bbAI_constructor_vtable[PLAYER_20230829](viewpoint);
+    bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
+    viewpoint_drawable_int = player_AI->drawables[0];
+
+    init_health();
 
     
     
     bbMapCoords mc;   
     
-    for (int i=0; i<128; i++){
+    for (int i=0; i<8; i++){
     
         float i = rand() % (POINTS_PER_SQUARE * 5);
         float j = rand() % (POINTS_PER_SQUARE * 5);
@@ -254,7 +262,7 @@ int Test_All(void){
         //printf("AI available head = %d, AI available tail = %d\n", bbAIControl_Pool_Available_Head, bbAIControl_Pool_Available_Tail);
         //#endif   
     }
-    for (int i=0; i<64; i++){
+    for (int i=0; i<8; i++){
 
         float i = rand() % (POINTS_PER_SQUARE * 5);
         float j = rand() % (POINTS_PER_SQUARE * 5);
@@ -276,15 +284,7 @@ int Test_All(void){
         //#endif
     }
 
-#ifdef VERBOSE
-        printf("Spawn player AI\n");
-    #endif    
 
-    player_int = bbAI_constructor_vtable[PLAYER_20230829](viewpoint);
-    bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
-    viewpoint_drawable_int = player_AI->drawables[0];
-
-    init_health();
 
 
     sfRenderTexture_drawSprite(viewport, sfSprite_vtable[28], NULL); //viewport background

@@ -683,6 +683,13 @@ int bbMapCoords_isCloser(bbMapCoords a, bbMapCoords b){
 
 float bbMapCoords_getDistance(bbMapCoords a, bbMapCoords b){
 
-    return sqrt((a.i - b.i)*(a.i - b.i)+(a.j - b.j)*(a.j - b.j));
+    long a_i = a.i;
+    long a_j = a.j;
+    long b_i = b.i;
+    long b_j = b.j;
+
+    long sum_squares = (a_i - b_i)*(a_i - b_i)+(a_j - b_j)*(a_j - b_j);
+    //printf("sum sqaures= %ld\n", sum_squares);
+    return sqrt(sum_squares);
 }
 

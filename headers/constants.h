@@ -164,6 +164,7 @@
 #define PLAYER_SWORD                7
 
 #define PLAYER_20230829             11
+#define AI_ARROW                    8
 
 //-----------------------------AI STATES (INTERNAL STATE)-------------------------------//
 

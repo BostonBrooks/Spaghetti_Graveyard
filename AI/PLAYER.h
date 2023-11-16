@@ -86,6 +86,7 @@ int PLAYER_new(bbMapCoords mc){
     
 
     aicontroller->drawables[0] = drawable_int;
+
     
     for(int i = 1; i<DRAWABLES_PER_AI; i++){
         aicontroller->drawables[i] = -1;
@@ -110,8 +111,11 @@ int PLAYER_update(bbAIControl* aicontroller){
     //#endif
     
     int drawable_int = aicontroller->drawables[0];
+
+
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
-    
+
+
     //test movement    
     if (left_button_down == 1){
     
@@ -140,7 +144,7 @@ int PLAYER_update(bbAIControl* aicontroller){
     bbMapCoords location = drawable->location;
     bbMapCoords target_location = drawable->target_location;
 
-    bbDrawable_movetowards_multiple(drawable_int, target_location); //TODO this function assumes there are 8 angles of drawable
+    bbDrawable_movetowards_multiple(drawable_int, target_location);
 
 
 

@@ -59,6 +59,7 @@
 #include "../AI/AI_Tortoise.h"
 #include "../AI/AI_Snail.h"
 #include "../AI/PLAYER.h"
+#include "../AI/AI_Arrow.h"
 
 
 //-----------------------------CODE------------------------------//
@@ -104,6 +105,10 @@ int bbAIControl_init(){
     bbAI_constructor_vtable[PLAYER_20230829] = PLAYER_new;
     bbAI_update_vtable[PLAYER_20230829] = PLAYER_update;
     bbAI_RPC_vtable[PLAYER_20230829] = PLAYER_RPC;
+
+    bbAI_constructor_vtable[AI_ARROW] = AI_arrow_new;
+    bbAI_update_vtable[AI_ARROW] = AI_arrow_update;
+    bbAI_RPC_vtable[AI_ARROW] = AI_arrow_RPC;
 }
 
 

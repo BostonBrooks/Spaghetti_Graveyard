@@ -269,7 +269,7 @@ int Load_Media(){
         }
         fscanf(Media, "%*[^\n]\n");
         bbAnimation_to_vtable(VAddress, Vdrawfunction, angles, frames, framerate, sprites);
-    
+
     }
     
     //return_value = fscanf(Media, "%*[^\n]\n%*[^\n]\n\"End:\"%*[^\n]");

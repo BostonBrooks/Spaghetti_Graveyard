@@ -31,6 +31,12 @@ int heal_player(int x);
 #define WINDOW
 #include "../headers/window.h"
 #endif
+
+
+#ifndef BBAICONTROL_INIT
+#define BBAICONTROL_INIT
+#include "../headers/bbAIControl_init.h"
+#endif
 //-----------------------------GLOBALS----------------------------//
 
 bbScreenCoords mouse_screen_position;
@@ -56,8 +62,9 @@ int process_click_widgets(int x, int y, int right_click){
     return 0;
     
 }
-int process_click_drawables(int x, int y, int right_click);
+
 /** This function will eventually enable the user to left click monsters */
+int process_click_drawables(int x, int y, int right_click);
 /*int process_click_drawables(int x, int y, int right_click){
 
     if (right_click == 0){
@@ -131,8 +138,8 @@ int input_process(void){
                    printf("You left clicked a drawable\n");
                    //The third argument is a flag to tell process_click_drawables that the drawable is being left clicked
                } else {
-                   
-               // no left click ground
+
+                   bbAI_constructor_vtable[AI_ARROW](mouse_map_position);
                //left_button_down = 1;
                
                }

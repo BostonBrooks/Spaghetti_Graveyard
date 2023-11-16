@@ -131,7 +131,6 @@ int bbTerrainSquare_onclick_visible(bbScreenCoords SC, int mousebutton){
             //printf("n=%d, m=%d\n", n, m);
             int flag = bbTerrainSquare_onclick(m, n, SC, mousebutton);
             if (flag == DONT_PASS) {
-                printf("flag = DONT_PASS\n");
                 return DONT_PASS;
             }
         }
