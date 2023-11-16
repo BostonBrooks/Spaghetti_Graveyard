@@ -57,7 +57,7 @@ int PLAYER_new(bbMapCoords mc){
     drawable->animation[0] = 4;
     drawable->angle[0]     = 0;
     drawable->frame[0]     = 0;
-    drawable->drawfunction[0]  = DRAW_BASIC;
+    drawable->drawfunction[0]  = DRAW_UNIT;
     drawable->start_time       = 0;
     
     drawable->avoidance_radius = 32 * POINTS_PER_PIXEL;
