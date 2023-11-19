@@ -9,6 +9,11 @@
 
 //-----------------------------INCLUDES----------------------------//
 
+#ifndef BBPRINTF
+#define BBPRINTF
+#include "../headers/bbPrintf.h"
+#endif
+
 #ifndef BBAICONTROL
 #define BBAICONTROL
 #include "../headers/bbAIControl.h"

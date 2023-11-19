@@ -65,7 +65,11 @@ int Test_All(void);
 int main (void){
 
     printf("Program Starting:\n");
-    
+
+    bbDebug("This is a debug message %f\n", 193.1);
+
+    bbVerbose("This is a verbose message %d\n", 193);
+
     Test_All();
     
     sleep(1);
@@ -292,7 +296,7 @@ int Test_All(void){
 
     
     while(1) {
-    
+
         
         #ifdef VERBOSE
         printf("Beginning Main Loop: time = %d\n", Current_Time);

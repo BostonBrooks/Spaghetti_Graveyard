@@ -12,7 +12,9 @@
 
 #define SHOWTIMING
 //#define VERBOSE
-#define DEBUG
+
+#define BBDEBUG
+#define BBVERBOSE
 
 //#define FASTLOAD
 //skips slow rendering of hillshading to speed up loading of game
