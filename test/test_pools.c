@@ -6,10 +6,9 @@
 #endif
 
 
-#ifndef BBNOTHING
-#define BBNOTHING
+//New way of including files
 #include "../headers/bbNothing.h"
-#endif
+
 
 #ifndef ALL_INCLUDES
 #define ALL_INCLUDES

@@ -67,10 +67,9 @@
 #endif
 
 
-#ifndef BBNOTHING
-#define BBNOTHING
+//New way of including files
 #include "../headers/bbNothing.h"
-#endif
+
 
 #ifndef BBTERRAINSQUARE
 #define BBTERRAINSQUARE
