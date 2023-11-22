@@ -146,6 +146,8 @@ bbMapCoords bbScreenCoords_getMapCoords_k0 (bbScreenCoords sc);
 /** Find the map coords of a point on screen (in fact, on the viewport), given k is at it's maximum value */
 bbMapCoords bbScreenCoords_getMapCoords_kmax (bbScreenCoords sc);
 
+/** Find the map coords of a point on screen (in fact, on the viewport), given k is at the given value*/
+bbMapCoords bbScreenCoords_getMapCoords_k_fixed (bbScreenCoords sc, int k);
 
 /** Find the value of k, given i and j are map coordinates */
 int bbElevations_interpolate ( int i, int j);
