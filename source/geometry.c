@@ -318,6 +318,24 @@ bbMapCoords bbScreenCoords_getMapCoords_kmax (bbScreenCoords sc) {
     return mc;
 }
 
+bbMapCoords bbScreenCoords_getMapCoords_k_fixed (bbScreenCoords sc, int k) {
+
+    bbMapCoords mc;
+    mc.k = k;
+
+    mc.i = (sc.x - VIEWPORT_WIDTH/2.0) * POINTS_PER_PIXEL / 2
+           + (sc.y - VIEWPORT_HEIGHT/2.0) * POINTS_PER_PIXEL * ISOMETRIC_FACTOR / 2
+           + (mc.k - viewpoint.k) * ISOMETRIC_FACTOR / 2
+           + viewpoint.i;
+
+    mc.j = (sc.x - VIEWPORT_WIDTH/2.0) * POINTS_PER_PIXEL / 2
+           - (sc.y - VIEWPORT_HEIGHT/2.0) * POINTS_PER_PIXEL * ISOMETRIC_FACTOR / 2
+           - (mc.k - viewpoint.k) * ISOMETRIC_FACTOR / 2
+           + viewpoint.j;
+
+    return mc;
+}
+
 int bbElevations_interpolate ( int i, int j){
 //calculates the elevation given i and j coordinates
 
