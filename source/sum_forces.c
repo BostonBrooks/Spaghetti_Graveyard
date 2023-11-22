@@ -34,6 +34,7 @@
 #include "../headers/bbTerrainSquare.h"
 #endif
 
+#include "../headers/bbPrintf.h"
 //-----------------------------GLOBALS----------------------------//
 
 bbFloat3D (*force_shape_vtable[NUMBER_OF_AVOIDANCE_SHAPES])(int drawable_A_int, int drawable_B_int, bbMapCoords test_point);
@@ -81,10 +82,10 @@ bbFloat3D Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords te
 
     //TODO what if avoidance_radius = -1
 
-    int delta_i = test_point.i - drawable_B_i;
+    int delta_i = test_point.i - drawable_B_i; //Use long to prevent overflow
     int delta_j = test_point.j - drawable_B_j;
 
-    float distance =  sqrt(delta_i * delta_i + delta_j*delta_j);
+    float distance = bbMapCoords_getDistance(test_point, drawable_B->location);
 
     bbFloat3D vector_force;
     if (distance < 8){ //TODO fixes glitchiness but there shouldnt be no force when drawables are too close together.
@@ -100,7 +101,6 @@ bbFloat3D Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords te
 
     float scalar_force = force(gap);
 
-
     float normal_i = delta_i / distance;
     float normal_j = delta_j / distance;
 
@@ -108,6 +108,11 @@ bbFloat3D Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords te
     vector_force.i = scalar_force * normal_i;
     vector_force.j = scalar_force * normal_j;
 
+    float debug_force = sqrt(vector_force.i * vector_force.i + vector_force.j * vector_force.j);
+
+    if (debug_force > POINTS_PER_SQUARE){
+        bbDebug("distance = %f\n", distance);
+    }
     return vector_force;
 
 }
@@ -203,6 +208,9 @@ bbFloat3D sum_forces_per_square(int drawable_A_int, bbMapCoords test_point, int 
                 output.i += temp.i;
                 output.j += temp.j;
 
+                float debug_force = sqrt(temp.i * temp.i + temp.j * temp.j);
+
+                assert(debug_force < POINTS_PER_SQUARE);
 
             }
 
@@ -213,6 +221,8 @@ bbFloat3D sum_forces_per_square(int drawable_A_int, bbMapCoords test_point, int 
     }
 
 //printf("per square potential = %f\n", output);
+
+
     return output;
 
 
