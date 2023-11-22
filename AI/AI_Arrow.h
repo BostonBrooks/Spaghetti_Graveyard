@@ -80,6 +80,8 @@ int AI_arrow_new(bbMapCoords mc){
     drawable->health_bar_height     = 200;
     drawable->health_bar_width      = 5;
     drawable->health_bar_length     = 60;
+    drawable->avoidance_radius      = -1;   //This should be enough to disable avoidance, but the next line is needed.
+    drawable->shape                 = AVOIDANCE_NULL;
 
     bbIntRect Hit_Box;
     Hit_Box.top = -1;
@@ -164,11 +166,10 @@ int AI_arrow_update(bbAIControl* aicontroller){
 
         case STATE_MOVING:
 
-            float speed = 8;
+            float speed = 256;  //Stub, should be determined elsewhere
 
             float distance_to_target = bbMapCoords_getDistance(AI_drawable->location, AI_drawable->target_location);
 
-            printf("distance to target = %f\n", distance_to_target);
             bbMapCoords new_location;
 
             if (distance_to_target < speed){
