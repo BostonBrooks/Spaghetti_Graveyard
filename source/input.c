@@ -21,6 +21,10 @@ int heal_player(int x);
 #include "../headers/system_includes.h"
 #endif
 
+#ifndef BBDRAWABLE
+#define BBDRAWABLE
+#include "../headers/bbDrawable.h"
+#endif
 
 #ifndef GEOMETRY
 #define GEOMETRY
@@ -40,7 +44,7 @@ int heal_player(int x);
 //-----------------------------GLOBALS----------------------------//
 
 bbScreenCoords mouse_screen_position;
-
+extern int player_int;
 
 bbScreenCoords mouse_viewport_position;
 
@@ -139,8 +143,36 @@ int input_process(void){
                    //The third argument is a flag to tell process_click_drawables that the drawable is being left clicked
                } else {
 
-                   bbAI_constructor_vtable[AI_ARROW](mouse_map_position);
-               //left_button_down = 1;
+                   bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
+
+                   int player_drawable_int = player_AI->drawables[0];
+                   bbDrawable* player_drawable = bbDrawable_Pool_Lookup(player_drawable_int);
+                   bbMapCoords player_coords = player_drawable->location;
+
+                   player_coords.k += POINTS_PER_TILE * 4;  //STUB: should be based on unit height
+
+                   int arrow_AI_int = bbAI_constructor_vtable[AI_ARROW](player_coords);
+                   bbAIControl* arrow_AI = bbAIControl_Pool_Lookup(arrow_AI_int);
+                   int arrow_drawable_int = arrow_AI->drawables[0];
+                   bbDrawable* arrow_drawable = bbDrawable_Pool_Lookup(arrow_drawable_int);
+                   bbMapCoords target_location = bbScreenCoords_getMapCoords_k_fixed (mouse_viewport_position, player_coords.k);
+
+                   float distance_to_target = bbMapCoords_getDistance(player_coords, target_location);
+
+                   bbMapCoords new_location = player_coords;
+
+                   int delta_i = target_location.i - player_coords.i;
+                   int delta_j = target_location.j - player_coords.j;
+
+                   int range = POINTS_PER_SQUARE * 2;
+
+                   new_location.i +=  delta_i * (range / distance_to_target);
+                   new_location.j +=  delta_j * (range / distance_to_target);
+
+
+                   arrow_drawable->target_location = new_location;
+
+                   //left_button_down = 1; //Set a flag to tell entire the system that the left mouse button is down.
                
                }
 
