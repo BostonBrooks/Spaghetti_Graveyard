@@ -5,7 +5,8 @@
  * @brief This header file contains all of the numerical constants used by the game, all in one place
  */
 
-#define CONSTANTS
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
 
 //-----------------------------COMPILATION------------------------//
 
@@ -226,3 +227,5 @@
 #define COLOUR_BACKGROUND_NULL sfBlue
 #define COLOUR_VIEWPORT_NULL   sfMagenta
 #define COLOUR_GROUND_NULL     {104, 151, 100, 255}
+
+#endif

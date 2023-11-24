@@ -5,8 +5,9 @@
  * @brief This header file contains includes for interacting with the operating system
  */
 
+#ifndef SYSTEM_INCLUDES_H
+#define SYSTEM_INCLUDES_H
 
-#define SYSTEM_INCLUDES
 
 #include <SFML/System.h>
 #include <SFML/Graphics.h>
@@ -22,3 +23,4 @@
 void err( int eval,
           const char *fmt, ...);
 
+#endif

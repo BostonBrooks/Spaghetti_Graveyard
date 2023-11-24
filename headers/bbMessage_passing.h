@@ -5,26 +5,15 @@
  * @brief The mechanics of passing messages 
  */
 
-#define BBMESSAGE_PASSING
 
-
+#ifndef MESSAGE_PASSING_H
+#define MESSAGE_PASSING_H
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-#ifndef BBMESSAGE_FUNCTIONS
-#define BBMESSAGE_FUNCTIONS
 #include "../headers/bbMessage_functions.h"
-#endif
 
 //-----------------------------GLOBALS----------------------------//
 
@@ -49,3 +38,5 @@ int bbMessage_process(int message_int);
 
 /** Perform all message queued, up to Current_Time */
 int bbMessage_processAll();
+
+#endif

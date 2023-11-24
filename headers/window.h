@@ -4,24 +4,15 @@
  * @ingroup 
  * @brief Some data for launching and updating the window
  */
- #define WINDOW
+ 
+#ifndef WINDOW_H
+#define WINDOW_H
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
 
 //-----------------------------CONSTANTS----------------------------//
 
@@ -46,3 +37,4 @@ int Display_Decal(void);
 /** TODO Window_Display not defined */
 int Window_Display(void);
 
+#endif

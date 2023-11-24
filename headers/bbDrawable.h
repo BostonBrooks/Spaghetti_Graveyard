@@ -5,25 +5,13 @@
  * @brief A drawable is any object in the game that is drawn to the viewport 
  */
 
-
-#define BBDRAWABLE
+#ifndef BBDRAWABLE_H
+#define BBDRAWABLE_H
 //-----------------------------INCLUDES----------------------------//
 
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef POOLS
-#define POOLS
 #include "../headers/pools.h"
-#endif
 
 #define NO_HEALTHBAR -1
 //-----------------------------STRUCTS------------------------------//
@@ -106,3 +94,6 @@ int bbDrawable_new_tree(bbMapCoords MC);
 /** drawable moves toward goal point */
 int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location);
 int bbDrawable_movetowards_multiple(int drawable_int, bbMapCoords target_location);
+
+
+#endif

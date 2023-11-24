@@ -6,20 +6,15 @@
  * It also includes geometric transformations between types of data.
  */
 
-#define GEOMETRY
 
+#ifndef GEOMETRY_H
+#define GEOMETRY_H
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
+
 
 
 
@@ -179,3 +174,4 @@ int bbMapCoords_isCloser(bbMapCoords a, bbMapCoords b);
 /** calculate the distance between 2 points, on the i, j plane */
 float bbMapCoords_getDistance(bbMapCoords a, bbMapCoords b);
 
+#endif

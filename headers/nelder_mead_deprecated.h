@@ -5,17 +5,15 @@
  * @brief This header file contains code to minimise the potential of a drawable, in order to calculate next location
  */
 
-#define NELDER_MEAD
+#ifndef NELDER_MEAD_H
+#define NELDER_MEAD_H
 
 //-----------------------------INCLUDES----------------------------//
 
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
 //-----------------------------CODE----------------------------//
 
 /** minimise the potential of a drawable, in order to calculate next location */
 bbMapCoords nelder_mead (int drawable_int);
+
+#endif

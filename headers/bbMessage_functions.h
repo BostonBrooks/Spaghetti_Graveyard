@@ -5,20 +5,15 @@
  * @brief Types of message and what their effects are.
  */
 
-#define BBMESSAGES_FUNCTIONS
-
+#ifndef BBMESSAGE_FUNCTIONS_H
+#define BBMESSAGE_FUNCTIONS_H
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef BBMESSAGE
-#define BBMESSAGE
-#include "../headers/bbMessage.h"
-#endif
 
-#ifndef CONSTANTS
-#define CONSTANTS
+#include "../headers/bbMessage.h"
 #include "../headers/constants.h"
-#endif
+
 
 //-----------------------------GLOBALS----------------------------//
 
@@ -35,3 +30,5 @@ int bbMessage_move_drawable(bbMessage* message);
 
 /** populate vtable of message types */
 int bbMessage_initTypes();
+
+#endif

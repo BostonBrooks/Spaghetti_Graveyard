@@ -7,37 +7,18 @@
  * drawable_A is repelled by drawable_B.
  */
 
-
-#define POTENTIAL_FIELDS
-
+#ifndef POTENTIAL_FIELDS_H
+#define POTENTIAL_FIELDS_H
 
 //-----------------------------INCLUDES----------------------------//
 
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBTERRAINSQUARE
-#define BBTERRAINSQUARE
 #include "../headers/bbTerrainSquare.h"
-#endif
+
 
 //-----------------------------GLOBALS----------------------------//
 
@@ -82,3 +63,5 @@ float sum_potential_Nearby(int drawable_A_int, bbMapCoords test_point);
 
 /** Output a csv file for plotting the potential field. */
 int plot_potential(int drawable_int);
+
+#endif

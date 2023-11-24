@@ -1,33 +1,21 @@
+
+
 /**
  * @file
  *
  * @ingroup 
  * @brief Contains shaders and textures for drawing to the viewport
  */
- 
- 
- #define VIEWPORT
+#ifndef VIEWPORT_H
+#define VIEWPORT_H
+
 
 //-----------------------------INCLUDES----------------------------//
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
+
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
-    #include "../headers/media.h"
-#endif
-
-#ifndef WINDOW
-#define WINDOW
-    #include "../headers/window.h"
-#endif
+#include "../headers/media.h"
+#include "../headers/window.h"
 
 //-----------------------------CONSTANTS----------------------------//
 
@@ -81,3 +69,4 @@ int bbViewport_shaders_create (void);
 /** Create textures for drawing to the viewport */
 int bbViewport_init(void);
 
+#endif

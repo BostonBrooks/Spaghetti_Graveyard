@@ -1,12 +1,12 @@
-/** This header contains custom print functions, assert function
- * Enabled by definitions BBDEBUG and BBVERBOSE */
+/** This header contains custom print functions
+ * Enabled by definitions BBDEBUG and BBVERBOSE
+ * May be defined on a file-by=file basis */
 
 
-#ifndef CONSTANTS
-#define CONSTANTS
+#ifndef BBPRINTF_H
+#define BBPRINTF_H
+
 #include "../headers/constants.h"
-#endif
-
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -44,4 +44,4 @@ static int bbVerbose(const char* format, ...){
 
 }
 
-
+#endif

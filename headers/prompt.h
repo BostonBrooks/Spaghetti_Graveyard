@@ -5,24 +5,15 @@
  * @brief Handle text input
  */
 
-#define PROMPT
+#ifndef PROMPT_H
+#define PROMPT_H
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
+
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef INPUT
-#define INPUT
 #include "../headers/input.h"
-#endif
 
 
 
@@ -89,3 +80,4 @@ int nth_newline(char* input, int n);
 /** Display text to screen */
 int prompt_display(void);
 
+#endif

@@ -5,14 +5,13 @@
  * @brief Uses Gaussian derivative and Lanczos interpolation to calculate a smooth ground surface, in order to calculate hill shading
  */
 
+#ifndef INTERPOLATION_H
+#define INTERPOLATION_H
 //-----------------------------INCLUDES----------------------------//
-#define INTERPOLATION
 
 
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
+
 
 
 //-----------------------------GLOBALS----------------------------//
@@ -57,4 +56,4 @@ int lanczos_getElevation(bbMapCoords mc);
 /** use interpolation to calculate normal to ground surface at a point */
 bbFloat3D lanczos_getNormal(bbMapCoords mc);
 
-
+#endif

@@ -6,46 +6,19 @@
  * A curved suface is approximated using vertex arrays and hill shading.
  */
 
-#define BBGROUNDSURFACE
-
+#ifndef BBGROUNDSURFACE_H
+#define BBGROUNDSURFACE_H
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
+
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef WINDOW
-#define WINDOW
 #include "../headers/window.h"
-#endif
-
-#ifndef INTERPOLATION
-#define INTERPOLATION
 #include "../headers/interpolation.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
-
-
-
-#ifndef VIEWPORT
-#define VIEWPORT
 #include "../headers/viewport.h"
-#endif
+
 
 //-----------------------------CONSTANTS----------------------------//
 
@@ -114,3 +87,5 @@ int bbGroundSurface_draw(int Square_i, int Square_j);
 
 /** Draw all sqaures visible on the screen */
 int bbGroundSurface_drawVisible();
+
+#endif

@@ -6,23 +6,16 @@
  * that is acted on an object at a latyer time, after all AI Controllers have completed proccessing.
  * Care should be taken to ensure these messages are associative (order doesnt matter)
  */
-#define BBMESSAGE
+
+#ifndef BBMESSAGE_H
+#define BBMESSAGE_H
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef POOLS
-#define POOLS
+
 #include "../headers/pools.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
+
 
 //-----------------------------GLOBALS------------------------------//
 
@@ -63,3 +56,5 @@ DECLARE_POOL_GLOBALS(bbMessage, MESSAGE_POOL_LEVEL_1, MESSAGE_POOL_LEVEL_2)
 
 /** Which message is to be processed at a later time. */
 int bbMessage_isAfter (bbMessage* a, bbMessage* b);
+
+#endif

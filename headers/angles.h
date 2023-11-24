@@ -3,11 +3,12 @@
  *
  * @ingroup 
  * @brief Provides code to decide what angle to display of a drawable and it's animations.
+ * STUB: these functions might want to be static functions or split into .h and .c files
  */
 
 
-#define ANGLES
-
+#ifndef ANGLES_H
+#define ANGLES_H
 
 //-----------------------------INCLUDES----------------------------//
 
@@ -140,3 +141,5 @@ int angles_32 (float i, float j){
     }
 
 }
+
+#endif

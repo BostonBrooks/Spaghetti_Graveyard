@@ -1,9 +1,8 @@
-#define POOLS
+#ifndef POOLS_H
+#define POOLS_H
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
+
 
 // Implements object pools to speed up code that frequently adds and removes
 // data from the heap. Additionally helps with pointer swizzling
@@ -349,3 +348,4 @@
     DEFINE_POOL_LOOKUP    (CLASS, LEVEL_1, LEVEL_2)\
     DEFINE_POOL_FREE_ALL  (CLASS, LEVEL_1, LEVEL_2)
 
+#endif

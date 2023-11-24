@@ -6,25 +6,14 @@
           there are two types of ai function
  */
 
-#define BBAICONTROL
-
+#ifndef BBAICONTROL_H
+#define BBAICONTROL_H
 //-----------------------------INCLUDES----------------------------//
 
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef POOLS
-#define POOLS
 #include "../headers/pools.h"
-#endif
+
 
 
 //-----------------------------STRUCTS------------------------------//
@@ -87,3 +76,5 @@ int bbAIControl_update_int(int aicontroller_int);
 
 /** Update all AIs in pool */
 int bbAIControl_updatePool(void);
+
+#endif

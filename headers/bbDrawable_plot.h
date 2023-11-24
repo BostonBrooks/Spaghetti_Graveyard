@@ -5,18 +5,14 @@
  * @brief Plot drawables to viewport
  */
 
-#define BBDRAWABLE_PLOT
+#ifndef BBDRAWABLE_PLOT_H
+#define BBDRAWABLE_PLOT_H
+
 //-----------------------------INCLUDES----------------------------//
-#ifndef CONSTANTS
-#define CONSTANTS
+
 #include "../headers/constants.h"
-#endif
-
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
+
 //-----------------------------GLOBALS----------------------------//
 
 //Drawfunction types:
@@ -68,3 +64,4 @@ int unitdraw(bbDrawable* tobedrawn, int i);
 /** Initialise vtable of draw functions */
 int bbDrawfunction_initAll();
 
+#endif

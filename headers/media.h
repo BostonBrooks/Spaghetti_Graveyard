@@ -5,14 +5,13 @@
  * @brief Load media from disk
  */
 
-#define MEDIA
-
+#ifndef MEIDA_H
+#define MEDIA_H
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
+
 #include "../headers/system_includes.h"
-#endif
+
 
 
 //-----------------------------STRUCURES------------------------------//
@@ -65,3 +64,5 @@ int Load_Media();
 sfSprite* bbAnimation_getSprite(int animation_int, int angle_int, int frame_int);
 
 int bbAnimation_print_data(int animation_int);
+
+#endif

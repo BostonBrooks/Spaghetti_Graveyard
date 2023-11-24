@@ -6,20 +6,13 @@
  * It should be called bbMapSquare
  */
 
-#define BBTERRAINSQUARE
+#ifndef BBTERRAINSQUARE_H
+#define BBTERRAINSQUARE_H
 
 //-----------------------------INCLUDES----------------------------//
 
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBDRAWABLE_PLOT
-#define BBDRAWABLE_PLOT
 #include "../headers/bbDrawable_plot.h"
-#endif
 
 
 //-----------------------------CONSTANTS----------------------------//
@@ -54,3 +47,5 @@ int bbTerrainSquare_drawVisible(void);
 
 /** Initilise terrain square grid */
 int bbTerrainSquare_initAll(void);
+
+#endif
