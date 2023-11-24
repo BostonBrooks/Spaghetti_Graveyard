@@ -1,99 +1,16 @@
-#define BBDRAWABLE
+#include "../headers/bbDrawable.h"
 //-----------------------------INCLUDES----------------------------//
 
 
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef POOLS
-#define POOLS
 #include "../headers/pools.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
-
-#ifndef BBMESSAGE_CONSTRUCTORS
-#define BBMESSAGE_CONSTRUCTORS
 #include "../headers/bbMessage_constructors.h"
-#endif
-
-
 #include <math.h>
 
-//#define NO_HEALTHBAR -1  // what even is this?
-//-----------------------------STRUCTS------------------------------//
+//STUB #define NO_HEALTHBAR -1  // what even is this?
 
-/** A drawable is any object in the game that is drawn to the viewport */
- typedef struct {
-
-/* Housekeeping Data: */
-    bbSquareCoords SquareCoords;
-    //what terrain square contains the drawable?
-    //int i_Coord;
-    //int j_Coord;
- 
-    int Pool_Self;
-    int Pool_Prev;
-    int Pool_Next;
-    int Pool_In_Use;
-    
-    int Square_Prev;
-    int Square_Next;
-    
-/* Cosmetic Data */
-
-    bbMapCoords location;
-    
-    int health;
-    int max_health;
-    int display_health_until;
-    int health_bar_height;
-    int health_bar_width;
-    int health_bar_length;
-    
-    int cosmetic_radius;
-
-    int animation[ANIMATIONS_PER_DRAWABLE];
-    int angle[ANIMATIONS_PER_DRAWABLE];
-    int frame[ANIMATIONS_PER_DRAWABLE];
-    int drawfunction[ANIMATIONS_PER_DRAWABLE];
-    int start_time; //frame = ((current time - start time)/framerate)%frames (not yet implemented)
-
-    int skin;
-    int state;
-
-
-     /* Avoidance Data */
-    
-    float avoidance_radius;
-    float mass;
-    float speed;
-    int shape;        //NO_POTENTIAL for no repulsion
-    bbMapCoords preferred_next_location;
-    bbMapCoords target_location;
-    int target_drawable;
-
-/* Interactive Data: */
-
-    int onclick_function; //might want to implement a vtable or just not use this variable
-    int AI_Controller;
-    int Interactivity; //(0 = none, 1 = enemy, 2 = chest)
-    bbIntRect Hit_Box;
-    
-    
-     
-
-} bbDrawable;
 
 //-----------------------------CODE------------------------------//
 
@@ -105,7 +22,7 @@
 
 DEFINE_POOL(bbDrawable, 500, 51)
 //DEFINE_POOL(bbDrawable, DRAWABLE_POOL_LEVEL_1, DRAWABLE_POOL_LEVEL_2)
-//TODO why does the commented out line cause segfault in MSYS?
+//Wy does the commented out line cause segfault in MSYS? Because you cannot allocate that much space in one go
 
 /** return 1 if a is closer to the screen than b, 0 otherwise */
 int bbDrawable_isCloser (bbDrawable* a, bbDrawable* b){ 
@@ -119,26 +36,17 @@ int bbDrawable_isCloser (bbDrawable* a, bbDrawable* b){
 /** Create a new drawable (a barrel) */
 int bbDrawable_new(bbMapCoords MC){
 
-    //#ifdef DEBUG
-    //printf("Create Drawable:\n");
-    //#endif
+
     
     int drawable_int = bbDrawable_Pool_New(NEXT_AVAILABLE);
 
-    //#ifdef DEBUG
-    //printf("Created Drawable\n");
-    //#endif
 
     assert(drawable_int >= 0);
     
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
 /* Cosmetic Data */
-    
-    //#ifdef DEBUG
-    //printf("Set Cosmetic Data\n");
-    //#endif
-    
+
     
     drawable->location              = MC;
     drawable->health                = 5;
@@ -155,10 +63,7 @@ int bbDrawable_new(bbMapCoords MC){
     drawable->frame[0]              = 0;
     drawable->drawfunction[0]       = DRAW_BASIC;
      
-    //#ifdef DEBUG
-    //printf("Set Null Animations\n");
-    //#endif
-       
+
     for (int i=1; i < ANIMATIONS_PER_DRAWABLE; i++){
    
    
@@ -177,9 +82,7 @@ int bbDrawable_new(bbMapCoords MC){
 
 /* Avoidance Data */
     
-    //#ifdef DEBUG
-    //printf("Set Avoidance Data\n");
-    //#endif
+
       
     drawable->avoidance_radius        = 20 * POINTS_PER_PIXEL;
     drawable->mass                    = -1;
@@ -190,10 +93,7 @@ int bbDrawable_new(bbMapCoords MC){
     drawable->target_drawable         = -1;
     
 /* Interactive Data: */
-    
-    //#ifdef DEBUG
-    //printf("Set Interactive Data\n");
-    //#endif
+
     
     bbIntRect NULL_Hit_Box;
     NULL_Hit_Box.top      = -1;
@@ -209,9 +109,7 @@ int bbDrawable_new(bbMapCoords MC){
 
 /* Add to Terrain Sqaure */
 
-    //#ifdef DEBUG
-    //printf("Add to Terrain Sqaure:\n");
-    //#endif
+
 
     bbDrawable_addtoTS (drawable_int);
 
@@ -220,15 +118,10 @@ int bbDrawable_new(bbMapCoords MC){
 
 int bbDrawable_new_tree(bbMapCoords MC){
 
-    //#ifdef DEBUG
-    //printf("Create Drawable:\n");
-    //#endif
+
 
     int drawable_int = bbDrawable_Pool_New(NEXT_AVAILABLE);
 
-    //#ifdef DEBUG
-    //printf("Created Drawable\n");
-    //#endif
 
     assert(drawable_int >= 0);
 
@@ -236,9 +129,7 @@ int bbDrawable_new_tree(bbMapCoords MC){
 
 /* Cosmetic Data */
 
-    //#ifdef DEBUG
-    //printf("Set Cosmetic Data\n");
-    //#endif
+
 
 
     drawable->location              = MC;
@@ -256,9 +147,6 @@ int bbDrawable_new_tree(bbMapCoords MC){
     drawable->frame[0]              = 0;
     drawable->drawfunction[0]       = DRAW_TREE;
 
-    //#ifdef DEBUG
-    //printf("Set Null Animations\n");
-    //#endif
 
     for (int i=1; i < ANIMATIONS_PER_DRAWABLE; i++){
 
@@ -278,9 +166,6 @@ int bbDrawable_new_tree(bbMapCoords MC){
 
 /* Avoidance Data */
 
-    //#ifdef DEBUG
-    //printf("Set Avoidance Data\n");
-    //#endif
 
     drawable->avoidance_radius        = 2*POINTS_PER_TILE;
     drawable->mass                    = -1;
@@ -292,9 +177,6 @@ int bbDrawable_new_tree(bbMapCoords MC){
 
 /* Interactive Data: */
 
-    //#ifdef DEBUG
-    //printf("Set Interactive Data\n");
-    //#endif
 
     bbIntRect NULL_Hit_Box;
     NULL_Hit_Box.top      = -1;
@@ -310,9 +192,6 @@ int bbDrawable_new_tree(bbMapCoords MC){
 
 /* Add to Terrain Sqaure */
 
-    //#ifdef DEBUG
-    //printf("Add to Terrain Sqaure:\n");
-    //#endif
 
     bbDrawable_addtoTS (drawable_int);
 
@@ -320,7 +199,7 @@ int bbDrawable_new_tree(bbMapCoords MC){
 }
 
 
-int angles_8_hack (float i, float j){
+int angles_8_hack (float i, float j){ //STUB: Did this to avoid multiple definitions of the same function
 
 
     float x = i + j;
@@ -369,7 +248,6 @@ int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location){
     int j = target_location.j - location.j;
 
     int angle = angles_8_hack(i,j);
-    //printf("angle = %d\n", angle);
     drawable->angle[0] = angle;
 
     float distance = sqrt(i*i + j*j);
@@ -433,7 +311,7 @@ int bbDrawable_movetowards_multiple(int drawable_int, bbMapCoords target_locatio
     int j = target_location.j - new_location.j;
 
     int angle = angles_8_hack(i,j);
-    //printf("angle = %d\n", angle);
+
     drawable->angle[0] = angle;
     bbMapCoords_updateElevation(&new_location);
     message_movement_new(drawable_int, new_location);

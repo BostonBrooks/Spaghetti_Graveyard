@@ -1,11 +1,8 @@
-#define MOVE_TOWARDS
+#include "../headers/move_towards_deprecated.h"
 //-----------------------------INCLUDES----------------------------//
 
 
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
 
 
 int bbMapCoords_move_toward(bbMapCoords* subject, bbMapCoords object, float distance){

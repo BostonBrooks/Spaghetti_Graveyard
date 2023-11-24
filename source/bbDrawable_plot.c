@@ -1,50 +1,16 @@
-#define BBDRAWABLE_PLOT
+#include "../headers/bbDrawable_plot.h"
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef VIEWPORT
-#define VIEWPORT
 #include "../headers/viewport.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBDRAWABLE_LISTS
-#define BBDRAWABLE_LISTS
 #include "../headers/bbDrawable_lists.h"
-#endif
-
-#ifndef BBGROUNDSURFACE
-#define BBGROUNDSURFACE
 #include "../headers/bbGroundSurface.h"
-#endif
-
-#ifndef BBSKIN
-#define BBSKIN
 #include "../headers/bbSkin.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
+
 
 //-----------------------------GLOBALS----------------------------//
 
@@ -293,7 +259,7 @@ int basicdraw(bbDrawable* tobedrawn, int i){
     bbMapCoords mc = tobedrawn->location;
     bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
     
-    //printf("x=%f, y=%f\n", sc.x, sc.y); 
+
     
     sfVector2f position;
     position.x = sc.x;
@@ -331,29 +297,13 @@ int nulldraw(bbDrawable* tobedrawn, int i){
 
 int repeatdraw(bbDrawable* tobedrawn, int i){
 
-//#ifdef DEBUG
-//    printf("before accessing drawable struct\n");
-//#endif
+
     int animation = tobedrawn->animation[i];
-
-
-//#ifdef DEBUG
-//    printf("animation = %d\n", animation);
-//#endif
 
     int angle = tobedrawn->angle[i];
     int frame = tobedrawn->frame[i];
 
-//#ifdef DEBUG
-//    printf("after accessing drawable struct\n");
-//#endif
-    
     bbMapCoords mc = tobedrawn->location;
-
-
-//#ifdef DEBUG
-//    printf("mc.i = %d, mc.j = %d, mc.k = %d\n", mc.i, mc.j, mc.k);
-//#endif
 
     bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
     
@@ -362,27 +312,13 @@ int repeatdraw(bbDrawable* tobedrawn, int i){
     position.y = sc.y;
 
 
-//#ifdef DEBUG
-//    printf("position.x = %f, position.y = %f\n", position.x, position.y);
-//#endif
-
-//#ifdef DEBUG
-//    printf("animation = %d, angle = %d, frame = %d\n", animation, angle, frame);
-//#endif
 
     sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
-
-//#ifdef DEBUG
-//    printf("after accessing sfSprite\n");
-//#endif
 
 
 
     sfSprite_setPosition(sprite, position);
 
-//#ifdef DEBUG
-//    printf("after modifying sfSprite\n");
-//#endif
     sfRenderTexture_drawSprite(bbViewport_main, sprite, NULL);
     
     bbAnimation* anim = bbAnimation_vtable[animation];
@@ -399,12 +335,6 @@ int angles_8 (float i, float j);
 
 int repeatdraw_skin(bbDrawable* tobedrawn, int i){
 
-//#ifdef DEBUG
-//    printf("repeatdraw_skin\n");
-//#endif
-//#ifdef DEBUG
-//    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
 
     int skin_int = -7;
     int state_int = -11;
@@ -421,32 +351,17 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
         assert(state_int >= 0 && state_int < INNER_STATES_PER_SKIN);
 
         animation = bbSkins[skin_int].animations_int[state_int][i];
-        //printf("animation = %d\n", animation);
+
 
     }
-
-//#ifdef DEBUG
-//    printf("animation = %d\n", animation);
-//#endif
 
     int angle = tobedrawn->angle[i];
     int frame = tobedrawn->frame[i];
 
-//#ifdef DEBUG
-//    printf("after accessing drawable struct\n");
-//#endif
 
-
-//#ifdef DEBUG
-//    printf("1 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
 
     bbMapCoords mc = tobedrawn->location;
 
-
-//#ifdef DEBUG
-//    printf("mc.i = %d, mc.j = %d, mc.k = %d\n", mc.i, mc.j, mc.k);
-//#endif
 
     bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
 
@@ -455,38 +370,10 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
     position.y = sc.y;
 
 
-//#ifdef DEBUG
-//    printf("position.x = %f, position.y = %f\n", position.x, position.y);
-//#endif
-
-//#ifdef DEBUG
-//    printf("i = %d, skin = %d, state = %d, animation = %d, angle = %d, frame = %d\n",i, skin_int,state_int,  animation, angle, frame);
-//#endif
-
-//#ifdef DEBUG
-//    printf("2 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
-
     sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
-
-
-
-//#ifdef DEBUG
-//    printf("after accessing sfSprite\n");
-//#endif
-
-//#ifdef DEBUG
-//    printf("3 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
 
     sfSprite_setPosition(sprite, position);
 
-//#ifdef DEBUG
-//    printf("4 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
-//#ifdef DEBUG
-//    printf("after modifying sfSprite\n");
-//#endif
     sfRenderTexture_drawSprite(bbViewport_main, sprite, NULL);
 
 
@@ -498,22 +385,12 @@ int repeatdraw_skin(bbDrawable* tobedrawn, int i){
     int framerate = anim->framerate;
 
     tobedrawn->frame[i] = (frame+1)%(frames*framerate);
-    //printf("frame = %d\n", tobedrawn->frame[i]);
-
-
 
     return 0;
 }
 
 int draw_once_skin(bbDrawable* tobedrawn, int i){
 
-    //printf("Draw once skin\n");
-//#ifdef DEBUG
-//    printf("before accessing drawable struct\n");
-//#endif
-//#ifdef DEBUG
-//    printf("0 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
     int skin_int = -7;
     int state_int = -11;
 
@@ -533,28 +410,11 @@ int draw_once_skin(bbDrawable* tobedrawn, int i){
 
     }
 
-//#ifdef DEBUG
-//    printf("animation = %d\n", animation);
-//#endif
-
     int angle = tobedrawn->angle[i];
     int frame = tobedrawn->frame[i];
 
-//#ifdef DEBUG
-//    printf("after accessing drawable struct\n");
-//#endif
-
-
-//#ifdef DEBUG
-//    printf("1 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
 
     bbMapCoords mc = tobedrawn->location;
-
-
-//#ifdef DEBUG
-//    printf("mc.i = %d, mc.j = %d, mc.k = %d\n", mc.i, mc.j, mc.k);
-//#endif
 
     bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
 
@@ -563,38 +423,11 @@ int draw_once_skin(bbDrawable* tobedrawn, int i){
     position.y = sc.y;
 
 
-//#ifdef DEBUG
-//    printf("position.x = %f, position.y = %f\n", position.x, position.y);
-//#endif
-
-//#ifdef DEBUG
-//    printf("i = %d, skin = %d, state = %d, animation = %d, angle = %d, frame = %d\n",i, skin_int,state_int,  animation, angle, frame);
-//#endif
-
-//#ifdef DEBUG
-//    printf("2 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
-
     sfSprite* sprite = bbAnimation_getSprite(animation, angle, frame);
 
 
-
-//#ifdef DEBUG
-//    printf("after accessing sfSprite\n");
-//#endif
-
-//#ifdef DEBUG
-//    printf("3 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
-
     sfSprite_setPosition(sprite, position);
 
-//#ifdef DEBUG
-//    printf("4 tobedrawn = %d\n", tobedrawn->Pool_Self);
-//#endif
-//#ifdef DEBUG
-//    printf("after modifying sfSprite\n");
-//#endif
     sfRenderTexture_drawSprite(bbViewport_main, sprite, NULL);
 
 
@@ -701,7 +534,6 @@ int draw_skin(bbDrawable* tobedrawn, int i){
 
     int drawfunction_int = bbSkins[skin_int].drawfunctions_int[state][i];
 
-    //printf("state = %d, drawfunction_int = %d\n",state, drawfunction_int);
     return bbDrawfunction_vtable[drawfunction_int](tobedrawn, i);
 }
 
@@ -714,7 +546,6 @@ int treedraw(bbDrawable* tobedrawn, int i){
     bbMapCoords mc = tobedrawn->location;
     bbScreenCoords sc = bbMapCoords_getScreenCoords_centre(mc);
 
-    //printf("x=%f, y=%f\n", sc.x, sc.y);
 
     sfVector2f position;
     position.x = sc.x;

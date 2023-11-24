@@ -1,81 +1,18 @@
-#define BBGROUNDSURFACE
+#include "../headers/bbGroundSurface.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef ALL_INCLUDES
-#define ALL_INCLUDES
 #include "../headers/all_includes.h"
-#endif
-
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef WINDOW
-#define WINDOW
 #include "../headers/window.h"
-#endif
-
-#ifndef INTERPOLATION
-#define INTERPOLATION
 #include "../headers/interpolation.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
-
-#ifndef VIEWPORT
-#define VIEWPORT
 #include "../headers/viewport.h"
-#endif
+
 
 //-----------------------------CONSTANTS----------------------------//
-
-/*
-#define DEFAULT_COLOR_R 104
-#define DEFAULT_COLOR_G 151
-#define DEFAULT_COLOR_B 100
-#define DEFAULT_COLOR_A 255
-*/
-//-----------------------------STRUCTS------------------------------//
-
-typedef struct {
-    int i_Coord; //what terrain square are we looking at?
-    int j_Coord;
-    
-    sfRenderTexture*  Base_Render_Texture;
-    sfTexture*        Base_Texture;
-    
-    
-    sfImage*          Hill_Shading_CPU;
-    sfUint8*          Hill_Shading_Data;
-    sfRenderTexture*  Hill_Shading_Render_Texture;
-    sfTexture*        Hill_Shading_Texture;
-    
-    sfRenderTexture*  Footprints_Render_Texture;
-    sfTexture*        Footprints_Texture;
-    
-    sfRenderTexture*  Auras_Render_Texture;
-    sfTexture*        Auras_Texture;
-    
-    sfRenderTexture*  Circles_Render_Texture;
-    sfTexture*        Circles_Texture;
-    
-    sfVertexArray*    Vertex_Array;
-} bbGroundSurface;
 
 
 
@@ -178,19 +115,14 @@ int bbGroundSurface_initVertexArray(int square_i, int square_j){
 sfUint8 Hill_Shading_Data[PIXELS_PER_SQUARE * PIXELS_PER_SQUARE * 4];
 
 int bbGroundSurface_calcHillShading(int Square_i, int Square_j){
-    
-    //#ifdef DEBUG  
-    //printf("Executing bbGroundSurface_calcHillShading(%d, %d);\n", Square_i, Square_j);
-    //#endif
+
     
     int Tile_i, Tile_j;
     int i, j;
     
     bbFloat3D LightInc = bbFloat3D_normalise (LightIncedence);
 
-    //#ifdef DEBUG  
-    //printf("LightInc (i, j, k) = (%f, %f, %f)\n", LightInc.i, LightInc.j, LightInc.k);
-    //#endif
+
     
     for (Tile_i = 0; Tile_i < TILES_PER_SQUARE; Tile_i++){
     
@@ -305,11 +237,6 @@ int bbGroundSurface_initAll(void){
     
     
     sfRenderTexture_display(bbGroundSurface_grid[0][0].Base_Render_Texture); 
-                
-            //#ifdef DEBUG  
-            //printf("Entering bbGroundSurface_calcHillShading(%d, %d);\n", i, j);
-            //#endif    
-
 
             bbGroundSurface_calcHillShading(i, j);
 
@@ -405,18 +332,12 @@ int Create_Ground_Shaders (void){
     
     GroundShader = sfShader_createFromMemory(vertShader, NULL, fragShader);
 
-//#ifdef DEBUG
-//    printf("ground shader problem?\n");
-//#endif
     assert (GroundShader != NULL);
     GroundRenderer.shader = GroundShader;
     GroundRenderer.blendMode = sfBlendAlpha;
     GroundRenderer.transform = sfTransform_Identity;
     GroundRenderer.texture = null_texture;
 
-//#ifdef DEBUG
-//    printf("No ground shader problem.\n");
-//#endif
 
 
 }

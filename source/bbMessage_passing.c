@@ -1,22 +1,12 @@
-#define BBMESSAGE_PASSING
+#include "../headers/bbMessage_passing.h"
 
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-#ifndef BBMESSAGE_FUNCTIONS
-#define BBMESSAGE_FUNCTIONS
 #include "../headers/bbMessage_functions.h"
-#endif
+
 
 //-----------------------------GLOBALS----------------------------//
 

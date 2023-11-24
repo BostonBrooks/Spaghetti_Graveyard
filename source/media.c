@@ -1,30 +1,14 @@
-#define MEDIA
+#include "../headers/media.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
 
 
 
 //-----------------------------STRUCURES------------------------------//
 
-typedef struct {
-
-int Vdrawfunction;
-int angles;
-int frames;
-int framerate;
-int sprites[];
-
-} bbAnimation;
 
 //-----------------------------GLOBALS----------------------------//
 
@@ -116,10 +100,6 @@ int bbAnimation_to_vtable(int VAddress, int Vdrawfunction, int angles, int frame
     animation->angles = angles;
     animation->frames = frames;
     animation->framerate = framerate;
-    
-    //debug
-    //printf("%d, %d, %d, %d, ", Vdrawfunction, angles, frames, framerate);
-    
 
     
     int i;
@@ -127,26 +107,21 @@ int bbAnimation_to_vtable(int VAddress, int Vdrawfunction, int angles, int frame
     for (i = 0; i < angles*frames; i++){
     
         animation->sprites[i] = sprites[i];
-        //debug
-        //printf("%d, ", sprites[i]);
+
     
     }
 
     bbAnimation_vtable[VAddress] = animation; 
-    //debug
-    //printf("\n");
+
 
 }
 
 int Load_Media(){
 
 // Input file
-    //#ifdef DEBUG
-    //printf("Executing Load_Media();\n");
-    //#endif
 
 
-    FILE* Media = fopen("../maps/map0/media.csv", "r");
+    FILE* Media = fopen("../maps/map0/media.csv", "r"); //STUB: this should not be hard-coded
     assert(Media != NULL);
     
     int return_value;
@@ -163,7 +138,6 @@ int Load_Media(){
     return_value = fscanf(Media, "\"Number of Textures:\",%d%*[^\n]\n%*[^\n]\n", &number);
     
 
-    //printf("number = %d\n", number); //debug
     assert (return_value == 1);
     
 
@@ -290,9 +264,7 @@ sfSprite* bbAnimation_getSprite(int animation_int, int angle_int, int frame_int)
     int sprite_int = (animation->frames)*angle_int + frame_int/animation->framerate;
     int sprite_num = animation->sprites[sprite_int];
 
-//#ifdef DEBUG
-//    printf("sprite_num = %d\n", sprite_num);
-//#endif
+
 //TODO why do we get a -1 here?
 
     if (sprite_num == -1) return sfSprite_vtable[44];

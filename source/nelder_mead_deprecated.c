@@ -1,28 +1,12 @@
-#define NELDER_MEAD
+#include "../headers/nelder_mead_deprecated.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef CONSTANTS
-#define CONSTANTS
+
 #include "../headers/constants.h"
-#endif
-
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-
-#ifndef POTENTIAL_FIELDS
-#define POTENTIAL_FIELDS
 #include "../headers/potential_fields_deprecated.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
 
 //-----------------------------CODE----------------------------//
 

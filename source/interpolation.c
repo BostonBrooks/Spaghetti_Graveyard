@@ -1,22 +1,10 @@
-#define INTERPOLATION
+#include "../headers/interpolation.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
-    #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
-    #include "../headers/constants.h"
-#endif
-
-
-#ifndef GEOMETRY
-#define GEOMETRY
+#include "../headers/system_includes.h"
+#include "../headers/constants.h"
 #include "../headers/geometry.h"
-#endif
 
 
 //-----------------------------GLOBALS----------------------------//
@@ -95,7 +83,7 @@ float gaussdiff(float x){
     return exp(-x*x)*x;
 
 }
-//float* gaussdiff_kernel;
+
 
 int generate_gaussdiff(){
 

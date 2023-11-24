@@ -1,13 +1,13 @@
 #include "../headers/bbNothing.h"
 
 //Old way of including headers
-#ifndef POOLS
-#define POOLS
-#include "../headers/pools_verbose.h"
-#endif
+//#ifndef POOLS
+//#define POOLS
+//#include "../headers/pools_verbose.h"
+//#endif
 
 //New way of including headers:
-//#include "../headers/pools_verbose.h"
+#include "../headers/pools_verbose.h"
 
 /* We dont have to rewrite this code
 typedef struct {

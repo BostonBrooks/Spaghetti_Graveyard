@@ -5,24 +5,14 @@
  * @brief Handle text input
  */
 
-#define PROMPT
+#include "../headers/prompt.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef INPUT
-#define INPUT
 #include "../headers/input.h"
-#endif
+
 
 
 
@@ -221,9 +211,7 @@ int prompt_display(void){
     sfText_setString(input_text, input_char);
     sfRenderWindow_drawText(window, display_text, NULL);
     
-    #ifdef INPUT_TOP
-    sfRenderWindow_drawText(window, input_text, NULL);
-    #endif
+
     
 
 }

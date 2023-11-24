@@ -1,34 +1,13 @@
-#define BBMESSAGE_CONSTRUCTORS
+#include "../headers/bbMessage_constructors.h"
 
 
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef GEOMETRY
-#define GEOMETRY
-#include "../headers/geometry.h"
-#endif
-
-
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-#ifndef BBMESSAGE_PASSING
-#define BBMESSAGE_PASSING
 #include "../headers/bbMessage_passing.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef BBMESSAGE_FUNCTIONS
-#define BBMESSAGE_FUNCTIONS
 #include "../headers/bbMessage_functions.h"
-#endif
 
 //-----------------------------CODE------------------------------//
 

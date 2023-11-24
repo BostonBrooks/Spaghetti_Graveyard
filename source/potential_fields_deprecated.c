@@ -1,33 +1,14 @@
-#define POTENTIAL_FIELDS
+#include "../headers/potential_fields_deprecated.h"
 
 
 //-----------------------------INCLUDES----------------------------//
 
-
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBTERRAINSQUARE
-#define BBTERRAINSQUARE
 #include "../headers/bbTerrainSquare.h"
-#endif
+
 
 //-----------------------------GLOBALS----------------------------//
 

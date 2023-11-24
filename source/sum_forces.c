@@ -3,37 +3,17 @@
 //forces are capped to prevent glitchyness.
 //forces are multiplied by the unit's mass.
 //what about test point? for now, text_point = drawable_A->location
-#define SUM_FORCES
 
+#include "../headers/sum_forces.h"
 
 //-----------------------------INCLUDES----------------------------//
 
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBTERRAINSQUARE
-#define BBTERRAINSQUARE
 #include "../headers/bbTerrainSquare.h"
-#endif
-
 #include "../headers/bbPrintf.h"
 //-----------------------------GLOBALS----------------------------//
 
@@ -65,7 +45,7 @@ bbFloat3D Circular_Force (int drawable_A_int, int drawable_B_int, bbMapCoords te
 
 //drawable_A is the object being repelled
 //drawable_B is the object doing the repelling,
-//TODO multiply scalar force by drawable_B->mass
+//STUB: multiply scalar force by drawable_B->mass
 //test_point is the hypothetical position where drawable_A is located.
 
     bbDrawable* drawable_A = bbDrawable_Pool_Lookup(drawable_A_int);
@@ -199,11 +179,6 @@ bbFloat3D sum_forces_per_square(int drawable_A_int, bbMapCoords test_point, int 
                 temp = force_shape_vtable[drawable_B->shape]
                         (drawable_A_int, drawable_B_int, test_point);
 
-//#ifdef DEBUG
-//                float scalar_temp = sqrt(temp.i * temp.i + temp.j *temp.j );
-//
-//                printf("repulsion from individual drawable = %f\n", scalar_temp);
-//#endif
 
                 output.i += temp.i;
                 output.j += temp.j;
@@ -220,7 +195,7 @@ bbFloat3D sum_forces_per_square(int drawable_A_int, bbMapCoords test_point, int 
         drawable_B_int = drawable_B->Square_Next;
     }
 
-//printf("per square potential = %f\n", output);
+
 
 
     return output;
@@ -267,21 +242,13 @@ bbFloat3D sum_forces_Nearby(int drawable_A_int, bbMapCoords test_point){
             output.i += temp.i;
             output.j += temp.j;
 
-//#ifdef DEBUG
-//            float temp_scalar = sqrt(temp.i * temp.i + temp.j * temp.j);
-//            printf("temp_scaler = %f\n", temp_scalar);
-//#endif
+
 
         }
 
     }
 
-//#ifdef DEBUG
-//    float output_scalar = sqrt(output.i * output.i + output.j * output.j);
-//
-//    //if (output_scalar > POINTS_PER_TILE)
-//        printf("output_scalar = %f\n", output_scalar);
-//#endif
+
 
     return output;
 

@@ -1,37 +1,14 @@
-#define BBDRAWABLE_LISTS
+#include "../headers/bbDrawable_lists.h"
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef CONSTANTS
-#define CONSTANTS
+
 #include "../headers/constants.h"
-#endif
-
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
-
-
-#ifndef BBDRAWABLE_PLOT
-#define BBDRAWABLE_PLOT
 #include "../headers/bbDrawable_plot.h"
-#endif
-
-#ifndef BBTERRAINSQUARE
-#define BBTERRAINSQUARE
 #include "../headers/bbTerrainSquare.h"
-#endif
+
 
 
 //-----------------------------CODE------------------------------//
@@ -236,8 +213,7 @@ int bbDrawable_addtoTS (int drawable_int){
         bbDrawable* next_element = list_element;
         
              
-//printf(  "list_element->Square_Prev = %d\n",   list_element->Square_Prev);
-//assert(list_element->Square_Prev >= 0);//searching for bug...
+
         if(list_element->Square_Prev == -1){
         //bug found, handle exception
         
@@ -271,9 +247,7 @@ int bbDrawable_addtoTS (int drawable_int){
     
     }
     
-    printf("Dead code?\n");
-    return drawable_int;
-     //TODO does this indincate failure?
+
     
     
 }

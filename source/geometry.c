@@ -1,61 +1,13 @@
-#define GEOMETRY
+#include "../headers/geometry.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
 
 
 
 //-----------------------------STRUCTS------------------------------//
-
-typedef struct {
-    float x;         //x axis is the number of pixels to the right of top left
-    float y;         //y axis is down number of pixels down from top left
-} bbScreenCoords;
-
-typedef struct {
-    int i;           //i axis points down and to the right, in units of points
-    int j;           //j axis points up and to the right, in units of points
-    int k;           //k axis points up, in units of points, negative indicates invalid
-} bbMapCoords;
-
-typedef struct {
-    int i;           //i axis points down and to the right, in units of tiles
-    int j;           //j axis points up and to the right, in units of tiles
-    int k;           //k axis points up, in units of points, negative indicates invalid
-} bbTileCoords;
-
-typedef struct {
-    int i;           //i axis points down and to the right, in units of tiles
-    int j;           //j axis points up and to the right, in units of tiles
-    int k;           //k axis points up, in units of points, negative indicates invalid
-} bbSquareCoords;
-
-
-typedef struct {
-    float i;           //i axis points down and to the right, in whatever units
-    float j;           //j axis points up and to the right, in whatever units
-    float k;           //k axis points up, whatever units
-} bbFloat3D;
-
-
-typedef struct {       //used to store the hit box of a drawable relative to the drawable's location on screen.
-
-    float top;
-    float left;
-    float height;
-    float width;
-    
-
-} bbIntRect;
 
 
 
@@ -115,7 +67,7 @@ int bbElevations_load(){
     sfVector2u height_map_size;
     sfUint8*   height_map_values;
     
-    height_map = sfImage_createFromFile("../maps/map0/HeightMap.bmp");
+    height_map = sfImage_createFromFile("../maps/map0/HeightMap.bmp"); //STUB: this should not be hard-coded
     assert (height_map != NULL);
     height_map_size = sfImage_getSize (height_map);
     height_map_values = sfImage_getPixelsPtr(height_map);
@@ -158,9 +110,7 @@ int bbTileCoords_getElevation(int i, int j){
         return 0;
         //elevation out of bounds
     }
-    #ifdef DEBUG
-    //printf("162: k = %d\n",  bbElevations[i][j]);
-    #endif
+
     return bbElevations[i][j];
 }
 
@@ -419,10 +369,6 @@ int bbScreenCoords_withinTriangle_screen (bbScreenCoords point, bbScreenCoords v
 
     if (area == 0) {
     
-        //#ifdef VERBOSE
-        //printf("Bad Geometry\n"); //May lead to exception
-        //#endif
-    
         return 0;
     }
 
@@ -562,10 +508,7 @@ int bbScreenCoords_withinTile (bbTileCoords tile, bbScreenCoords p) {
         return 2; //Bottom
     }
 
-    //#ifdef VERBOSE
-    //printf("Bad Geometry\n");
-    //#endif
-    
+
     return 0;
 }
 
@@ -645,9 +588,7 @@ bbMapCoords bbScreenCoords_getMapCoords (bbScreenCoords point){
     }
     //assert (point_top_or_bottom != 0);
     if (point_top_or_bottom == 0){
-        #ifdef VERBOSE
-        printf("culprit for many crashes\n");
-        #endif
+
         
         bbMapCoords foo;
         foo.i = -1;
@@ -707,7 +648,7 @@ float bbMapCoords_getDistance(bbMapCoords a, bbMapCoords b){
     long b_j = b.j;
 
     long sum_squares = (a_i - b_i)*(a_i - b_i)+(a_j - b_j)*(a_j - b_j);
-    //printf("sum sqaures= %ld\n", sum_squares);
+
     return sqrt(sum_squares);
 }
 

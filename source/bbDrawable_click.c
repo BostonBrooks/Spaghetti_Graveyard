@@ -5,19 +5,11 @@ int process_click_drawables(int x, int y, int right_click);
 #define LEFT_CLICK  0
 #define RIGHT_CLICK 1
 #define PASS        0   //pass click command to next nearest drawable
-#define DONT_PASS   1
+#define DONT_PASS   1   //STUB: I would usually store this in constants.h
 
 
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-
-#ifndef BBTERRAINSQUARE
-#define BBTERRAINSQUARE
 #include "../headers/bbTerrainSquare.h"
-#endif
 
 int cow_onclick( int drawable_int, int mousebutton){
     if (mousebutton == RIGHT_CLICK){

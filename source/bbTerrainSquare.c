@@ -1,33 +1,15 @@
-#define BBTERRAINSQUARE
+#include "../headers/bbTerrainSquare.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBDRAWABLE_PLOT
-#define BBDRAWABLE_PLOT
 #include "../headers/bbDrawable_plot.h"
-#endif
 
 
 //-----------------------------CONSTANTS----------------------------//
 
 
 //-----------------------------STRUCTS------------------------------//
-
-typedef struct {
-
-    int i_Coord; //what terrain square are we looking at?
-    int j_Coord;
-    
-    int bbDrawable_head;
-    int bbDrawable_tail;
-    
-} bbTerrainSquare;
 
 
 bbTerrainSquare bbTerrainSquare_grid[SQUARES_PER_MAP][SQUARES_PER_MAP];
@@ -37,10 +19,6 @@ int bbDrawable_lost_tail;
 
 
 //-----------------------------FUNCTIONS--------------------------//
-
-int bbTerrainSquare_draw(int Square_i, int Square_j);
-int bbTerrainSquare_drawVisible(void);
-int bbTerrainSquare_initAll(void);
 
 
 int bbTerrainSquare_initAll(void){

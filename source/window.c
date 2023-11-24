@@ -1,21 +1,11 @@
-#define WINDOW
+#include "../headers/window.h"
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
+
 
 //-----------------------------CONSTANTS----------------------------//
 
@@ -42,9 +32,6 @@ int Window_Init(void){
 
     sfRenderWindow_setPosition(window, position);
 
-#ifdef LIMIT_FRAMERATE
-    sfRenderWindow_setFramerateLimit(window, 60);
-#endif
 
     sfColor beige = COLOUR_BEIGE;
     

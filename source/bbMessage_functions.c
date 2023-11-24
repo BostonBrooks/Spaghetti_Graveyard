@@ -1,34 +1,13 @@
-#define BBMESSAGE_FUNCTIONS
+#include "../headers/bbMessage_functions.h"
 
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef BBMESSAGE_PASSING
-#define BBMESSAGE_PASSING
 #include "../headers/bbMessage_passing.h"
-#endif
 
 //-----------------------------GLOBALS----------------------------//
 

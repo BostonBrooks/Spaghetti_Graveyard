@@ -1,25 +1,11 @@
-#define VIEWPORT
+#include "../headers/viewport.h"
 
 //-----------------------------INCLUDES----------------------------//
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
+
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
-    #include "../headers/media.h"
-#endif
-
-#ifndef WINDOW
-#define WINDOW
-    #include "../headers/window.h"
-#endif
+#include "../headers/media.h"
+#include "../headers/window.h"
 
 //-----------------------------CONSTANTS----------------------------//
 

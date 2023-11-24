@@ -5,42 +5,19 @@
  * @brief Input key presses and mouse clicks
  */
  
- #define INPUT
+#include "../headers/input.h"
 
 int heal_player(int x);
 //-----------------------------INCLUDES----------------------------//
 
 
-#ifndef PROMPT
-#define PROMPT
 #include "../headers/prompt.h"
-#endif
-
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef WINDOW
-#define WINDOW
 #include "../headers/window.h"
-#endif
-
-
-#ifndef BBAICONTROL_INIT
-#define BBAICONTROL_INIT
 #include "../headers/bbAIControl_init.h"
-#endif
+
 //-----------------------------GLOBALS----------------------------//
 
 bbScreenCoords mouse_screen_position;

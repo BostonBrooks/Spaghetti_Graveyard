@@ -5,65 +5,24 @@
  * @brief each bbSkin contains INNER_STATES_PER_SKIN animations. These are templates the animations used by bbAIControl objects.
  */
 
-#define BBSKIN
+#include "../headers/bbSkin.h"
 
 
 //-----------------------------INCLUDES----------------------------//
 
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef VIEWPORT
-#define VIEWPORT
 #include "../headers/viewport.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBDRAWABLE_LISTS
-#define BBDRAWABLE_LISTS
 #include "../headers/bbDrawable_lists.h"
-#endif
-
-#ifndef BBGROUNDSURFACE
-#define BBGROUNDSURFACE
 #include "../headers/bbGroundSurface.h"
-#endif
-
-#ifndef BBSKIN
-#define BBSKIN
 #include "../headers/bbSkin.h"
-#endif
-
-#ifndef MEDIA
-#define MEDIA
 #include "../headers/media.h"
-#endif
+
 
 //-----------------------------GLOBALS----------------------------//
 
-typedef struct {
-
-    int animations_int [INNER_STATES_PER_SKIN][ANIMATIONS_PER_DRAWABLE];
-    int drawfunctions_int [INNER_STATES_PER_SKIN][ANIMATIONS_PER_DRAWABLE];
-
-
-} bbSkin;
 
 bbSkin bbSkins [NUMBER_OF_SKINS];
 

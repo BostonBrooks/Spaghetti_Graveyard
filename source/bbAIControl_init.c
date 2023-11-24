@@ -5,49 +5,18 @@
  * @brief Code for updating AI is stored in ./source/AI. There is one file per unit type. This file includes all of those files and initialises a vtable containing the functions 
  */
 
-#define BBAICONTROL_INIT
+#include "../headers/bbAIControl_init.h"
 
 //-----------------------------INCLUDES----------------------------//
 
 
-#ifndef BBAICONTROL
-#define BBAICONTROL
 #include "../headers/bbAIControl.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBAICONTROL
-#define BBAICONTROL
 #include "../headers/bbAIControl.h"
-#endif
-
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-
-#ifndef NELDER_MEAD
-#define NELDER_MEAD
 #include "../headers/nelder_mead_deprecated.h"
-#endif
-
-#ifndef ANGLES
-#define ANGLES
 #include "../headers/angles.h"
 #endif
 
