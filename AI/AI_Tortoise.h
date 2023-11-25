@@ -1,50 +1,13 @@
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-
-#ifndef ANGLES
-#define ANGLES
 #include "../headers/angles.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBAICONTROL
-#define BBAICONTROL
 #include "../headers/bbAIControl.h"
-#endif
-
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-
-#ifndef SUM_FORCES
-#define SUM_FORCES
 #include "../headers/sum_forces.h"
-#endif
 
 int AI_tortoise_new(bbMapCoords mc){
 

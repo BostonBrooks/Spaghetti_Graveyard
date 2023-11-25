@@ -5,40 +5,13 @@
  * @brief This header file describes the actions of a Player AI, the player is prompted to move around the map by the data from input.h / input.c
  */
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBAICONTROL
-#define BBAICONTROL
 #include "../headers/bbAIControl.h"
-#endif
-
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
-
-#ifndef INPUT
-#define INPUT
 #include "../headers/input.h"
-#endif
 
 int PLAYER_new(bbMapCoords mc){
 

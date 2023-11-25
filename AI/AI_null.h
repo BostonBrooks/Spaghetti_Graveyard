@@ -1,33 +1,10 @@
 
-#ifndef SYSTEM_INCLUDES
-#define SYSTEM_INCLUDES
 #include "../headers/system_includes.h"
-#endif
-
-#ifndef CONSTANTS
-#define CONSTANTS
 #include "../headers/constants.h"
-#endif
-
-#ifndef GEOMETRY
-#define GEOMETRY
 #include "../headers/geometry.h"
-#endif
-
-#ifndef BBAICONTROL
-#define BBAICONTROL
 #include "../headers/bbAIControl.h"
-#endif
-
-#ifndef BBMESSAGE
-#define BBMESSAGE
 #include "../headers/bbMessage.h"
-#endif
-
-#ifndef BBDRAWABLE
-#define BBDRAWABLE
 #include "../headers/bbDrawable.h"
-#endif
 
 int AI_null_new(bbMapCoords mc){
 
