@@ -61,7 +61,7 @@ int AI_cow_new(bbMapCoords mc){
 
     drawable->skin = 0;
     drawable->state = STATE_IDLE;
-    drawable->animation[0] = 17;
+    drawable->animation[0] = 22;
     drawable->angle[0] = rand() % 8;
     drawable->frame[0] = 0;
     drawable->drawfunction[0] = DRAW_UNIT;
