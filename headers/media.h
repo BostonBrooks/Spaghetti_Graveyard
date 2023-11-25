@@ -5,7 +5,7 @@
  * @brief Load media from disk
  */
 
-#ifndef MEIDA_H
+#ifndef MEDIA_H
 #define MEDIA_H
 //-----------------------------INCLUDES----------------------------//
 

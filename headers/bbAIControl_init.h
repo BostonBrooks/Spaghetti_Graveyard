@@ -31,7 +31,4 @@ extern int (*bbAI_RPC_vtable[NUMBER_OF_EXTERNAL_STATES])(bbAIControl* aicontroll
 int bbAIControl_init();
 
 
-
-
-
 #endif

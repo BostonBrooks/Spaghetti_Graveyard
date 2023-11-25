@@ -18,7 +18,6 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/nelder_mead_deprecated.h"
 #include "../headers/angles.h"
-#endif
 
 //one #include per ai type
 

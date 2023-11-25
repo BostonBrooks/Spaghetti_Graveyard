@@ -7,7 +7,8 @@
  
 #ifndef BBSKIN_H
 #define BBSKIN_H
- 
+
+#include "../headers/constants.h"
  
 typedef struct {
 
