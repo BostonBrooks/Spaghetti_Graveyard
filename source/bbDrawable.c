@@ -318,3 +318,28 @@ int bbDrawable_movetowards_multiple(int drawable_int, bbMapCoords target_locatio
 
     return 0;
 }
+
+int bbDrawable_set_passthrough(bbDrawable* drawable, bbMapCoords mid_point, float range){
+
+    bbMapCoords start_point = drawable->location;
+    bbMapCoords end_point = start_point;
+
+    float distance_to_target = bbMapCoords_getDistance(start_point, mid_point);
+
+    if (distance_to_target > 0.0001) { //Not sure if this is good, but it prevents divide by zero
+
+        int delta_i = mid_point.i - start_point.i;
+        int delta_j = mid_point.j - start_point.j;
+        int delta_k = mid_point.k - start_point.k;
+
+        end_point.i += delta_i * (range / distance_to_target);
+        end_point.j += delta_j * (range / distance_to_target);
+        end_point.k += delta_k * (range / distance_to_target);
+
+    }
+
+    drawable->target_location = end_point;
+
+    return 0;
+
+}

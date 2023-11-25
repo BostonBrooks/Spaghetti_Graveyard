@@ -15,10 +15,6 @@
 
 int PLAYER_new(bbMapCoords mc){
 
-    //#ifdef DEBUG  
-    //printf("Creating a null AI object\n");
-    //#endif
-    
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
@@ -79,9 +75,6 @@ int PLAYER_new(bbMapCoords mc){
 
 int PLAYER_update(bbAIControl* aicontroller){
 
-    //#ifdef DEBUG
-    //printf("Updating a Player AI object\n");
-    //#endif
     
     int drawable_int = aicontroller->drawables[0];
 

@@ -15,9 +15,6 @@ int damage_player(int);
 
 int AI_arrow_new(bbMapCoords mc){
 
-    //#ifdef DEBUG
-    //printf("Creating a tortoise AI object\n");
-    //#endif
 
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
@@ -53,15 +50,11 @@ int AI_arrow_new(bbMapCoords mc){
     Hit_Box.width = -1;
 
     drawable->Hit_Box = Hit_Box;
-    //#ifdef DEBUG
-    //printf("New drawable is at the location %d\n", drawable_int );
-    //#endif
+
 
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
 
-    //#ifdef DEBUG
-    //printf("New AI Controller is at the location %d\n", aicontroller_int );
-    //#endif
+
     drawable->AI_Controller = aicontroller_int;
 
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);
@@ -150,9 +143,6 @@ int AI_arrow_update(bbAIControl* aicontroller){
 
             }
 
-            //new_location.i = AI_coords.i + POINTS_PER_PIXEL;
-            //new_location.j = AI_coords.j + POINTS_PER_PIXEL;
-            //new_location.k = AI_coords.k;
             message_movement_new(AI_drawable_int , new_location);
             //is the drawable overlapping with a target drawable? Then set STATE_ATTACKING
 

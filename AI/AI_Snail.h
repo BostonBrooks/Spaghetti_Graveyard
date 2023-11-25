@@ -15,10 +15,6 @@ int damage_player(int);
 
 int AI_cow_new(bbMapCoords mc){
 
-    //#ifdef DEBUG
-    //printf("Creating a tortoise AI object\n");
-    //#endif
-
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
@@ -47,15 +43,10 @@ int AI_cow_new(bbMapCoords mc){
     Hit_Box.width = 40 * 1.5;
 
     drawable->Hit_Box = Hit_Box;
-    //#ifdef DEBUG
-    //printf("New drawable is at the location %d\n", drawable_int );
-    //#endif
+
 
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
 
-    //#ifdef DEBUG
-    //printf("New AI Controller is at the location %d\n", aicontroller_int );
-    //#endif
     drawable->AI_Controller = aicontroller_int;
 
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);

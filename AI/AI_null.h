@@ -8,10 +8,6 @@
 
 int AI_null_new(bbMapCoords mc){
 
-    //#ifdef DEBUG  
-    //printf("Creating a null AI object\n");
-    //#endif
-    
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
@@ -26,12 +22,7 @@ int AI_null_new(bbMapCoords mc){
     //#endif
     
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
-    
-    //#ifdef DEBUG  
-    //printf("New AI Controller is at the location %d\n", aicontroller_int );
-    //#endif
-    
-    
+
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);
     
     
@@ -58,9 +49,6 @@ int AI_null_new(bbMapCoords mc){
 
 int AI_null_update(bbAIControl* aicontroller){
 
-    //#ifdef DEBUG
-    //printf("Updating a null AI object\n");
-    //#endif
 
     return NO_RETHUNK;
 

@@ -652,3 +652,11 @@ float bbMapCoords_getDistance(bbMapCoords a, bbMapCoords b){
     return sqrt(sum_squares);
 }
 
+int bbScreenCoords_within_bbRect(bbScreenCoords SC, bbIntRect Rect){
+    if (SC.x < Rect.left)              return 0;
+    if (SC.x > Rect.left + Rect.width) return 0;
+    if (SC.y < Rect.top)               return 0;
+    if (SC.y > Rect.top + Rect.height) return 0;
+
+    return 1;
+}

@@ -10,10 +10,6 @@
 
 int AI_yeti_new(bbMapCoords mc){
 
-    //#ifdef DEBUG  
-    //printf("Creating a null AI object\n");
-    //#endif
-
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
 
@@ -28,16 +24,10 @@ int AI_yeti_new(bbMapCoords mc){
     drawable->mass             = 1;
     drawable->speed            = 4;
     drawable->shape            = AVOIDANCE_CIRCLULAR;  
-    //#ifdef DEBUG  
-    //printf("New drawable is at the location %d\n", drawable_int );
-    //#endif
-    
+
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
     
-    //#ifdef DEBUG  
-    //printf("New AI Controller is at the location %d\n", aicontroller_int );
-    //#endif
-    
+
     
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);
     
@@ -65,10 +55,6 @@ int AI_yeti_new(bbMapCoords mc){
 
 int AI_yeti_update(bbAIControl* aicontroller){
 
-    //#ifdef DEBUG  
-    //printf("Updating a null AI object\n");
-    //#endif
-    
     int drawable_int = aicontroller->drawables[0];
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
     
@@ -76,11 +62,7 @@ int AI_yeti_update(bbAIControl* aicontroller){
     int j = viewpoint.j - drawable->location.j;
     
     int angle = angles_8(i, j);
-    
-    //#ifdef DEBUG  
-    //printf("Angle = %d\n", angle);
-    //#endif
-    
+
     drawable->angle[0] = angle;
    
     bbMapCoords current_location = drawable->location;

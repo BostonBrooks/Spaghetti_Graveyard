@@ -14,9 +14,6 @@ extern int player_int;
 
 int AI_cow_new(bbMapCoords mc){
 
-    //#ifdef DEBUG
-    //printf("Creating a tortoise AI object\n");
-    //#endif
 
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
@@ -29,15 +26,10 @@ int AI_cow_new(bbMapCoords mc){
     drawable->drawfunction[0] = DRAW_SKIN;
     drawable->start_time = 0;
     drawable->avoidance_radius = POINTS_PER_TILE;
-    //#ifdef DEBUG
-    //printf("New drawable is at the location %d\n", drawable_int );
-    //#endif
+
 
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
 
-    //#ifdef DEBUG
-    //printf("New AI Controller is at the location %d\n", aicontroller_int );
-    //#endif
 
 
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);

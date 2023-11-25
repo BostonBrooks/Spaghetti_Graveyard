@@ -174,4 +174,7 @@ int bbMapCoords_isCloser(bbMapCoords a, bbMapCoords b);
 /** calculate the distance between 2 points, on the i, j plane */
 float bbMapCoords_getDistance(bbMapCoords a, bbMapCoords b);
 
+/** is the point within the rect? ie. is the arrow within the unit's hitbox? */
+int bbScreenCoords_within_bbRect(bbScreenCoords SC, bbIntRect Rect);
+
 #endif

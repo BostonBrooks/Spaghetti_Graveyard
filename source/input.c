@@ -134,20 +134,7 @@ int input_process(void){
                    bbDrawable* arrow_drawable = bbDrawable_Pool_Lookup(arrow_drawable_int);
                    bbMapCoords target_location = bbScreenCoords_getMapCoords_k_fixed (mouse_viewport_position, player_coords.k);
 
-                   float distance_to_target = bbMapCoords_getDistance(player_coords, target_location);
-
-                   bbMapCoords new_location = player_coords;
-
-                   int delta_i = target_location.i - player_coords.i;
-                   int delta_j = target_location.j - player_coords.j;
-
-                   int range = POINTS_PER_SQUARE * 2;
-
-                   new_location.i +=  delta_i * (range / distance_to_target);
-                   new_location.j +=  delta_j * (range / distance_to_target);
-
-
-                   arrow_drawable->target_location = new_location;
+                   bbDrawable_set_passthrough(arrow_drawable, target_location, POINTS_PER_SQUARE);
 
                    //left_button_down = 1; //Set a flag to tell entire the system that the left mouse button is down.
                

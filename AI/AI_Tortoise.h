@@ -11,9 +11,7 @@
 
 int AI_tortoise_new(bbMapCoords mc){
 
-    //#ifdef DEBUG  
-    //printf("Creating a tortoise AI object\n");
-    //#endif
+
     
     int drawable_int = bbDrawable_new(mc);
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
@@ -24,16 +22,11 @@ int AI_tortoise_new(bbMapCoords mc){
     drawable->frame[0] = 0;
     drawable->drawfunction[0] = DRAW_BASIC;
     drawable->start_time = 0;
-    //#ifdef DEBUG  
-    //printf("New drawable is at the location %d\n", drawable_int );
-    //#endif
+
     
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
     
-    //#ifdef DEBUG  
-    //printf("New AI Controller is at the location %d\n", aicontroller_int );
-    //#endif
-    
+
     
     bbAIControl* aicontroller =  bbAIControl_Pool_Lookup(aicontroller_int);
     
@@ -61,9 +54,6 @@ int AI_tortoise_new(bbMapCoords mc){
 
 int AI_tortoise_update(bbAIControl* aicontroller){
 
-    //#ifdef DEBUG
-    //printf("Updating a tortoise AI object\n");
-    //#endif
 
     int drawable_int = aicontroller->drawables[0];
     bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
@@ -76,10 +66,6 @@ int AI_tortoise_update(bbAIControl* aicontroller){
     int j = viewpoint.j - location.j;
 
     int angle = angles_32(i, j);
-
-    //#ifdef DEBUG
-    //printf("Angle = %d\n", angle);
-    //#endif
 
     drawable->angle[0] = angle;
 
@@ -104,10 +90,6 @@ int AI_tortoise_update(bbAIControl* aicontroller){
 
     }
     bbFloat3D forces = sum_forces_Nearby(drawable_int, location);
-
-    //#ifdef DEBUG
-    //printf("forces.i = %f, forces.j = %f]\n", forces.i, forces.j);
-    //#endif
 
     new_location.i += forces.i;
     new_location.j += forces.j;

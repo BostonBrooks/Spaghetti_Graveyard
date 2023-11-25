@@ -95,5 +95,6 @@ int bbDrawable_new_tree(bbMapCoords MC);
 int bbDrawable_movetowards(int drawable_int, bbMapCoords target_location);
 int bbDrawable_movetowards_multiple(int drawable_int, bbMapCoords target_location);
 
-
+/** This function calculates the endpoint of an arrow with a trajectory through the point mid_point */
+int bbDrawable_set_passthrough(bbDrawable* drawable, bbMapCoords mid_point, float range);
 #endif
