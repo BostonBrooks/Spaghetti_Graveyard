@@ -27,4 +27,8 @@ int bbDrawable_setLocation(int drawable_int, bbMapCoords mc);
 /** When creating a new drawable, use this to add to the appropriate terrain square */
 int bbDrawable_addtoTS (int drawable_int);
 
+/** If drawable_1 is within the hitbox of some drawable, return the index of that drawable, otherwise return -1 */
+int bbDrawable_hitbox (int drawable_1_int);
+
+
 #endif

@@ -8,6 +8,7 @@
 #include "../headers/media.h"
 #include "../headers/bbDrawable_plot.h"
 #include "../headers/bbTerrainSquare.h"
+#include "../headers/bbPrintf.h"
 
 
 
@@ -293,6 +294,68 @@ int bbDrawable_setLocation(int drawable_int, bbMapCoords mc){
     return 0;
 }
 
+int bbDrawable_hitbox_bbTerrainSquare (int drawable_A_int, int m, int n){
 
 
+    bbTerrainSquare* TS = &bbTerrainSquare_grid[m][n];
+    int drawable_int = TS->bbDrawable_tail;
+    if (drawable_int == -1) return -1;
+
+    bbDrawable* drawable_A = bbDrawable_Pool_Lookup(drawable_A_int);
+
+    while(drawable_int != -1){
+
+        //printf("drawable_int =%d\n", drawable_int);
+        bbDrawable* drawable = bbDrawable_Pool_Lookup(drawable_int);
+
+        //Does the drawable ignore arrows?
+        if (drawable->Ignore_Arrows == 0){
+
+            bbScreenCoords SC = bbMapCoords_getScreenCoords_vector(drawable->location, drawable_A->location);
+            int flag = bbScreenCoords_within_bbRect (SC, drawable->Hit_Box);
+            if (flag == 0) {
+
+                return drawable_int;
+            }
+
+        }
+        //is arrow within hitbox?
+
+
+        drawable_int = drawable->Square_Prev;
+
+
+
+    }
+    return -1;
+
+}
+
+int bbDrawable_hitbox (int drawable_A_int){
+
+    bbDrawable* drawable_A = bbDrawable_Pool_Lookup(drawable_A_int);
+
+    bbSquareCoords SC = bbMapCoords_getSquareCoords(drawable_A->location);
+
+    int i_min = SC.i - 1;
+    int j_min = SC.j - 1;
+    int i_max = SC.i + 1;
+    int j_max = SC.j + 1;
+
+    if (i_min < 0)  i_min = 0;
+    if (j_min < 0)  j_min = 0;
+    if (i_max > SQUARES_PER_MAP - 1) i_max = SQUARES_PER_MAP - 1;
+    if (j_max > SQUARES_PER_MAP - 1) j_max = SQUARES_PER_MAP - 1;
+
+    for (int n = j_min; n <= j_max; n++) {
+        for (int m = i_max; m >= i_min; m--) {
+
+             int flag = bbDrawable_hitbox_bbTerrainSquare (drawable_A_int, m, n);
+
+             if (flag != -1) return flag;
+        }
+    }
+
+    return -1;
+}
 

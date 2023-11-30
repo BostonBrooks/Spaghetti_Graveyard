@@ -45,10 +45,10 @@ int bbTerrainSquare_onclick(int Square_i, int Square_j, bbScreenCoords SC, int m
         bbMapCoords MC = drawable->location;
         bbScreenCoords  drawable_SC = bbMapCoords_getScreenCoords_centre(MC);
 
-        int top = drawable_SC.y - drawable->Hit_Box.top;
-        int bottom = top + drawable->Hit_Box.height;
-        int left = drawable_SC.x - drawable->Hit_Box.left;
-        int right = left + drawable->Hit_Box.width;
+        int top = drawable_SC.y + drawable->Click_Box.top;
+        int bottom = top + drawable->Click_Box.height;
+        int left = drawable_SC.x + drawable->Click_Box.left;
+        int right = left + drawable->Click_Box.width;
 
         //is SC within hitbox
         //printf("did we get this far?\n");
@@ -136,3 +136,4 @@ int process_click_drawables(int x, int y, int right_click){
     SC.y = y;
     return bbTerrainSquare_onclick_visible(SC, right_click);
 }
+

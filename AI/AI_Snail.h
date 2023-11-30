@@ -37,12 +37,15 @@ int AI_cow_new(bbMapCoords mc){
     drawable->health_bar_length     = 60;
 
     bbIntRect Hit_Box;
-    Hit_Box.top = 94 * 1.5;
-    Hit_Box.left = 20 * 1.5;
+    Hit_Box.top = -94 * 1.5;
+    Hit_Box.left = -20 * 1.5;
     Hit_Box.height = 94 * 1.5;
     Hit_Box.width = 40 * 1.5;
 
+    drawable->Interactivity = 0;
+    drawable->Ignore_Arrows     = 0;
     drawable->Hit_Box = Hit_Box;
+    drawable->Click_Box = Hit_Box;
 
 
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
@@ -90,10 +93,16 @@ int AI_cow_update(bbAIControl* aicontroller){
         Hit_Box.height = -1;
         Hit_Box.width = -1;
 
+        drawable->Ignore_Arrows     = -1;
+        drawable->Interactivity     = -1;
+        drawable->Hit_Box = Hit_Box;
+        drawable->Click_Box = Hit_Box;
+        
+      
+
         for(int i = 0; i < ANIMATIONS_PER_DRAWABLE; i++){
             drawable->frame[i] = 0;
 
-            drawable->Hit_Box = Hit_Box;
         }
 
         return KILL_AI;

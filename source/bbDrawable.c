@@ -62,7 +62,8 @@ int bbDrawable_new(bbMapCoords MC){
     drawable->angle[0]              = 0;
     drawable->frame[0]              = 0;
     drawable->drawfunction[0]       = DRAW_BASIC;
-     
+
+
 
     for (int i=1; i < ANIMATIONS_PER_DRAWABLE; i++){
    
@@ -87,7 +88,7 @@ int bbDrawable_new(bbMapCoords MC){
     drawable->avoidance_radius        = 20 * POINTS_PER_PIXEL;
     drawable->mass                    = -1;
     drawable->speed                   = -1;
-    drawable->shape                   = AVOIDANCE_CIRCLULAR;
+    drawable->shape                   = AVOIDANCE_NULL;
     drawable->preferred_next_location = NULL_Coords;
     drawable->target_location         = NULL_Coords;
     drawable->target_drawable         = -1;
@@ -104,6 +105,9 @@ int bbDrawable_new(bbMapCoords MC){
     drawable->onclick_function  = -1;
     drawable->AI_Controller     = -1;
     drawable->Interactivity     = -1;
+    drawable->Click_Box         = NULL_Hit_Box;
+
+    drawable->Ignore_Arrows     = -1;
     drawable->Hit_Box           = NULL_Hit_Box;
     
 
@@ -187,8 +191,10 @@ int bbDrawable_new_tree(bbMapCoords MC){
     drawable->onclick_function  = -1;
     drawable->AI_Controller     = -1;
     drawable->Interactivity     = -1;
-    drawable->Hit_Box           = NULL_Hit_Box;
+    drawable->Click_Box         = NULL_Hit_Box;
 
+    drawable->Ignore_Arrows     = -1;
+    drawable->Hit_Box           = NULL_Hit_Box;
 
 /* Add to Terrain Sqaure */
 

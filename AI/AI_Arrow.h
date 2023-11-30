@@ -8,6 +8,9 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/sum_forces.h"
+#include "../headers/bbDrawable_lists.h"
+#include "../headers/bbPrintf.h"
+#include "../headers/bbAIControl_init.h"
 
 extern int Current_Time;
 extern int player_int;
@@ -43,13 +46,19 @@ int AI_arrow_new(bbMapCoords mc){
     drawable->avoidance_radius      = -1;   //This should be enough to disable avoidance, but the next line is needed.
     drawable->shape                 = AVOIDANCE_NULL;
 
-    bbIntRect Hit_Box;
-    Hit_Box.top = -1;
-    Hit_Box.left = -1;
-    Hit_Box.height = -1;
-    Hit_Box.width = -1;
+    bbIntRect NULL_Hit_Box;
+    NULL_Hit_Box.top      = -1;
+    NULL_Hit_Box.left     = -1;
+    NULL_Hit_Box.height   = -1;
+    NULL_Hit_Box.width    = -1;
 
-    drawable->Hit_Box = Hit_Box;
+    drawable->onclick_function  = -1;
+    drawable->AI_Controller     = -1;
+    drawable->Interactivity     = -1;
+    drawable->Click_Box         = NULL_Hit_Box;
+
+    drawable->Ignore_Arrows     = -1;
+    drawable->Hit_Box           = NULL_Hit_Box;
 
 
     int aicontroller_int = bbAIControl_Pool_New(NEXT_AVAILABLE);
@@ -130,6 +139,8 @@ int AI_arrow_update(bbAIControl* aicontroller){
 
             if (distance_to_target < speed){
                 new_location = AI_drawable->target_location;
+                aicontroller->internal_state = STATE_IDLE;
+                return NO_RETHUNK;
             } else {
                 //move toward target location;
 
@@ -145,6 +156,17 @@ int AI_arrow_update(bbAIControl* aicontroller){
 
             message_movement_new(AI_drawable_int , new_location);
             //is the drawable overlapping with a target drawable? Then set STATE_ATTACKING
+
+
+            int target = bbDrawable_hitbox (AI_drawable_int);
+
+            if (target >= 0) {
+
+                bbDrawable* drawable = bbDrawable_Pool_Lookup(target);
+
+                drawable->health = drawable->health - 55;
+                drawable->display_health_until = Current_Time + 180;
+            }
 
             return NO_RETHUNK;
     }

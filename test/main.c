@@ -81,6 +81,8 @@ int main (void){
 
 int Test_All(void){
 
+
+
     Window_Init();
 
     sfColor beige = COLOUR_BEIGE;
@@ -115,26 +117,14 @@ int Test_All(void){
     goalpoint.j = 3000;
     goalpoint.k = 0;
     
-    
-    
-    #ifdef VERBOSE
-        printf("bbDrawable_Pool_Make_Null();\n");
-    #endif
+
         
     bbDrawable_Pool_Make_Null();
-    
-    #ifdef VERBOSE
-        printf("bbAIControl_Pool_Make_Null();\n");
-    #endif
+
     
     bbAIControl_Pool_Make_Null();
     
 
-    
-    
-    #ifdef VERBOSE
-        printf("Load_Media();\n");
-    #endif
     
     Load_Media();
 
@@ -145,78 +135,40 @@ int Test_All(void){
 
     bbSkin_init();
 
-    #ifdef VERBOSE
-        printf("bbTerrainSquare_initAll();\n");
-    #endif
     
     bbTerrainSquare_initAll();
-    
-    #ifdef VERBOSE
-        printf("bbElevations_load();\n");
-    #endif
+
     
     bbElevations_load();
-    
-    #ifdef VERBOSE
-        printf("bbViewport_init();\n");
-    #endif
-    
-    
-    bbViewport_init();
-    
-    #ifdef VERBOSE
-        printf("bbGroundSurface_initAll();\n");
-    #endif
-    
-    
-    bbGroundSurface_initAll();
-    
-    #ifdef VERBOSE
-        printf("bbDrawfunction_initAll();\n");
-    #endif
-    
-    
-    bbDrawfunction_initAll();
-    
-    #ifdef VERBOSE
-        printf("bbAIControl_initTypes();\n");
-    #endif
-    
-    
-    bbAIControl_init();
-    
 
     
     
-    #ifdef VERBOSE
-        printf("bbMessage_initTypes();\n");
-    #endif
+    bbViewport_init();
+
+    
+    
+    bbGroundSurface_initAll();
+
+    
+    bbDrawfunction_initAll();
+
+    
+    bbAIControl_init();
+
         
     bbMessage_initTypes();
-    
-    #ifdef VERBOSE
-        printf("potential_avoidance_initShapes();\n");
-    #endif
+
     
     potential_avoidance_initShapes();
     Sum_Forces_initShapes();
-    
-    #ifdef VERBOSE
-        printf("Create_Ground_Shaders();\n");
-    #endif
+
     
     Create_Ground_Shaders();
     
-    #ifdef VERBOSE
-        printf("prompt_init();\n");
-    #endif
-    
+
     prompt_init();
     
-    #ifdef VERBOSE
-        printf("some text stuff\n");
-    #endif
-    
+
     char string2[1000];
     sfText* text2 = sfText_create();
     sfText_setString(text2, "Hello SFML");
@@ -226,14 +178,6 @@ int Test_All(void){
     text_position.x = 0;
     text_position.y = 150;
     sfText_setPosition(text2, text_position);
-    
-    #ifdef VERBOSE
-        printf("Spawn some null AIs\n");
-    #endif
-
-#ifdef VERBOSE
-    printf("Spawn player AI\n");
-#endif
 
     player_int = bbAI_constructor_vtable[PLAYER_20230829](viewpoint);
     bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
@@ -297,43 +241,29 @@ int Test_All(void){
     
     while(1) {
 
-        
-        #ifdef VERBOSE
-        printf("Beginning Main Loop: time = %d\n", Current_Time);
-        #endif   
+
+
+       // bbVerbose("Beginning Main Loop: time = %d\n", Current_Time);
+
         sfEvent event;
-        
-        
-        #ifdef VERBOSE
-        printf("User Input:\n");
-        #endif 
+
         input_process();
         
-        
-        #ifdef VERBOSE
-        printf("bbAIControl_updatePool();\n");
-        #endif 
+
         
         bbAIControl_updatePool();
                 
-        #ifdef VERBOSE
-        printf("bbMessage_processAll();\n");
-        #endif 
+
         
         bbMessage_processAll();
         
-        #ifdef VERBOSE
-        printf("Centre view on viewpoint_drawable_int\n");
-        #endif 
+
         
         bbDrawable* viewpoint_drawable
              = bbDrawable_Pool_Lookup(viewpoint_drawable_int);
         viewpoint = viewpoint_drawable->location;
         viewpoint.k = viewpoint.k *0.5 + 200;
-        
-        #ifdef VERBOSE
-        printf("Draw to Screen:\n");
-        #endif
+
     
         bbTerrainSquare_drawVisible();
         bbGroundSurface_drawVisible(); 
@@ -343,10 +273,7 @@ int Test_All(void){
         prompt_display();
         display_health();
         sfRenderWindow_display(window);
-        
-        #ifdef VERBOSE
-        printf("Clear Screen:\n");
-        #endif 
+
         sfRenderTexture_clear(bbViewport_background, sfBlue);
         sfRenderTexture_clear(bbViewport_ground, sfTransparent);
         sfRenderTexture_clear(bbViewport_main, sfTransparent);

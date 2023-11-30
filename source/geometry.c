@@ -4,6 +4,7 @@
 
 #include "../headers/system_includes.h"
 #include "../headers/constants.h"
+#include "../headers/bbPrintf.h"
 
 
 
@@ -186,6 +187,7 @@ bbScreenCoords bbMapCoords_getScreenCoords_vector (bbMapCoords A, bbMapCoords B)
     sc.y =    (B.i - A.i) / (1.0 * ISOMETRIC_FACTOR * POINTS_PER_PIXEL)
               - (B.j - A.j) / (1.0 * ISOMETRIC_FACTOR * POINTS_PER_PIXEL)
               - (B.k - A.k) / (1.0 * POINTS_PER_PIXEL);
+
 
     return sc;
 }
@@ -653,10 +655,12 @@ float bbMapCoords_getDistance(bbMapCoords a, bbMapCoords b){
 }
 
 int bbScreenCoords_within_bbRect(bbScreenCoords SC, bbIntRect Rect){
-    if (SC.x < Rect.left)              return 0;
-    if (SC.x > Rect.left + Rect.width) return 0;
-    if (SC.y < Rect.top)               return 0;
-    if (SC.y > Rect.top + Rect.height) return 0;
 
-    return 1;
+
+    if (SC.x < Rect.left)              return -1;
+    if (SC.x > Rect.left + Rect.width) return -1;
+    if (SC.y < Rect.top)               return -1;
+    if (SC.y > Rect.top + Rect.height) return -1;
+
+    return 0;
 }

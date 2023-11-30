@@ -34,6 +34,19 @@ int PLAYER_new(bbMapCoords mc){
     drawable->speed            = 6;
     drawable->shape            = AVOIDANCE_CIRCLULAR;
 
+    bbIntRect NULL_Hit_Box;
+    NULL_Hit_Box.top      = -1;
+    NULL_Hit_Box.left     = -1;
+    NULL_Hit_Box.height   = -1;
+    NULL_Hit_Box.width    = -1;
+
+    drawable->onclick_function  = -1;
+    drawable->AI_Controller     = -1;
+    drawable->Interactivity     = -1;
+    drawable->Click_Box         = NULL_Hit_Box;
+
+    drawable->Ignore_Arrows     = -1;
+    drawable->Hit_Box           = NULL_Hit_Box;
 
     drawable->health     = 100;
     drawable->max_health = 100;

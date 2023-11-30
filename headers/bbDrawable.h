@@ -69,9 +69,13 @@
 
     int onclick_function; //might want to implement a vtable or just not use this variable
     int AI_Controller;
-    int Interactivity; //(0 = none, 1 = enemy, 2 = chest)
+    int Interactivity; //(-1 = none...0 = none, 1 = enemy, 2 = chest)
+    bbIntRect Click_Box;
+
+    int Ignore_Arrows; //-1 -> ignore arrows, 0-> dont ignore arrows
     bbIntRect Hit_Box;
-    
+
+
     
      
 
