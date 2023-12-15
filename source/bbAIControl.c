@@ -35,6 +35,9 @@ int bbAIControl_update(bbAIControl* aicontroller){
         if (rethunk == KILL_AI){
             return KILL_AI;
         }
+        if (rethunk == ANNIHILATE_AI){
+            return ANNIHILATE_AI;
+        }
 
     }
 
@@ -55,6 +58,9 @@ int bbAIControl_update_int(int aicontroller_int){
         rethunk = bbAI_update_vtable[type](aicontroller);
         if (rethunk == KILL_AI){
             return KILL_AI;
+        }
+        if (rethunk == ANNIHILATE_AI){
+            return ANNIHILATE_AI;
         }
     }
 
@@ -93,6 +99,20 @@ int bbAIControl_updatePool(void){
 
 
 
+        } else if (killflag == ANNIHILATE_AI){    //TODO delete drawables in a message
+
+
+                //Cleanup orphaned drawables;
+                for (int i = 0; i<DRAWABLES_PER_AI; i++){
+                    int drawable_int = tobeupdated->drawables[i];
+                    if (drawable_int >= 0) {
+                        //remove drawable from lists and delete
+                        bbDrawable_removefromTS (drawable_int);
+                        bbDrawable_Pool_Delete(drawable_int);
+                    }
+                }
+                //Delete AI Controller
+                bbAIControl_Pool_Delete(previous_int);
         }
 
 

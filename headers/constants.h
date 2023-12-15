@@ -149,9 +149,12 @@
 
 #define DRAWABLES_PER_AI           TBA
 
-#define RETHUNK      1   //flag message/ai handler to re-process message/ai function
-#define NO_RETHUNK   0
-#define KILL_AI      2
+#define RETHUNK       1   //flag message/ai handler to re-process message/ai function
+#define NO_RETHUNK    0
+#define KILL_AI       2
+#define ANNIHILATE_AI 3    //TODO delete drawables in a message
+
+//TODO set ignore flag for drawables created by AI controllers until next timestep
 //-----------------------------AI TYPES (EXTERNAL STATE)----------------------------------//
 
 

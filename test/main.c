@@ -128,10 +128,6 @@ int Test_All(void){
     
     Load_Media();
 
-    //#ifdef DEBUG
-    //bbAnimation_print_data(18);
-    //bbAnimation_print_data(19);
-    //#endif
 
     bbSkin_init();
 

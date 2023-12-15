@@ -154,7 +154,6 @@ int AI_arrow_update(bbAIControl* aicontroller){
 
             }
 
-            message_movement_new(AI_drawable_int , new_location);
             //is the drawable overlapping with a target drawable? Then set STATE_ATTACKING
 
 
@@ -166,8 +165,12 @@ int AI_arrow_update(bbAIControl* aicontroller){
 
                 drawable->health = drawable->health - 55;
                 drawable->display_health_until = Current_Time + 180;
+
+
+                return ANNIHILATE_AI; //TODO remove annihilate AI, replace with delete_message_new(drawable_int)
             }
 
+            message_movement_new(AI_drawable_int , new_location); //Do not send a message and then return ANNIHILATE_AI
             return NO_RETHUNK;
     }
     return NO_RETHUNK;
