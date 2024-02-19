@@ -134,7 +134,7 @@ int input_process(void){
                    bbDrawable* arrow_drawable = bbDrawable_Pool_Lookup(arrow_drawable_int);
                    bbMapCoords target_location = bbScreenCoords_getMapCoords_k_fixed (mouse_viewport_position, player_coords.k);
 
-                   bbDrawable_set_passthrough(arrow_drawable, target_location, POINTS_PER_SQUARE);
+                   bbDrawable_set_passthrough(arrow_drawable, target_location, 3*POINTS_PER_SQUARE);
 
                    //left_button_down = 1; //Set a flag to tell entire the system that the left mouse button is down.
                

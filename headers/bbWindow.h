@@ -16,7 +16,7 @@ typedef struct {
     int height;
     char title[128];
 
-    int decal_int;
+    int decal_int;   //TODO consolidate with root_widget
     bbViewport* viewport;
     bbPrompt* prompt;
     bbTextbox* textbox;

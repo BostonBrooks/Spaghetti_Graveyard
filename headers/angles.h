@@ -10,6 +10,8 @@
 #ifndef ANGLES_H
 #define ANGLES_H
 
+
+#include "../headers/bbDictionary.h"
 //-----------------------------INCLUDES----------------------------//
 
 //-----------------------------STRUCTS------------------------------//

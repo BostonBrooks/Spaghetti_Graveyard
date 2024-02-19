@@ -8,6 +8,7 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/sum_forces.h"
+#include "../headers/flags.h"
 
 int AI_tortoise_new(bbMapCoords mc){
 
@@ -113,7 +114,7 @@ int AI_tortoise_update(bbAIControl* aicontroller){
 
     message_movement_new(drawable_int, new_location);
 
-    return NO_RETHUNK;
+    return F_CONTINUE;
 
 }
 

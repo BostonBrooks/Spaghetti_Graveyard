@@ -12,6 +12,7 @@
 #include "../headers/bbMessage.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/input.h"
+#include "../headers/flags.h"
 
 int PLAYER_new(bbMapCoords mc){
 
@@ -105,7 +106,7 @@ int PLAYER_update(bbAIControl* aicontroller){
         
         left_button_down = 0;
         
-        return NO_RETHUNK;
+        return F_CONTINUE;
         
     }
     
@@ -127,7 +128,7 @@ int PLAYER_update(bbAIControl* aicontroller){
 
 
 
-    return NO_RETHUNK;
+    return F_CONTINUE;
 
 }
 

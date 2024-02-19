@@ -26,6 +26,10 @@ int Window_Init(void){
     
     window = sfRenderWindow_create(mode, "Maths RPG", sfResize | sfClose, NULL);
 
+#ifdef LIMIT_FRAMERATE
+	sfRenderWindow_setFramerateLimit(window, 60);
+#endif // LIMIT_FRAMERATE
+
     sfVector2i position;
     position.x = 0;
     position.y = 0;

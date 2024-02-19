@@ -8,6 +8,7 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/sum_forces.h"
+#include "../headers/flags.h"
 
 extern int Current_Time;
 extern int player_int;
@@ -70,7 +71,7 @@ int AI_cow_update(bbAIControl* aicontroller){
             drawable->frame[i] = 0;
         }
 
-        return KILL_AI;
+        return F_DELETE;
     }
 
 
@@ -97,9 +98,9 @@ int AI_cow_update(bbAIControl* aicontroller){
 
                 aicontroller->internal_state = STATE_APPROACHING;
                 aicontroller->state_transition = 1;
-                return RETHUNK;
+                return F_REPEAT;
             }
-            return NO_RETHUNK;
+            return F_CONTINUE;
 
         case STATE_APPROACHING:
 
@@ -121,9 +122,9 @@ int AI_cow_update(bbAIControl* aicontroller){
 
                 aicontroller->internal_state = STATE_ATTACKING;
                 aicontroller->state_transition = 1;
-                return RETHUNK;
+                return F_REPEAT;
             }
-            return NO_RETHUNK;
+            return F_CONTINUE;
 
         case STATE_ATTACKING:
             if (aicontroller->state_transition == 1){
@@ -144,11 +145,11 @@ int AI_cow_update(bbAIControl* aicontroller){
 
                 aicontroller->internal_state = STATE_IDLE;
                 aicontroller->state_transition = 1;
-                return RETHUNK;
+                return F_REPEAT;
             }
-            return NO_RETHUNK;
+            return F_CONTINUE;
     }
-    return NO_RETHUNK;
+    return F_CONTINUE;
 }
 
 int AI_cow_RPC (bbAIControl* aicontroller, bbMessage* message){

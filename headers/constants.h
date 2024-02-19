@@ -30,7 +30,7 @@
 
 //-----------------------------WINDOW----------------------------//
 
-#define RESOLUTION             1280 //as opposed to 1920
+#define RESOLUTION             1920 //as opposed to 1280
 
 #if RESOLUTION == 1920
 

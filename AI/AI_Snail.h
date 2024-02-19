@@ -8,6 +8,7 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/sum_forces.h"
+#include "../headers/flags.h"
 
 extern int Current_Time;
 extern int player_int;
@@ -105,7 +106,7 @@ int AI_cow_update(bbAIControl* aicontroller){
 
         }
 
-        return KILL_AI;
+        return F_DELETE;
     }
 
     bbAIControl* player_AI = bbAIControl_Pool_Lookup(player_int);
@@ -140,17 +141,17 @@ int AI_cow_update(bbAIControl* aicontroller){
             //set target
             //set state to approaching
             //set state_transition
-            //return RETHUNK
+            //return F_REPEAT
 
 
             if (distance < 25 * POINTS_PER_TILE) {
                 aicontroller->internal_state = STATE_APPROACHING;
                 AI_drawable->target_drawable = player_drawable->Pool_Self;
                 aicontroller->state_transition = 1;
-                return RETHUNK;
+                return F_REPEAT;
             }
 
-            return NO_RETHUNK;
+            return F_CONTINUE;
 
         case STATE_APPROACHING:
 
@@ -171,7 +172,7 @@ int AI_cow_update(bbAIControl* aicontroller){
             if (distance > 25 * POINTS_PER_TILE){
                 aicontroller->internal_state = STATE_IDLE;
                 aicontroller->state_transition = 1;
-                return RETHUNK;
+                return F_REPEAT;
 
             }
 
@@ -181,13 +182,13 @@ int AI_cow_update(bbAIControl* aicontroller){
                 aicontroller->internal_state = STATE_ATTACKING;
                 aicontroller->attack_centre = player_coords;
                 aicontroller->state_transition = 1;
-                return RETHUNK;
+                return F_REPEAT;
 
             }
 
             //else move towards player
             bbDrawable_movetowards_multiple(AI_drawable_int, player_coords);
-            return NO_RETHUNK;
+            return F_CONTINUE;
 
         case STATE_ATTACKING:
             if (aicontroller->state_transition == 1){
@@ -216,7 +217,7 @@ int AI_cow_update(bbAIControl* aicontroller){
             if (Current_Time > aicontroller->clock + 304) {
                 aicontroller->internal_state = STATE_IDLE;
                 aicontroller->state_transition = 1;
-                return RETHUNK;
+                return F_REPEAT;
 
             }
             //if player within range and Current_Time = clock + ?
@@ -225,9 +226,9 @@ int AI_cow_update(bbAIControl* aicontroller){
             //"become" IDLE
 
             //else move towards player
-            return NO_RETHUNK;
+            return F_CONTINUE;
     }
-    return NO_RETHUNK;
+    return F_CONTINUE;
 }
 
 int AI_cow_RPC (bbAIControl* aicontroller, bbMessage* message){

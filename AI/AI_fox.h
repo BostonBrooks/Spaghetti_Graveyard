@@ -11,6 +11,7 @@
 #include "../headers/bbAIControl.h"
 #include "../headers/bbMessage.h"
 #include "../headers/bbDrawable.h"
+#include "../headers/flags.h"
 
 int AI_fox_new(bbMapCoords mc){
 
@@ -67,7 +68,7 @@ int AI_fox_update(bbAIControl* aicontroller){
     
     
 
-    return NO_RETHUNK;
+    return F_CONTINUE;
 
 }
 

@@ -7,6 +7,7 @@
 #include "../headers/bbMessage.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/angles.h"
+#include "../headers/flags.h"
 
 int AI_yeti_new(bbMapCoords mc){
 
@@ -81,7 +82,7 @@ int AI_yeti_update(bbAIControl* aicontroller){
     
     float distance = sqrt(delta_i * delta_i + delta_j * delta_j);
     
-    if (distance > 64 * POINTS_PER_TILE) return NO_RETHUNK;
+    if (distance > 64 * POINTS_PER_TILE) return F_CONTINUE;
     //normalise difference by distance/speed
     
     //if (distance < POINTS_PER_TILE) return 0;
@@ -106,7 +107,7 @@ int AI_yeti_update(bbAIControl* aicontroller){
     //create movement message
     message_movement_new(drawable_int, new_location);
 
-    return NO_RETHUNK;
+    return F_CONTINUE;
 
 }
 

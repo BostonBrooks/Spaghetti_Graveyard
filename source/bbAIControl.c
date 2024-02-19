@@ -8,6 +8,7 @@
 #include "../headers/pools.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/bbAIControl_init.h"
+#include "../headers/flags.h"
 
 //-----------------------------CODE------------------------------//
 
@@ -23,20 +24,20 @@ int bbAIControl_update(bbAIControl* aicontroller){
     
     int type;
     
-    int rethunk = RETHUNK;
+    int flag = F_REPEAT;
 
     
     
-    while (rethunk == RETHUNK){
+    while (flag == F_REPEAT){
     
         type = aicontroller->external_state;
 
-        rethunk = bbAI_update_vtable[type](aicontroller);
-        if (rethunk == KILL_AI){
-            return KILL_AI;
+		flag = bbAI_update_vtable[type](aicontroller);
+        if (flag == F_DELETE){
+            return F_DELETE;
         }
-        if (rethunk == ANNIHILATE_AI){
-            return ANNIHILATE_AI;
+        if (flag == F_ANNIHILATE){
+            return F_ANNIHILATE;
         }
 
     }
@@ -50,17 +51,17 @@ int bbAIControl_update_int(int aicontroller_int){
     
     int type;
     
-    int rethunk = RETHUNK;
+    int flag = F_REPEAT;
     
-    while (rethunk == RETHUNK){
+    while (flag == F_REPEAT){
     
         type = aicontroller->external_state;
-        rethunk = bbAI_update_vtable[type](aicontroller);
-        if (rethunk == KILL_AI){
-            return KILL_AI;
+		flag = bbAI_update_vtable[type](aicontroller);
+        if (flag == F_DELETE){
+            return F_DELETE;
         }
-        if (rethunk == ANNIHILATE_AI){
-            return ANNIHILATE_AI;
+        if (flag == F_ANNIHILATE){
+            return F_ANNIHILATE;
         }
     }
 
@@ -71,7 +72,7 @@ int bbAIControl_updatePool(void){
 
     int tobeupdated_int = bbAIControl_Pool_In_Use_Head;
     int previous_int;
-    int killflag;
+    int flag;
     
     if ( tobeupdated_int == -1) return 0;
     
@@ -82,10 +83,10 @@ int bbAIControl_updatePool(void){
     
 
         bbAIControl* tobeupdated = bbAIControl_Pool_Lookup(tobeupdated_int);
-        killflag = bbAIControl_update(tobeupdated);
+        flag = bbAIControl_update(tobeupdated);
         previous_int = tobeupdated_int;
         tobeupdated_int = tobeupdated->Pool_Next;
-        if(killflag == KILL_AI) {
+        if(flag == F_DELETE) {
             //Cleanup orphaned drawables;
             for (int i = 0; i<DRAWABLES_PER_AI; i++){
                 int drawable_int = tobeupdated->drawables[i];
@@ -99,7 +100,7 @@ int bbAIControl_updatePool(void){
 
 
 
-        } else if (killflag == ANNIHILATE_AI){    //TODO delete drawables in a message
+        } else if (flag == F_ANNIHILATE){    //TODO delete drawables in a message
 
 
                 //Cleanup orphaned drawables;

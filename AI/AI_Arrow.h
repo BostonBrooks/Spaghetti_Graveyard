@@ -11,6 +11,7 @@
 #include "../headers/bbDrawable_lists.h"
 #include "../headers/bbPrintf.h"
 #include "../headers/bbAIControl_init.h"
+#include "../headers/flags.h"
 
 extern int Current_Time;
 extern int player_int;
@@ -115,19 +116,19 @@ int AI_arrow_update(bbAIControl* aicontroller){
 
             //arrow is idle?
 
-            return NO_RETHUNK;
+            return F_CONTINUE;
 
         case STATE_APPROACHING:
 
             //arrow is approaching a drawable?
 
-            return NO_RETHUNK;
+            return F_CONTINUE;
 
         case STATE_ATTACKING:
 
             //arrow hits drawable?
 
-            return NO_RETHUNK;
+            return F_CONTINUE;
 
         case STATE_MOVING:
 
@@ -140,7 +141,7 @@ int AI_arrow_update(bbAIControl* aicontroller){
             if (distance_to_target < speed){
                 new_location = AI_drawable->target_location;
                 aicontroller->internal_state = STATE_IDLE;
-                return NO_RETHUNK;
+                return F_CONTINUE;
             } else {
                 //move toward target location;
 
@@ -167,13 +168,13 @@ int AI_arrow_update(bbAIControl* aicontroller){
                 drawable->display_health_until = Current_Time + 180;
 
 
-                return ANNIHILATE_AI; //TODO remove annihilate AI, replace with delete_message_new(drawable_int)
+                return F_ANNIHILATE; //TODO remove annihilate AI, replace with delete_message_new(drawable_int)
             }
 
             message_movement_new(AI_drawable_int , new_location); //Do not send a message and then return ANNIHILATE_AI
-            return NO_RETHUNK;
+            return F_CONTINUE;
     }
-    return NO_RETHUNK;
+    return F_CONTINUE;
 }
 
 int AI_arrow_RPC (bbAIControl* aicontroller, bbMessage* message){

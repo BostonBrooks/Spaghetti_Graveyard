@@ -1,5 +1,7 @@
 #define MAIN
 
+#define BBWIDGET_H   //Prevent this from being included
+
 #ifndef ALL_INCLUDES
 #define ALL_INCLUDES
 #include "../headers/all_includes.h"
@@ -116,18 +118,21 @@ int Test_All(void){
     goalpoint.i = 2000;
     goalpoint.j = 3000;
     goalpoint.k = 0;
-    
+
 
         
     bbDrawable_Pool_Make_Null();
 
     
     bbAIControl_Pool_Make_Null();
-    
+
 
     
     Load_Media();
 
+	//bbWidget_Pool_Make_Null();
+	//bbWidget_Init_Tables();
+	//root_widget = bbWidget_Init_Widgets();
 
     bbSkin_init();
 
@@ -266,6 +271,8 @@ int Test_All(void){
         sfRenderTexture_display(viewport); 
         sfRenderWindow_drawSprite(window, viewport_sprite, &bbViewport_renderer);
         Display_Decal();
+
+		//bbWidget_Draw(root_widget);
         prompt_display();
         display_health();
         sfRenderWindow_display(window);

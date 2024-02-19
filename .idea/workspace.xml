@@ -18,14 +18,58 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="bbMapCoords_getScreenCoords_vector">
-      <change afterPath="$PROJECT_DIR$/AI/arrow.h" afterDir="false" />
+    <list default="true" id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="a few days work... getting sloppy with commits.">
+      <change afterPath="$PROJECT_DIR$/Ubuntu/test_animations.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ubuntu/test_dict.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ubuntu/test_media.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ubuntu/test_sprites.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ubuntu/test_textures.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ubuntu/test_widgets.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/bbAnimation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/bbDictionary.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/bbWidget.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/commands.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/flags.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/sprites.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headers/textures.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/bbAnimation.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/bbDictionary.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/bbWidget.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/sprites.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/textures.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_animations.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_dict.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_media.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_sprites.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_textures.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_widgets.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/button.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/decal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/widgets/menu.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/AI_Cow.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Snail.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_Arrow.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Arrow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_Snail.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Snail.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_Tortoise.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Tortoise.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_Yeti.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_Yeti.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_fox.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_fox.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI_null.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_null.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AI/AI_state_machine.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI_state_machine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/PLAYER.h" beforeDir="false" afterPath="$PROJECT_DIR$/AI/PLAYER.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Ubuntu/Build_Linux.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/all_includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/all_includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/angles.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/angles.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/bbAIControl.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbAIControl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/bbWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/bbWindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/headers/constants.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/constants.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/geometry.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/geometry.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/bbAIControl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/headers/system_includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/system_includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map0/animations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/animations.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map0/sprites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/sprites.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map0/textures.csv" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map0/textures.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/bbAIControl.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/bbAIControl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/input.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/input.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/media.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/media.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/source/window.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +125,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/boston-brooks/CLionProjects/Spaghetti_Graveyard/headers&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/boston-brooks/CLionProjects/0ad-propper&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,11 +142,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Ubuntu" />
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/headers" />
+      <recent name="$PROJECT_DIR$/source" />
       <recent name="$PROJECT_DIR$/AI" />
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\AI" />
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\source" />
-      <recent name="C:\Users\bbroo\CLionProjects\Spaghetti_Graveyard\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/headers" />
     </key>
   </component>
   <component name="RunManager">
@@ -141,6 +190,66 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Shell Script.scratch.sh" />
@@ -148,6 +257,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="dd9ac542-8742-4ba9-88d3-a4ae90337655" name="Changes" comment="" />
@@ -178,7 +290,41 @@
       <workItem from="1699765790917" duration="1973000" />
       <workItem from="1699769231394" duration="168000" />
       <workItem from="1700104960637" duration="23000" />
-      <workItem from="1700112958629" duration="830000" />
+      <workItem from="1700112958629" duration="1071000" />
+      <workItem from="1700114043221" duration="8774000" />
+      <workItem from="1700379534486" duration="2425000" />
+      <workItem from="1700382134432" duration="3718000" />
+      <workItem from="1700643225135" duration="2102000" />
+      <workItem from="1700817728594" duration="1000" />
+      <workItem from="1700820031553" duration="3552000" />
+      <workItem from="1700885949833" duration="626000" />
+      <workItem from="1700888398577" duration="492000" />
+      <workItem from="1700889398029" duration="5416000" />
+      <workItem from="1701242715087" duration="12730000" />
+      <workItem from="1701417907041" duration="1292000" />
+      <workItem from="1701419563098" duration="1000" />
+      <workItem from="1701490510303" duration="11000" />
+      <workItem from="1701492015386" duration="25000" />
+      <workItem from="1702099469386" duration="1422000" />
+      <workItem from="1702102965233" duration="4379000" />
+      <workItem from="1702539005645" duration="1651000" />
+      <workItem from="1702612351164" duration="1900000" />
+      <workItem from="1702797240212" duration="35000" />
+      <workItem from="1703125418436" duration="744000" />
+      <workItem from="1705284230664" duration="8522000" />
+      <workItem from="1705478900729" duration="11543000" />
+      <workItem from="1705490451556" duration="2997000" />
+      <workItem from="1705643973405" duration="19496000" />
+      <workItem from="1705981517687" duration="1174000" />
+      <workItem from="1705983255607" duration="19517000" />
+      <workItem from="1706486078432" duration="10549000" />
+      <workItem from="1706506743661" duration="1605000" />
+      <workItem from="1706593593477" duration="3529000" />
+      <workItem from="1706672540276" duration="3905000" />
+      <workItem from="1706931399723" duration="2043000" />
+      <workItem from="1708237671162" duration="6351000" />
+      <workItem from="1708306235908" duration="24000" />
+      <workItem from="1708306269168" duration="10030000" />
     </task>
     <task id="LOCAL-00001" summary="Importing files from old VCS, Windows Explorer :P">
       <option name="closed" value="true" />
@@ -404,7 +550,175 @@
       <option name="project" value="LOCAL" />
       <updated>1700038400433</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="changed AI_COW to AI_SNAIL">
+      <option name="closed" value="true" />
+      <created>1700113808775</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1700113808775</updated>
+    </task>
+    <task id="LOCAL-00030" summary="set player draw function to DRAW_UNIT">
+      <option name="closed" value="true" />
+      <created>1700113919523</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1700113919523</updated>
+    </task>
+    <task id="LOCAL-00031" summary="created AI_ARROW">
+      <option name="closed" value="true" />
+      <created>1700122672140</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1700122672141</updated>
+    </task>
+    <task id="LOCAL-00032" summary="created some printf wrappers">
+      <option name="closed" value="true" />
+      <created>1700382514917</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1700382514917</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Nicer way to handle includes. Applied to bbNothing.h">
+      <option name="closed" value="true" />
+      <created>1700382880295</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1700382880295</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed 32 bit overflow in sqrt sum squares">
+      <option name="closed" value="true" />
+      <created>1700644946854</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1700644946854</updated>
+    </task>
+    <task id="LOCAL-00035" summary="included bbPrintf for debugging">
+      <option name="closed" value="true" />
+      <created>1700645001463</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1700645001463</updated>
+    </task>
+    <task id="LOCAL-00036" summary="arrows do not push on other AI/Drawable objects">
+      <option name="closed" value="true" />
+      <created>1700645058025</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1700645058025</updated>
+    </task>
+    <task id="LOCAL-00037" summary="find map coords given screen coord and k value">
+      <option name="closed" value="true" />
+      <created>1700645093678</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1700645093678</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fooling around with arrow animation">
+      <option name="closed" value="true" />
+      <created>1700645133140</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1700645133140</updated>
+    </task>
+    <task id="LOCAL-00039" summary="arrows begin at player position, pass though mouse position and end up at target position.">
+      <option name="closed" value="true" />
+      <created>1700645237238</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700645237238</updated>
+    </task>
+    <task id="LOCAL-00040" summary="increase saturation on grass texture">
+      <option name="closed" value="true" />
+      <created>1700645263412</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1700645263412</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Fixed include guards in .h files">
+      <option name="closed" value="true" />
+      <created>1700820951047</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1700820951047</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Fixed include guards in .c files&#10;deleted some debug code">
+      <option name="closed" value="true" />
+      <created>1700823830061</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1700823830061</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fixed some typos">
+      <option name="closed" value="true" />
+      <created>1700888871237</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1700888871237</updated>
+    </task>
+    <task id="LOCAL-00044" summary="changed snail animation to cow">
+      <option name="closed" value="true" />
+      <created>1700889499043</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1700889499043</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fixed include guards in AI header files">
+      <option name="closed" value="true" />
+      <created>1700889784605</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700889784605</updated>
+    </task>
+    <task id="LOCAL-00046" summary="bbDrawable_set_passthrough()&#10;bbScreenCoords_within_bbRect()&#10;removed some debug code">
+      <option name="closed" value="true" />
+      <created>1700895932894</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1700895932894</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fixed hard to find but where arrow hits cow&#10;&#10;window.h will contain all data referring to the window and whats drawn onto it">
+      <option name="closed" value="true" />
+      <created>1701322763866</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1701322763866</updated>
+    </task>
+    <task id="LOCAL-00048" summary="a few days work... getting sloppy with commits.">
+      <option name="closed" value="true" />
+      <created>1702617806242</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1702617806242</updated>
+    </task>
+    <task id="LOCAL-00049" summary="a few days work... getting sloppy with commits.">
+      <option name="closed" value="true" />
+      <created>1702618313827</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1702618313827</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,28 +754,42 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit" />
-    <MESSAGE value="Importing files from old VCS, Windows Explorer :P" />
-    <MESSAGE value="Testing gitignore" />
-    <MESSAGE value="Testing gitignore. Fixing code after moving AI directory from within source directory to root directory." />
-    <MESSAGE value="RE Fixing code after moving AI directory from within source directory to root directory. Removed comment relating to previous directory structure." />
-    <MESSAGE value="Fiddling around with file paths, compiling externally with MSYS" />
-    <MESSAGE value="pools.h testing with MSYS" />
-    <MESSAGE value="EXIT_FAILURE is malloc fails" />
-    <MESSAGE value="nothing" />
-    <MESSAGE value="int draw_once_skin(bbDrawable* tobedrawn, int i)" />
-    <MESSAGE value="int draw_skin(bbDrawable* tobedrawn, int i)" />
-    <MESSAGE value="AI Cow state machine. doesnt work if drawable-&gt;health &gt; 0" />
-    <MESSAGE value="AI Cow state machine. Works well" />
-    <MESSAGE value="Show HP bars, with sloppy code." />
-    <MESSAGE value="set drawable-&gt;AI_Controller for AI_Cow and PLAYER&#10;&#10;set drawable-&gt;AI_Controller = -1 when ai controller dies." />
-    <MESSAGE value="Can now click to damage cow" />
-    <MESSAGE value="set POINTS_PER_PIXEL to 64&#10;set ELEVATION_SCALE to 32&#10;&#10;set PIXELS_PER_SQUARE to (PIXELS_PER_TILE * TILES_PER_SQUARE)&#10;instead of (POINTS_PER_TILE * TILES_PER_SQUARE)&#10;&#10;Uncommented offensive code in bbGroundsurface.&#10;&#10;no apparent hill shading" />
     <MESSAGE value="updates brawable move towards in PLAYER.h&#10;&#10;this causes a glitch because PLAYER has 2 angles and the new function expects 8 angles." />
     <MESSAGE value="gave PLAYER 8 angles, in line with change in code" />
     <MESSAGE value="fixed hill shading" />
     <MESSAGE value="bbMapCoords_getScreenCoords_vector&#10;Things aren't doing what they should :S&#10;mouse_screen_position and mouse_map_position look wrong" />
     <MESSAGE value="bbMapCoords_getScreenCoords_vector" />
-    <option name="LAST_COMMIT_MESSAGE" value="bbMapCoords_getScreenCoords_vector" />
+    <MESSAGE value="changed AI_COW to AI_SNAIL" />
+    <MESSAGE value="set player draw function to DRAW_UNIT" />
+    <MESSAGE value="created AI_ARROW" />
+    <MESSAGE value="created some printf wrappers" />
+    <MESSAGE value="Nicer way to handle includes. Applied to bbNothing.h" />
+    <MESSAGE value="fixed 32 bit overflow in sqrt sum squares" />
+    <MESSAGE value="included bbPrintf for debugging" />
+    <MESSAGE value="arrows do not push on other AI/Drawable objects" />
+    <MESSAGE value="find map coords given screen coord and k value" />
+    <MESSAGE value="fooling around with arrow animation" />
+    <MESSAGE value="arrows begin at player position, pass though mouse position and end up at target position." />
+    <MESSAGE value="increase saturation on grass texture" />
+    <MESSAGE value="Fixed include guards in .h files" />
+    <MESSAGE value="Fixed include guards in .c files&#10;deleted some debug code" />
+    <MESSAGE value="fixed some typos" />
+    <MESSAGE value="changed snail animation to cow" />
+    <MESSAGE value="fixed include guards in AI header files" />
+    <MESSAGE value="bbDrawable_set_passthrough()&#10;bbScreenCoords_within_bbRect()&#10;removed some debug code" />
+    <MESSAGE value="fixed hard to find but where arrow hits cow&#10;&#10;window.h will contain all data referring to the window and whats drawn onto it" />
+    <MESSAGE value="a few days work... getting sloppy with commits." />
+    <option name="LAST_COMMIT_MESSAGE" value="a few days work... getting sloppy with commits." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/headers/geometry.h</url>
+          <line>179</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

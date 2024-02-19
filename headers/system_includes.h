@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
+#include <stdbool.h>
 //#include <err.h>
 
 void err( int eval,

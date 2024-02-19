@@ -13,6 +13,7 @@
 #include "../headers/constants.h"
 #include "../headers/geometry.h"
 #include "../headers/pools.h"
+#include "../headers/flags.h"
 
 
 

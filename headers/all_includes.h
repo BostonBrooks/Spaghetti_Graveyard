@@ -23,6 +23,7 @@
 #include "../headers/bbMessage_passing.h"
 #include "../headers/bbNothing.h"
 #include "../headers/bbTerrainSquare.h"
+#include "../headers/bbWidget.h"
 #include "../headers/constants.h"
 #include "../headers/geometry.h"
 #include "../headers/input.h"

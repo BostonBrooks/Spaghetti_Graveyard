@@ -101,6 +101,7 @@ int bbAnimation_to_vtable(int VAddress, int Vdrawfunction, int angles, int frame
     animation->frames = frames;
     animation->framerate = framerate;
 
+
     
     int i;
     
