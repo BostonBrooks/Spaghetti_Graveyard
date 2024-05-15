@@ -169,10 +169,6 @@ bbDictionary_entry* grab_entry (bbDictionary* dict){ //remove an entry from avai
 	entry->Dict_In_Use = 1;
 
 	return entry;
-
-
-
-
 }
 
 int bbDictionary_add(bbDictionary* dict, char* key, int value){

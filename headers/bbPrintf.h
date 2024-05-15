@@ -6,7 +6,6 @@
 #ifndef BBPRINTF_H
 #define BBPRINTF_H
 
-#include "../headers/constants.h"
 #include <stdio.h>
 #include <stdarg.h>
 

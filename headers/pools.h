@@ -120,6 +120,7 @@
 \
 
 //Allocate memory for use in pool, add to tail end of available list.
+
 #define DEFINE_POOL_INCREASE(CLASS, LEVEL_1, LEVEL_2)\
     int CLASS##_Pool_Increase(int Level1_Address){\
 \
@@ -142,8 +143,9 @@
 \
         if (CLASS##_Pool_Available_Head == -1){\
             assert(CLASS##_Pool_Available_Tail == -1);\
-\
-            for (int l = 0; l < LEVEL_2; l++) {\
+                                                     \
+                                                     \
+            for (int l = 0; l < LEVEL_2; l++) {      \
                 CLASS##_Pool[i][l].Pool_Self = i * LEVEL_2 + l;\
                 CLASS##_Pool[i][l].Pool_Prev = i * LEVEL_2 + l - 1;\
                 CLASS##_Pool[i][l].Pool_Next = i * LEVEL_2 + l + 1;\
