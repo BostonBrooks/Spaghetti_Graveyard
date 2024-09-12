@@ -190,7 +190,7 @@ int Test_All(void){
     
     bbMapCoords mc;   
     
-    for (int i=0; i<8; i++){
+    for (int i=0; i<32; i++){
     
         float i = rand() % (POINTS_PER_SQUARE * 5);
         float j = rand() % (POINTS_PER_SQUARE * 5);

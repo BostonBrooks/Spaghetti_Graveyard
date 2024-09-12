@@ -21,12 +21,14 @@ int AI_cow_new(bbMapCoords mc){
 
     drawable->skin = 0;
     drawable->state = STATE_IDLE;
-    drawable->animation[0] = 22;
+    drawable->animation[0] = 23;
     drawable->angle[0] = rand() % 8;
     drawable->frame[0] = 0;
     drawable->drawfunction[0] = DRAW_UNIT;
     drawable->start_time = 0;
     drawable->avoidance_radius = POINTS_PER_TILE;
+    
+    drawable->shape                   = AVOIDANCE_CIRCLULAR;
 
 
 
@@ -169,7 +171,7 @@ int AI_cow_update(bbAIControl* aicontroller){
                 aicontroller->state_transition = 0;
             }
             //if player out of view, "become" IDLE
-            if (distance > 25 * POINTS_PER_TILE){
+            if (distance > 35 * POINTS_PER_TILE){
                 aicontroller->internal_state = STATE_IDLE;
                 aicontroller->state_transition = 1;
                 return F_REPEAT;
@@ -178,14 +180,14 @@ int AI_cow_update(bbAIControl* aicontroller){
 
             //else if player within range, "become" ATTACKING
 
-            if (distance < 5*POINTS_PER_TILE) {
+/*            if (distance < 5*POINTS_PER_TILE) {
                 aicontroller->internal_state = STATE_ATTACKING;
                 aicontroller->attack_centre = player_coords;
                 aicontroller->state_transition = 1;
                 return F_REPEAT;
 
             }
-
+*/
             //else move towards player
             bbDrawable_movetowards_multiple(AI_drawable_int, player_coords);
             return F_CONTINUE;
