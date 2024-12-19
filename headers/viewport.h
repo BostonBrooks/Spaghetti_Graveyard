@@ -63,7 +63,7 @@ extern sfShader* bbViewport_shader;
 
 //-----------------------------FUNCTIONS--------------------------//
 
-/** Create shaders for drawing drawables to vieport */
+/** Create shaders for drawing drawables to viewport */
 int bbViewport_shaders_create (void);
 
 /** Create textures for drawing to the viewport */

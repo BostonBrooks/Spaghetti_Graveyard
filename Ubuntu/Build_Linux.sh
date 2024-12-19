@@ -34,6 +34,7 @@ Color_Off='\033[0m'
   ../source/sum_forces.c\
   ../source/viewport.c\
   ../source/window.c\
+  ../source/GPU_HillShading.c\
   -lcsfml-system -lcsfml-graphics -lcsfml-window -g -lm -w;
   then
     echo "Compile Succeeded:"

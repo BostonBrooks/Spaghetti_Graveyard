@@ -10,6 +10,7 @@
 #include "../headers/constants.h"
 #include "../headers/media.h"
 #include "../headers/viewport.h"
+#include "../headers/GPU_HillShading.h"
 
 
 //-----------------------------CONSTANTS----------------------------//
@@ -237,11 +238,17 @@ int bbGroundSurface_initAll(void){
     
     
     sfRenderTexture_display(bbGroundSurface_grid[0][0].Base_Render_Texture); 
+/*
+	sfClock* clock;
+	clock = sfClock_create();
+	sfTime t1, t2;
 
-            bbGroundSurface_calcHillShading(i, j);
+			sfClock_restart(clock);
+*/
+			calcHillShading(Ground_Surface->Hill_Shading_Render_Texture, i, j);
+/*			t1 = sfClock_restart(clock);
 
-
-                
+			bbGroundSurface_calcHillShading(i, j);
             sfIntRect area;
             area.left = 0;
             area.top = 0;
@@ -263,11 +270,14 @@ int bbGroundSurface_initAll(void){
             sfSprite_destroy(temp_hill_shading_sprite);
             sfTexture_destroy(temp_hill_shading);
 
-            
 
-            
 
-            
+
+			t2 = sfClock_restart(clock);
+			sfClock_destroy(clock);
+
+			printf("t1 = %ld, t2 = %ld\n", sfTime_asMicroseconds(t1), sfTime_asMicroseconds(t2));
+     */
             Ground_Surface->Vertex_Array = sfVertexArray_create();
             
             bbGroundSurface_initVertexArray(i, j);
