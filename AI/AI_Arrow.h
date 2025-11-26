@@ -12,6 +12,7 @@
 #include "../headers/bbPrintf.h"
 #include "../headers/bbAIControl_init.h"
 #include "../headers/flags.h"
+#include "../headers/bbMessage_constructors.h"
 
 extern int Current_Time;
 extern int player_int;

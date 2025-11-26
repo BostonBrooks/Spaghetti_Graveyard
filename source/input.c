@@ -22,7 +22,7 @@ int heal_player(int x);
 
 bbScreenCoords mouse_screen_position;
 extern int player_int;
-
+extern sfRenderWindow *window;
 bbScreenCoords mouse_viewport_position;
 
 bbMapCoords mouse_map_position;
@@ -64,7 +64,7 @@ int input_process(void){
 
     sfEvent event;
     //update mouse screen position;
-    sfVector2i position = sfMouse_getPosition(window);
+    sfVector2i position = sfMouse_getPositionRenderWindow (window);
     
     mouse_screen_position.x = position.x;
     mouse_screen_position.y = position.y;

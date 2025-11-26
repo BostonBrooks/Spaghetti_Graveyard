@@ -297,11 +297,11 @@
         int j = Address % LEVEL_2;\
 \
         if (CLASS##_Pool[i] == NULL){\
-            return((long)LEVEL_1_POOL_NOT_INITIALISED);\
+            return((void*)LEVEL_1_POOL_NOT_INITIALISED);\
         }\
 \
         if (CLASS##_Pool[i][j].Pool_In_Use == 0){\
-            return((long)OBJECT_NOT_IN_USE);\
+            return((void*)OBJECT_NOT_IN_USE);\
         }\
         CLASS* obj = &CLASS##_Pool[i][j];\
 \
@@ -314,7 +314,7 @@
         int j = Address % LEVEL_2;\
 \
         if (CLASS##_Pool[i] == NULL){\
-            return((long)LEVEL_1_POOL_NOT_INITIALISED);\
+            return((void*)LEVEL_1_POOL_NOT_INITIALISED);\
         }\
 \
         return (&(CLASS##_Pool[i][j]));\

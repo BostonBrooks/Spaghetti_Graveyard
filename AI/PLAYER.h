@@ -13,6 +13,7 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/input.h"
 #include "../headers/flags.h"
+#include "../headers/bbMessage_constructors.h"
 
 int PLAYER_new(bbMapCoords mc){
 

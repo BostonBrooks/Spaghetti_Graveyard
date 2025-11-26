@@ -14,7 +14,6 @@
 #include "../headers/bbMessage.h"
 #include "../headers/constants.h"
 
-
 //-----------------------------GLOBALS----------------------------//
 
 /** vtable containing message types */

@@ -7,6 +7,7 @@
 #include "../headers/pools.h"
 #include "../headers/media.h"
 #include "../headers/bbMessage_constructors.h"
+#include "../headers/bbDrawable_lists.h"
 #include <math.h>
 
 //STUB #define NO_HEALTHBAR -1  // what even is this?

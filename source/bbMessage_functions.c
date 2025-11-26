@@ -8,7 +8,8 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/constants.h"
 #include "../headers/bbMessage_passing.h"
-
+#include "../headers/bbSkin.h"
+#include "../headers/bbDrawable_lists.h"
 //-----------------------------GLOBALS----------------------------//
 
 extern int Current_Time; //TODO Move to appropriate header file.

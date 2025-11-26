@@ -12,7 +12,7 @@
 #include "../headers/bbMessage.h"
 #include "../headers/bbDrawable.h"
 #include "../headers/flags.h"
-
+#include "../headers/bbMessage_constructors.h"
 int AI_fox_new(bbMapCoords mc){
 
 

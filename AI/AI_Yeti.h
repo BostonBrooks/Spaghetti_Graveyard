@@ -8,6 +8,7 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/angles.h"
 #include "../headers/flags.h"
+#include "../headers/bbMessage_constructors.h"
 
 int AI_yeti_new(bbMapCoords mc){
 

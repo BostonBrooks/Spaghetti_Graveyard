@@ -13,7 +13,7 @@
 //-----------------------------CODE------------------------------//
 
 DEFINE_POOL(bbAIControl, AICONTROLLER_POOL_LEVEL_1, AICONTROLLER_POOL_LEVEL_2);
-
+int bbDrawable_removefromTS (int drawable_int);
 
 // What happens when you have an extern of something in the same file as the non-extern?
 // Nothing happens, all good

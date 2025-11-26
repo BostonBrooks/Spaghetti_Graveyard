@@ -233,7 +233,8 @@ int main_test(void){
 	assert(window != NULL && "sfRenderWindow_create failed\n");
 
 	sfRenderTexture* renderTexture;
-	calcHillShading(&renderTexture, 0, 0);
+	//TODO: sfRenderTexture_create(mode, &renderTexture);
+	calcHillShading(renderTexture, 0, 0);
 
 	sfTexture* texture = sfRenderTexture_getTexture(renderTexture);
 

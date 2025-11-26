@@ -11,6 +11,7 @@
 
 typedef struct {
 
+//TODO sfRenderWindow* window;
     sfRenderWindow window;
     int width;
     int height;

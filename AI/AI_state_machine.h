@@ -9,6 +9,7 @@
 #include "../headers/bbDrawable.h"
 #include "../headers/sum_forces.h"
 #include "../headers/flags.h"
+#include "../headers/bbMessage_constructors.h"
 
 extern int Current_Time;
 extern int player_int;

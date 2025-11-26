@@ -27,6 +27,7 @@
 #include "../headers/constants.h"
 #include "../headers/geometry.h"
 #include "../headers/input.h"
+#include "../headers/bbSkin.h"
 #include "../headers/interpolation.h"
 #include "../headers/media.h"
 #include "../headers/move_towards_deprecated.h"
